@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Sơ đồ mặt bằng căn hộ A-18.06 và hành lang tầng 18">
+  <defs>
+    <pattern id="hatch" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="10" height="10" fill="#ddd2b8"/>
+      <line x1="0" y1="0" x2="0" y2="10" stroke="#c4b591" stroke-width="3"/>
+    </pattern>
+    <pattern id="tile" width="20" height="20" patternUnits="userSpaceOnUse">
+      <rect width="20" height="20" fill="#e3dac4"/>
+      <path d="M20 0H0V20" fill="none" stroke="#d3c8ad" stroke-width="1"/>
+    </pattern>
+    <style>
+      .wall { stroke: #1b2330; stroke-width: 8; fill: none; stroke-linecap: square; }
+      .thin { stroke: #1b2330; stroke-width: 2; fill: none; }
+      .furn { fill: #c9bb97; stroke: #6b604f; stroke-width: 2; }
+      .label { font-family: "Be Vietnam Pro", "Segoe UI", Arial, sans-serif; font-size: 15px; font-weight: 700; fill: #2a2520; letter-spacing: .06em; }
+      .small { font-family: "Be Vietnam Pro", "Segoe UI", Arial, sans-serif; font-size: 11px; fill: #6b604f; }
+    </style>
+  </defs>
+
+  <!-- Nền giấy -->
+  <rect width="800" height="600" fill="#ece3cc"/>
+
+  <!-- Căn 18.05 (hàng xóm) -->
+  <rect x="20" y="20" width="180" height="420" fill="url(#hatch)"/>
+  <text x="110" y="220" text-anchor="middle" class="label">CĂN 18.05</text>
+  <text x="110" y="240" text-anchor="middle" class="small">(ông Tâm)</text>
+
+  <!-- Sàn các phòng căn 18.06 -->
+  <rect x="200" y="20" width="100" height="180" fill="url(#tile)"/>
+  <rect x="300" y="20" width="480" height="420" fill="#f1e9d6"/>
+  <rect x="200" y="200" width="100" height="240" fill="#f1e9d6"/>
+  <rect x="600" y="200" width="180" height="240" fill="url(#tile)"/>
+
+  <!-- Hành lang -->
+  <rect x="20" y="440" width="760" height="140" fill="#d9cfb6"/>
+  <text x="400" y="525" text-anchor="middle" class="label">HÀNH LANG TẦNG 18 · BLOCK A</text>
+
+  <!-- ===== Nội thất ===== -->
+  <!-- WC -->
+  <rect x="215" y="35" width="40" height="55" rx="18" class="furn"/>
+  <rect x="245" y="140" width="45" height="45" class="furn"/>
+  <path d="M205 60 q-6 30 0 60" stroke="#8a7a5a" stroke-width="3" fill="none" stroke-dasharray="4 4"/>
+  <text x="250" y="120" text-anchor="middle" class="label">WC</text>
+
+  <!-- Phòng làm việc -->
+  <rect x="330" y="35" width="110" height="40" class="furn"/>
+  <rect x="352" y="42" width="24" height="18" fill="#f4eedf" stroke="#6b604f"/>
+  <circle cx="385" cy="98" r="14" class="furn"/>
+  <rect x="470" y="30" width="38" height="120" class="furn"/>
+  <text x="410" y="170" text-anchor="middle" class="label">P. LÀM VIỆC</text>
+
+  <!-- Phòng ngủ -->
+  <rect x="600" y="35" width="160" height="120" rx="6" class="furn"/>
+  <rect x="610" y="45" width="60" height="30" rx="8" fill="#f4eedf" stroke="#6b604f"/>
+  <rect x="610" y="85" width="60" height="30" rx="8" fill="#f4eedf" stroke="#6b604f"/>
+  <rect x="560" y="60" width="32" height="32" class="furn"/>
+  <rect x="566" y="68" width="20" height="10" fill="#7a1f2b"/>
+  <text x="680" y="185" text-anchor="middle" class="label">P. NGỦ</text>
+
+  <!-- Phòng khách -->
+  <rect x="380" y="215" width="170" height="42" rx="8" class="furn"/>
+  <text x="465" y="242" text-anchor="middle" class="small">sofa</text>
+  <!-- Ghế bành nơi phát hiện thi thể -->
+  <rect x="300" y="305" width="50" height="50" rx="10" fill="#9b2c3a" stroke="#5a141d" stroke-width="2"/>
+  <rect x="306" y="311" width="38" height="38" rx="8" fill="#b44352"/>
+  <!-- Bàn trà + ấm chén -->
+  <circle cx="416" cy="366" r="30" class="furn"/>
+  <circle cx="408" cy="360" r="7" fill="#7a4b3c"/>
+  <circle cx="426" cy="372" r="4" fill="#f4eedf" stroke="#7a4b3c" stroke-width="2"/>
+  <rect x="404" y="378" width="20" height="12" fill="#f4eedf" stroke="#6b604f"/>
+  <!-- Ghế đôn bị kéo lệch -->
+  <circle cx="482" cy="392" r="15" class="furn" stroke-dasharray="4 3"/>
+  <!-- Tủ kính -->
+  <rect x="210" y="395" width="70" height="30" fill="#bcd0d6" stroke="#4f6670" stroke-width="2"/>
+  <path d="M233 395v30M256 395v30" stroke="#4f6670" stroke-width="1.5"/>
+  <text x="245" y="385" text-anchor="middle" class="small">tủ kính</text>
+  <text x="400" y="300" text-anchor="middle" class="label">P. KHÁCH</text>
+
+  <!-- Bếp -->
+  <rect x="738" y="215" width="34" height="215" class="furn"/>
+  <rect x="742" y="262" width="26" height="36" fill="#f4eedf" stroke="#6b604f"/>
+  <path d="M746 270h18M746 278h18M746 286h18" stroke="#6b604f" stroke-width="1.5"/>
+  <rect x="742" y="320" width="26" height="30" fill="#bcd0d6" stroke="#4f6670"/>
+  <rect x="640" y="300" width="70" height="50" rx="4" class="furn"/>
+  <text x="675" y="400" text-anchor="middle" class="label">BẾP</text>
+  <text x="726" y="252" text-anchor="end" class="small">giá phơi</text>
+  <text x="726" y="340" text-anchor="end" class="small">bồn rửa</text>
+
+  <!-- Thang máy -->
+  <rect x="40" y="470" width="50" height="50" fill="#b8b4a6" stroke="#1b2330" stroke-width="3"/>
+  <rect x="100" y="470" width="50" height="50" fill="#b8b4a6" stroke="#1b2330" stroke-width="3"/>
+  <path d="M65 470v50M125 470v50" stroke="#1b2330" stroke-width="1.5"/>
+  <text x="65" y="540" text-anchor="middle" class="small">A1</text>
+  <text x="125" y="540" text-anchor="middle" class="small">A2</text>
+  <text x="95" y="562" text-anchor="middle" class="label">THANG MÁY</text>
+
+  <!-- Cửa thoát hiểm + cầu thang bộ -->
+  <rect x="700" y="470" width="70" height="100" fill="#cbbf9f" stroke="#1b2330" stroke-width="3"/>
+  <path d="M705 490h60M705 505h60M705 520h60M705 535h60M705 550h60" stroke="#8a7a5a" stroke-width="2"/>
+  <rect x="690" y="452" width="62" height="16" rx="2" fill="#3d7a52"/>
+  <text x="721" y="464" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="700" fill="#fff">THOÁT HIỂM</text>
+
+  <!-- ===== Tường ===== -->
+  <!-- Tường bao + tường chung 18.05 | 18.06 -->
+  <path class="wall" d="M20 20H780V440H520 M470 440H200 M200 20V440"/>
+  <path class="wall" d="M20 20V440H110 M160 440H200"/>
+  <!-- Vách trong căn 18.06 -->
+  <path class="wall" d="M300 20V200 M520 20V200"/>
+  <path class="wall" d="M200 200H225 M265 200H400 M440 200H540 M580 200H780"/>
+  <path class="wall" d="M600 200V260 M600 360V440"/>
+  <!-- Hành lang -->
+  <path class="wall" d="M20 440V580H780V440"/>
+
+  <!-- Cửa (cung mở) -->
+  <path class="thin" d="M470 440 A50 50 0 0 1 520 390" stroke-dasharray="3 3"/>
+  <path d="M470 440 L520 390" stroke="#1b2330" stroke-width="3"/>
+  <path class="thin" d="M225 200 A40 40 0 0 0 265 240" stroke-dasharray="3 3"/>
+  <path class="thin" d="M400 200 A40 40 0 0 0 440 240" stroke-dasharray="3 3"/>
+  <path class="thin" d="M540 200 A40 40 0 0 0 580 240" stroke-dasharray="3 3"/>
+  <path class="thin" d="M110 440 A50 50 0 0 1 160 490" stroke-dasharray="3 3"/>
+  <text x="495" y="458" text-anchor="middle" class="small">cửa chính</text>
+
+  <!-- Nhãn căn hộ + hướng bắc -->
+  <text x="770" y="40" text-anchor="end" class="small">CĂN A-18.06</text>
+  <g transform="translate(40 50)">
+    <circle r="16" fill="#f4eedf" stroke="#1b2330" stroke-width="2"/>
+    <path d="M0 -12 L6 6 L0 2 L-6 6Z" fill="#7a1f2b"/>
+    <text y="30" text-anchor="middle" class="small">B</text>
+  </g>
+</svg>

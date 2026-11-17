@@ -1,0 +1,12 @@
+{
+  "name": "ho-so-vu-an",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Web game giải đố phá án dạng hồ sơ vụ án — HTML/CSS/JS thuần",
+  "type": "module",
+  "scripts": {
+    "start": "npx --yes serve -l 3000 .",
+    "encode": "node tools/encode-case.mjs",
+    "check": "node tools/check-case.mjs"
+  }
+}

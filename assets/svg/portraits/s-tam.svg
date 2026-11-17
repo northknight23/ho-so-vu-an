@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" role="img" aria-label="Chân dung Lê Văn Tâm">
+  <defs>
+    <!-- Hoạ tiết sơ mi caro -->
+    <pattern id="plaid" width="16" height="16" patternUnits="userSpaceOnUse">
+      <rect width="16" height="16" fill="#a88f62"/>
+      <rect x="0" y="6" width="16" height="4" fill="#7a1f2b" opacity=".35"/>
+      <rect x="6" y="0" width="4" height="16" fill="#1b2330" opacity=".3"/>
+    </pattern>
+  </defs>
+  <rect width="200" height="240" fill="#403c30"/>
+  <circle cx="100" cy="98" r="80" fill="#4c4739"/>
+  <!-- Áo sơ mi caro -->
+  <path d="M20 240 C24 188 60 168 100 168 C140 168 176 188 180 240Z" fill="url(#plaid)"/>
+  <path d="M84 166 L100 190 L116 166 L110 162 L100 176 L90 162Z" fill="#e6dcc4"/>
+  <!-- Cổ -->
+  <path d="M87 138 h26 v28 c-8 8 -18 8 -26 0z" fill="#c08d68"/>
+  <!-- Tai + mặt gầy -->
+  <ellipse cx="63" cy="108" rx="6.5" ry="11" fill="#c08d68"/>
+  <ellipse cx="137" cy="108" rx="6.5" ry="11" fill="#c08d68"/>
+  <ellipse cx="100" cy="102" rx="37" ry="50" fill="#cf9c76"/>
+  <path d="M68 116 C72 146 86 152 100 152 C114 152 128 146 132 116 C124 140 112 146 100 146 C88 146 76 140 68 116Z" fill="#000" opacity=".08"/>
+  <!-- Hói đỉnh, tóc bạc hai bên -->
+  <path d="M63 106 C60 84 64 70 72 64 L74 88 C68 92 66 98 65 108Z" fill="#b9b4a8"/>
+  <path d="M137 106 C140 84 136 70 128 64 L126 88 C132 92 134 98 135 108Z" fill="#b9b4a8"/>
+  <path d="M82 72 q18 -4 36 0 M86 80 q14 -3 28 0" stroke="#a87c5d" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <!-- Lông mày -->
+  <path d="M75 94 q9 -3 18 1 M107 95 q9 -4 18 -1" stroke="#8f8a80" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <!-- Mắt + kính gọng vuông dày -->
+  <ellipse cx="85" cy="107" rx="3" ry="3.3" fill="#1d1d1f"/>
+  <ellipse cx="115" cy="107" rx="3" ry="3.3" fill="#1d1d1f"/>
+  <rect x="71" y="97" width="28" height="20" rx="4" fill="#ffffff" fill-opacity=".1" stroke="#1d1d1f" stroke-width="4"/>
+  <rect x="101" y="97" width="28" height="20" rx="4" fill="#ffffff" fill-opacity=".1" stroke="#1d1d1f" stroke-width="4"/>
+  <path d="M99 105 h2 M71 104 l-8 -2 M129 104 l8 -2" stroke="#1d1d1f" stroke-width="3"/>
+  <!-- Mũi, ria mép, miệng -->
+  <path d="M100 113 q-4 11 0 14 q3 1 5 -1" stroke="#a37554" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+  <path d="M84 133 C90 126 98 128 100 131 C102 128 110 126 116 133 C110 132 104 134 100 134 C96 134 90 132 84 133Z" fill="#a9a398"/>
+  <path d="M92 140 q8 -2 16 0" stroke="#6e3a2e" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+</svg>

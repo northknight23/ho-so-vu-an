@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" role="img" aria-label="Chân dung Phạm Gia Bảo">
+  <rect width="200" height="240" fill="#2a2632"/>
+  <circle cx="100" cy="98" r="80" fill="#353040"/>
+  <!-- Vest xanh than, sơ mi trắng, cà vạt đỏ đô -->
+  <path d="M14 240 C18 184 56 164 100 164 C144 164 182 184 186 240Z" fill="#1e2a3d"/>
+  <path d="M78 166 L100 222 L122 166 C112 162 88 162 78 166Z" fill="#f4f2ec"/>
+  <path d="M95 172 h10 l-2 8 l6 40 l-9 10 l-9 -10 l6 -40z" fill="#7a1f2b"/>
+  <path d="M78 166 L94 206 L70 192 L66 172Z M122 166 L106 206 L130 192 L134 172Z" fill="#162132"/>
+  <path d="M58 210 h22" stroke="#c9a45c" stroke-width="3" stroke-linecap="round"/>
+  <!-- Cổ -->
+  <path d="M83 138 h34 v28 c-9 8 -25 8 -34 0z" fill="#c99c76"/>
+  <!-- Tai + mặt đầy đặn -->
+  <ellipse cx="58" cy="108" rx="7" ry="11" fill="#c99c76"/>
+  <ellipse cx="142" cy="108" rx="7" ry="11" fill="#c99c76"/>
+  <ellipse cx="100" cy="103" rx="43" ry="49" fill="#dcae86"/>
+  <path d="M60 118 C64 148 84 154 100 154 C116 154 136 148 140 118 C130 142 116 146 100 146 C84 146 70 142 60 118Z" fill="#000" opacity=".09"/>
+  <!-- Tóc chải lật, mai tóc điểm bạc -->
+  <path d="M57 104 C52 64 76 48 104 50 C130 50 150 66 143 104 C140 88 134 78 124 74 C108 72 88 70 78 66 C70 76 62 88 57 104Z" fill="#1f1a17"/>
+  <path d="M78 66 C92 60 112 60 124 74" stroke="#3a322d" stroke-width="2" fill="none"/>
+  <path d="M57 104 C56 96 58 90 61 86 L63 100Z M143 104 C144 96 142 90 139 86 L137 100Z" fill="#8f8f8f"/>
+  <!-- Lông mày, mắt -->
+  <path d="M73 96 q10 -4 19 0 M108 96 q10 -4 19 0" stroke="#1f1a17" stroke-width="3.8" fill="none" stroke-linecap="round"/>
+  <ellipse cx="84" cy="108" rx="3.3" ry="3.5" fill="#1d1d1f"/>
+  <ellipse cx="116" cy="108" rx="3.3" ry="3.5" fill="#1d1d1f"/>
+  <path d="M78 114 q6 2 12 0 M110 114 q6 2 12 0" stroke="#b0835f" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- Mũi, miệng (cười xã giao) -->
+  <path d="M100 112 q-5 12 0 15 q4 1 6 -1" stroke="#b0835f" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M88 134 q12 6 24 0" stroke="#74392f" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>

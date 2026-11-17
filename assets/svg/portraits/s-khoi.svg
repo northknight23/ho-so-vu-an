@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" role="img" aria-label="Chân dung Hà Minh Khôi">
+  <rect width="200" height="240" fill="#2c3a4a"/>
+  <circle cx="100" cy="98" r="80" fill="#36475a"/>
+  <!-- Áo hoodie đen -->
+  <path d="M16 240 C20 186 56 166 100 166 C144 166 180 186 184 240Z" fill="#232428"/>
+  <path d="M66 172 C76 196 124 196 134 172 C124 164 76 164 66 172Z" fill="#303136"/>
+  <path d="M90 186 v34 M110 186 v34" stroke="#d9d6cf" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="90" cy="222" r="3" fill="#d9d6cf"/>
+  <circle cx="110" cy="222" r="3" fill="#d9d6cf"/>
+  <!-- Cổ -->
+  <path d="M85 138 h30 v30 c-8 8 -22 8 -30 0z" fill="#c99470"/>
+  <!-- Tai + mặt -->
+  <ellipse cx="61" cy="108" rx="7" ry="11" fill="#c99470"/>
+  <ellipse cx="139" cy="108" rx="7" ry="11" fill="#c99470"/>
+  <circle cx="139" cy="117" r="2.5" fill="#c9a45c"/>
+  <ellipse cx="100" cy="102" rx="39" ry="48" fill="#d6a07a"/>
+  <!-- Râu lún phún -->
+  <path d="M64 116 C66 146 84 151 100 151 C116 151 134 146 136 116 C128 136 116 141 100 141 C84 141 72 136 64 116Z" fill="#3a2a22" opacity=".28"/>
+  <path d="M86 128 q14 -4 28 0 q-14 5 -28 0Z" fill="#3a2a22" opacity=".3"/>
+  <!-- Tóc rối -->
+  <path d="M58 102 C52 62 78 42 104 46 C128 44 150 62 142 102 C138 86 132 76 126 72 L120 82 L112 68 L102 80 L94 66 L86 80 L76 70 C68 78 62 90 58 102Z" fill="#141416"/>
+  <!-- Lông mày nhíu -->
+  <path d="M75 97 l18 4 M125 97 l-18 4" stroke="#141416" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <!-- Mắt -->
+  <ellipse cx="85" cy="109" rx="3.4" ry="3.8" fill="#1d1d1f"/>
+  <ellipse cx="115" cy="109" rx="3.4" ry="3.8" fill="#1d1d1f"/>
+  <path d="M80 117 q5 2 10 0 M110 117 q5 2 10 0" stroke="#a87554" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- Mũi, miệng -->
+  <path d="M100 112 q-4 11 0 14 q3 1 5 -1" stroke="#a87554" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+  <path d="M90 135 q10 -3 20 0" stroke="#6e3a2e" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>
