@@ -305,6 +305,8 @@ button { font: inherit; color: inherit; }
   align-items: center;
   gap: 12px;
 }
+.exit-btn { flex: none; gap: 6px; }
+.exit-btn svg { width: 18px; height: 18px; }
 .case-header__home {
   background: none;
   border: 0;

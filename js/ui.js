@@ -30,6 +30,7 @@ const ICON_PATHS = {
   scene: 'M3 6.5 9 4l6 2.5L21 4v13.5L15 20l-6-2.5L3 20zM9 4v13.5M15 6.5V20',
   board: 'M3 4h18v14H3zM7 9l5 4 5-6M7 9h.01M12 13h.01M17 7h.01M8 21l1-3M16 21l-1-3',
   notes: 'M4 20h4L19.5 8.5l-4-4L4 16zM14 6l4 4',
+  exit: 'M10 4H5v16h5M14 8l4 4-4 4M18 12H9',
 };
 
 function icon(name) {
@@ -120,6 +121,14 @@ export function renderCase(app, tab, actions, opts = {}) {
 
   const header = el('header', { class: 'case-header' },
     el('div', { class: 'case-header__row' },
+      // Nút thoát ra trang bìa — tiến trình đã tự lưu nên không cần hỏi xác nhận
+      el('button', {
+        type: 'button',
+        class: 'btn btn--ghost btn--small exit-btn',
+        title: 'Thoát ra trang bìa (tiến trình đã được lưu)',
+        'aria-label': 'Thoát ra trang bìa hồ sơ',
+        onClick: () => actions.go('#/'),
+      }, icon('exit'), el('span', { class: 'hide-sm', text: 'Thoát' })),
       el('button', { type: 'button', class: 'case-header__home', onClick: () => actions.go('#/'), 'aria-label': 'Về trang bìa hồ sơ' },
         el('span', { class: 'case-header__title', text: c.title }),
         el('span', { class: 'case-header__progress', text: `Đã xem ${seen}/${clues.length} manh mối${locked ? ` · 🔒 ${locked} chưa mở` : ''}` })),
@@ -486,6 +495,7 @@ export function renderSubmit(app, actions) {
   el('div', { class: 'submit-bar' },
     el('button', { type: 'submit', class: 'btn btn--primary' }, 'Nộp kết luận'),
     el('button', { type: 'button', class: 'btn btn--ghost', onClick: () => actions.go(`#/case/${p.lastTab || 'overview'}`) }, 'Quay lại hồ sơ'),
+    el('button', { type: 'button', class: 'btn btn--ghost', onClick: () => actions.go('#/') }, 'Thoát ra trang bìa'),
     msg));
 
   mount(root(), el('section', { class: 'panel' },
@@ -559,5 +569,6 @@ export function renderResult(app, solution, actions) {
 
     el('div', { class: 'result-actions' },
       el('button', { type: 'button', class: 'btn btn--ghost', onClick: () => actions.go(`#/case/${p.lastTab || 'overview'}`) }, 'Xem lại hồ sơ'),
+      el('button', { type: 'button', class: 'btn btn--ghost', onClick: () => actions.go('#/') }, 'Về trang bìa'),
       el('button', { type: 'button', class: 'btn btn--primary', onClick: () => actions.reset() }, 'Chơi lại từ đầu'))));
 }
