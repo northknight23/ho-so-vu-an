@@ -11,7 +11,7 @@
 import { el, mount, para, rich } from './dom.js';
 import { renderDocument } from './documents.js';
 import { optionsFor } from './caseLoader.js';
-import { PARTS } from './answer.js';
+import { partsOf } from './answer.js';
 import { openModal, confirmDialog } from './modal.js';
 import { allClues, findClue, clueNo, lockedRemaining, hintsUsedTotal } from './selectors.js';
 import { renderInterrogation, solvedCount } from './interrogation.js';
@@ -87,10 +87,27 @@ export function renderIntro(app, actions) {
     buttons.push(el('button', { type: 'button', class: 'btn btn--paper', onClick: () => actions.reset() }, 'Chơi lại từ đầu'));
   }
 
+  // Kệ hồ sơ: chuyển vụ bằng ?case=<id> (mỗi vụ lưu tiến trình riêng)
+  const shelf = (app.library || []).length > 1 && el('nav', { class: 'shelf', 'aria-label': 'Chọn hồ sơ vụ án' },
+    app.library.map((item) => {
+      const current = item.id === c.id;
+      return el(current ? 'span' : 'a', {
+        class: `shelf__item${current ? ' is-current' : ''}`,
+        href: current ? null : `?case=${encodeURIComponent(item.id)}`,
+        'aria-current': current ? 'true' : null,
+      },
+      el('span', { class: 'shelf__no', text: item.caseNumber || item.id }),
+      el('span', { class: 'shelf__title', text: item.title }),
+      el('span', { class: 'shelf__meta' },
+        item.difficulty && el('span', { class: `shelf__diff shelf__diff--${item.difficulty === 'Khó' ? 'hard' : 'easy'}`, text: item.difficulty }),
+        item.status && el('span', { text: item.status })));
+    }));
+
   mount(root(), el('section', { class: 'intro' },
+    shelf,
     el('div', { class: 'folder', 'data-label': c.caseNumber || 'HỒ SƠ' },
       el('div', { class: 'stamp', 'aria-hidden': 'true', text: c.stamp || 'MẬT' }),
-      el('div', { class: 'intro__eyebrow', text: c.location || '' }),
+      el('div', { class: 'intro__eyebrow', text: [c.location, c.difficulty && `Độ khó: ${c.difficulty}`].filter(Boolean).join(' · ') }),
       el('h1', { class: 'intro__title', text: c.title }),
       c.tagline && el('p', { class: 'intro__tagline', text: c.tagline }),
       el('div', { class: 'intro__summary' }, para(c.summary)),
@@ -424,6 +441,7 @@ function renderNotes(app, actions) {
   const pinned = p.board.cards.filter((x) => x.kind === 'clue').map((x) => x.ref);
   return [
     el('h2', { class: 'panel__title', text: 'Sổ tay điều tra' }),
+    renderElimGrid(app, actions),
     el('div', { class: 'notebook-layout' },
       el('div', { class: 'paper-card notebook' },
         el('div', { class: 'notebook__head' }, el('span', { text: 'Ghi chú của bạn' }), status),
@@ -434,6 +452,87 @@ function renderNotes(app, actions) {
           ? el('ul', {}, pinned.map((id) => el('li', {}, clueLink(app, id, actions))))
           : el('p', { class: 'pinned__empty', text: 'Mở một manh mối và bấm “📌 Ghim” để đưa nó lên Bảng suy luận.' }))),
   ];
+}
+
+// ---------- Lưới loại trừ (đầu tab Sổ tay) ----------
+const GRID_MARKS = {
+  yes: { text: '✓', label: 'thỏa' },
+  no: { text: '✗', label: 'không thỏa' },
+  maybe: { text: '?', label: 'chưa chắc' },
+};
+const GRID_DEFAULT_LABELS = ['Động cơ', 'Cơ hội', 'Ngoại phạm'];
+const GRID_MAX_COLUMNS = 6;
+
+/**
+ * Lưới nghi phạm × điều kiện, người chơi tự đặt tên cột.
+ * Bấm ô để đổi: trống → ✓ → ✗ → ? → trống. Lưu riêng theo từng vụ (progress.grid).
+ */
+function renderElimGrid(app, actions) {
+  const { caseData: c, progress: p } = app;
+  const grid = p.grid || { columns: GRID_DEFAULT_LABELS.map((label, i) => ({ id: `g${i + 1}`, label })), cells: {} };
+  const cells = grid.cells || {};
+  const canAdd = grid.columns.length < GRID_MAX_COLUMNS;
+
+  const head = el('tr', {},
+    el('th', { scope: 'col', class: 'elim__corner', text: 'Nghi phạm' }),
+    grid.columns.map((col, i) => el('th', { scope: 'col' },
+      el('div', { class: 'elim__colhead' },
+        el('input', {
+          type: 'text',
+          class: 'elim__colname',
+          value: col.label,
+          maxlength: '40',
+          placeholder: `Điều kiện ${i + 1}`,
+          'aria-label': `Tên cột ${i + 1}`,
+          onChange: (e) => actions.gridRenameColumn(col.id, e.target.value),
+          onKeydown: (e) => { if (e.key === 'Enter') e.target.blur(); },
+        }),
+        el('button', {
+          type: 'button',
+          class: 'elim__remove',
+          title: 'Xóa cột này',
+          'aria-label': `Xóa cột ${col.label || i + 1}`,
+          onClick: async () => {
+            const hasMarks = Object.keys(cells).some((k) => k.endsWith(`|${col.id}`));
+            if (hasMarks && !(await confirmDialog({ title: 'Xóa cột?', message: `Các dấu đã đánh trong cột “${col.label || i + 1}” sẽ mất.`, okLabel: 'Xóa cột' }))) return;
+            actions.gridRemoveColumn(col.id);
+          },
+        }, '\u00d7')))),
+    canAdd && el('th', { scope: 'col', class: 'elim__addcol' },
+      el('button', { type: 'button', class: 'btn btn--paper btn--small', onClick: () => actions.gridAddColumn() }, '+ Cột')));
+
+  const rows = c.suspects.map((s) => {
+    const marks = grid.columns.map((col) => cells[`${s.id}|${col.id}`] || '');
+    return el('tr', { class: marks.includes('no') ? 'is-out' : '' },
+      el('th', { scope: 'row', class: 'elim__who' },
+        s.portrait && el('img', { src: s.portrait, alt: '', width: '28', height: '34' }),
+        el('span', { text: s.name })),
+      grid.columns.map((col, i) => {
+        const info = GRID_MARKS[marks[i]];
+        return el('td', {},
+          el('button', {
+            type: 'button',
+            class: `elim__cell${marks[i] ? ` is-${marks[i]}` : ''}`,
+            'aria-label': `${s.name}, ${col.label || `điều kiện ${i + 1}`}: ${info ? info.label : 'chưa đánh dấu'}`,
+            onClick: () => actions.gridCycle(s.id, col.id),
+          }, info ? info.text : ''));
+      }),
+      canAdd && el('td', {}));
+  });
+
+  return el('section', { class: 'paper-card elim' },
+    el('div', { class: 'elim__head' },
+      el('h3', { text: 'Lưới loại trừ' }),
+      Object.keys(cells).length ? el('button', {
+        type: 'button',
+        class: 'btn btn--paper btn--small',
+        onClick: async () => {
+          if (await confirmDialog({ title: 'Xóa mọi dấu?', message: 'Tên cột được giữ lại, chỉ xóa các dấu ✓ ✗ ?.', okLabel: 'Xóa dấu' })) actions.gridClear();
+        },
+      }, 'Xóa dấu') : null),
+    el('p', { class: 'elim__help', text: 'Đặt tên cột là những điều hung thủ bắt buộc phải làm được. Bấm vào ô để đánh dấu: ✓ thỏa · ✗ không thỏa · ? chưa chắc. Ai có một dấu ✗ sẽ bị gạch mờ.' }),
+    el('div', { class: 'elim__scroll', tabindex: '0' },
+      el('table', { class: 'elim__table' }, el('thead', {}, head), el('tbody', {}, rows))));
 }
 
 // ======================================================================
@@ -469,16 +568,16 @@ export function renderSubmit(app, actions) {
     class: 'submit-form',
     novalidate: true,
     onChange: () => {
-      actions.saveDraft(readForm(form));
+      actions.saveDraft(readForm(form, c));
       msg.classList.remove('is-error');
       msg.textContent = defaultMsg;
     },
     onSubmit: async (e) => {
       e.preventDefault();
-      const choice = readForm(form);
-      const missing = PARTS.filter((part) => !choice[part]);
+      const choice = readForm(form, c);
+      const missing = partsOf(c).filter((part) => !choice[part]);
       if (missing.length) {
-        msg.textContent = 'Hãy trả lời đủ cả ba câu hỏi trước khi nộp.';
+        msg.textContent = `Hãy trả lời đủ cả ${partsOf(c).length} câu hỏi trước khi nộp.`;
         msg.classList.add('is-error');
         return;
       }
@@ -491,7 +590,7 @@ export function renderSubmit(app, actions) {
       if (ok) actions.submit(choice);
     },
   },
-  PARTS.map((part, i) => fieldset(part, i + 1)),
+  partsOf(c).map((part, i) => fieldset(part, i + 1)),
   el('div', { class: 'submit-bar' },
     el('button', { type: 'submit', class: 'btn btn--primary' }, 'Nộp kết luận'),
     el('button', { type: 'button', class: 'btn btn--ghost', onClick: () => actions.go(`#/case/${p.lastTab || 'overview'}`) }, 'Quay lại hồ sơ'),
@@ -504,9 +603,9 @@ export function renderSubmit(app, actions) {
     form));
 }
 
-function readForm(form) {
+function readForm(form, c) {
   const data = new FormData(form);
-  return Object.fromEntries(PARTS.map((part) => [part, data.get(part) || '']));
+  return Object.fromEntries(partsOf(c).map((part) => [part, data.get(part) || '']));
 }
 
 // ======================================================================
@@ -549,7 +648,7 @@ export function renderResult(app, solution, actions) {
         app.rank?.text && el('p', { text: app.rank.text }),
         solution.headline && el('p', { class: 'result-hero__headline' }, rich(solution.headline)))),
 
-    el('div', { class: 'part-list' }, PARTS.map(partRow)),
+    el('div', { class: 'part-list' }, partsOf(c).map(partRow)),
 
     el('article', { class: 'paper-card solution' },
       el('h3', { text: 'Chuyện gì đã xảy ra' }),

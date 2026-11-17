@@ -22,7 +22,7 @@ import { randomBytes } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import {
-  PARTS, hashChoice, encodeSolution, decodeSolution,
+  partsOf, hashChoice, encodeSolution, decodeSolution,
   contradictionHash, encodeContradiction, decodeContradiction, encodeHint, decodeHint,
 } from '../js/answer.js';
 import { validateSecret, contradictionPayload, solutionPayload } from './case-secrets.mjs';
@@ -53,7 +53,7 @@ const id = caseData.id;
 
 // 1. Đáp án
 caseData.answer = { algo: 'sha256', salt };
-for (const part of PARTS) caseData.answer[part] = hashChoice(salt, part, secret.answers[part]);
+for (const part of partsOf(caseData)) caseData.answer[part] = hashChoice(salt, part, secret.answers[part]);
 
 // 2. Lời giải
 const sol = solutionPayload(secret);
@@ -74,7 +74,7 @@ caseData.lockedClues = (secret.lockedClues || []).length;
 // 4. Gợi ý
 if ((caseData.hintCosts || []).length) {
   caseData.hints = {};
-  for (const part of PARTS) {
+  for (const part of partsOf(caseData)) {
     caseData.hints[part] = secret.hints[part].map((text, level) => {
       const payload = encodeHint(id, salt, part, level, text);
       if (decodeHint(id, salt, part, level, payload) !== text) fail(`gợi ý ${part}/${level}`);
@@ -85,4 +85,4 @@ if ((caseData.hintCosts || []).length) {
 
 await writeFile(casePath, JSON.stringify(caseData, null, 2) + '\n', 'utf8');
 console.log(`✓ Đã mã hóa ${caseId}: salt=${salt.slice(0, 8)}…, ${(secret.contradictions || []).length} mâu thuẫn, `
-  + `${caseData.lockedClues} manh mối bị khóa, ${caseData.hints ? PARTS.length * caseData.hintCosts.length : 0} gợi ý.`);
+  + `${caseData.lockedClues} manh mối bị khóa, ${caseData.hints ? partsOf(caseData).length * caseData.hintCosts.length : 0} gợi ý.`);

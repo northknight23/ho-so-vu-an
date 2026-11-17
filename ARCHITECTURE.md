@@ -5,7 +5,10 @@ Web game giải đố phá án dạng "hồ sơ vụ án". Người chơi:
 - **thẩm vấn** nghi phạm và trình bằng chứng để vạch mâu thuẫn;
 - ghim thẻ lên **bảng suy luận** rồi căng dây đỏ nối các chi tiết;
 - có thể dùng **gợi ý 3 cấp** (bị trừ điểm);
-- cuối cùng nộp kết luận (hung thủ / động cơ / cách gây án) để được chấm điểm và xem lời giải.
+- dùng **lưới loại trừ** (tab Sổ tay) để đánh dấu ✓/✗ từng nghi phạm theo các điều kiện tự đặt;
+- cuối cùng nộp kết luận (mặc định 3 câu: hung thủ / động cơ / cách gây án; mỗi vụ có thể tự khai báo số câu) để được chấm điểm và xem lời giải.
+
+Trang bìa có **kệ hồ sơ** liệt kê các vụ trong `cases/index.json`, mỗi vụ lưu tiến trình riêng.
 
 ## Ràng buộc công nghệ (bắt buộc giữ)
 
@@ -21,14 +24,15 @@ Web game giải đố phá án dạng "hồ sơ vụ án". Người chơi:
 ```bash
 npx serve -l 3000 .          # hoặc: npm start
 ```
-Mở http://localhost:3000. Không mở trực tiếp `index.html` bằng file://, vì khi đó `fetch` JSON sẽ lỗi. Chọn vụ án khác bằng `?case=case-02`.
+Mở http://localhost:3000. Không mở trực tiếp `index.html` bằng file://, vì khi đó `fetch` JSON sẽ lỗi. Chọn vụ án bằng kệ hồ sơ ở trang bìa, hoặc trực tiếp qua `?case=case-02`.
 
 ## Cấu trúc
 
 ```
 index.html                 khung trang + <dialog id="modal"> dùng chung
 css/style.css              style chia mục: 1 token · 2 nền · 3 nút · 4 intro · 5 hồ sơ · 6 modal · 7 tài liệu
-                           · 8 nộp bài/kết quả · 10 thẩm vấn · 11 bảng suy luận · 12 gợi ý · 9 responsive (cuối file)
+                           · 8 nộp bài/kết quả · 10 thẩm vấn · 11 bảng suy luận · 12 gợi ý
+                           · 13 kệ hồ sơ & lưới loại trừ · 9 responsive (cuối file)
 js/main.js                 khởi động, state `app`, object `actions`, router theo hash
 js/ui.js                   các màn chính + modal manh mối/nghi phạm (chỉ hiển thị; đổi state qua `actions`)
 js/interrogation.js        màn thẩm vấn, trình bằng chứng, computeUnlocks()
@@ -38,16 +42,18 @@ js/modal.js                openModal / closeModal / confirmDialog
 js/selectors.js            allClues(), findClue(), clueNo()… — đọc dữ liệu từ `app`
 js/documents.js            render manh mối dạng "tài liệu" theo detail.type
 js/dom.js                  el() / mount() / rich() — helper DOM an toàn (không dùng innerHTML)
-js/caseLoader.js           fetch + validateCase() + optionsFor()
+js/caseLoader.js           fetch + validateCase() + optionsFor() + loadLibrary() (đọc cases/index.json)
 js/storage.js              localStorage key "phaan:v2:<caseId>", tự chuyển dữ liệu từ v1, có fallback bộ nhớ
-js/answer.js               chấm điểm (có trừ điểm gợi ý), mã hóa/giải mã lời giải, mâu thuẫn, gợi ý (không đụng DOM)
+js/answer.js               partsOf() (danh sách câu kết luận của vụ), chấm điểm (có trừ điểm gợi ý),
+                           mã hóa/giải mã lời giải, mâu thuẫn, gợi ý (không đụng DOM)
 js/sha256.js               SHA-256 thuần JS (không dùng crypto.subtle — xem bên dưới)
+cases/index.json           danh sách vụ án cho kệ hồ sơ ở trang bìa: [{ id, caseNumber, title, difficulty }]
 cases/<id>.json            dữ liệu công khai của vụ án + các phần đã mã hóa
 authoring/<id>.secret.json đáp án, mâu thuẫn, manh mối bị khóa, gợi ý, lời giải dạng chữ thường — KHÔNG deploy
 tools/case-secrets.mjs     validateSecret() + dựng payload, dùng chung cho 2 tool bên dưới
 tools/encode-case.mjs      file bí mật → hash/mã hóa vào cases/<id>.json
 tools/check-case.mjs       kiểm tra schema, file ảnh, và độ khớp với file bí mật
-assets/svg/portraits/      chân dung 200×240 (nạn nhân + nghi phạm)
+assets/svg/portraits/      chân dung 200×240 (nạn nhân + nghi phạm); vụ mới để trong thư mục con, vd portraits/case-02/
 assets/svg/icons/          icon manh mối 64×64 (nền tròn #26313f) + favicon
 assets/svg/scene/          sơ đồ hiện trường (viewBox 800×600)
 docs/<id>-solution.md      giải thích chuỗi suy luận để kiểm tra logic — KHÔNG deploy
@@ -65,7 +71,8 @@ docs/<id>-solution.md      giải thích chuỗi suy luận để kiểm tra log
   - `#/result` — kết quả và lời giải
 
   Đã nộp bài thì `#/submit` tự chuyển sang `#/result`; chưa nộp thì ngược lại.
-- **State**: `app = { caseData, progress, unlocked, solution, revealedClues, rank }`.
+- **State**: `app = { caseData, progress, unlocked, solution, revealedClues, rank, library }`.
+  - `library` = nội dung `cases/index.json`, kèm `status` của từng vụ (đọc từ localStorage lúc khởi động) để hiện trên kệ hồ sơ.
   - Chỉ `main.js` ghi vào `progress`, thông qua `actions`, rồi gọi `saveProgress`.
   - Các module UI nhận `app` + `actions`. Sau khi đổi state, chúng gọi `actions.rerender()` để vẽ lại màn hiện tại mà vẫn giữ vị trí cuộn.
 - **Ba nguồn manh mối**:
@@ -86,13 +93,15 @@ docs/<id>-solution.md      giải thích chuỗi suy luận để kiểm tra log
                                                { "k": "present", "t", "c": "<clueId>", "ok": bool, "dup"?: true } ] } },
   "board": { "cards": [{ "id", "kind": "clue|person|note", "ref", "x", "y", "text"? }],
              "links": [{ "id", "from", "to", "label" }], "zoom": number|null },
-  "hintsUsed": { "culprit": 0-3, "motive": 0-3, "method": 0-3 },
-  "submission": { "culprit", "motive", "method", "submittedAt" } | null,
+  "grid": { "columns": [{ "id", "label" }], "cells": { "<suspectId>|<columnId>": "yes|no|maybe" } } | null,  // lưới loại trừ
+  "hintsUsed": { "<phần>": 0-3, … },
+  "submission": { "<phần>": "<optionId>", …, "submittedAt" } | null,
   "result": { "score", "max", "parts": { "<part>": { "correct", "points", "max", "penalty" } } } | null
 }
 ```
 
 - Thẩm vấn chỉ lưu **nhật ký**. Mọi thứ đã mở khóa (câu hỏi, manh mối, lời khai bổ sung) được tính lại bằng `computeUnlocks()` mỗi lần tải trang, nên nội dung bí mật không nằm dạng chữ trong localStorage. Nhật ký lưu id (topic/clue) chứ không lưu hash, nên chạy lại encode (đổi salt) cũng không làm hỏng tiến trình.
+- `grid` là `null` cho tới khi người chơi đụng vào lưới; khi đó `ensureGrid()` (main.js) tạo 3 cột mặc định "Động cơ / Cơ hội / Ngoại phạm". Tối đa 6 cột. Tên cột do người chơi tự đặt — **không** khai báo sẵn trong JSON, để không lộ cấu trúc lời giải.
 - Mỗi lượt chơi chỉ được nộp bài **một lần**. "Chơi lại từ đầu" xóa toàn bộ tiến trình.
 - Đổi cấu trúc progress thì phải tăng tiền tố key và viết hàm migrate (xem `migrateV1` trong `storage.js`).
 
@@ -111,6 +120,7 @@ docs/<id>-solution.md      giải thích chuỗi suy luận để kiểm tra log
 
 ### Điểm & gợi ý
 
+- Danh sách phần kết luận lấy từ `partsOf(caseData)`: trường `parts` của vụ, hoặc mặc định `["culprit", "motive", "method"]`. Mọi chỗ (form nộp bài, màn kết quả, gợi ý, chấm điểm, tools) đều đi qua hàm này — **không hardcode tên phần**.
 - `scoring` chia điểm cho từng phần. Gợi ý mở lần lượt theo cấp, mỗi cấp trừ `hintCosts[i]` (cộng dồn).
 - Điểm trừ **chỉ áp vào phần tương ứng** và không làm điểm phần đó xuống dưới 0. Phần trả lời sai thì bằng 0 sẵn rồi.
 - Trình sai bằng chứng khi thẩm vấn **không** bị trừ điểm. Nghi phạm chỉ đáp bằng câu trong `fallback`.
@@ -120,7 +130,7 @@ docs/<id>-solution.md      giải thích chuỗi suy luận để kiểm tra log
 ```jsonc
 {
   "id": "case-01", "schemaVersion": 1,
-  "caseNumber": "HỒ SƠ SỐ 01", "stamp": "MẬT",
+  "caseNumber": "HỒ SƠ SỐ 01", "stamp": "MẬT", "difficulty"?: "Dễ",
   "title", "tagline", "location", "summary", "briefing": ["đoạn…"],
   "victim": { "id", "name", "age", "occupation", "portrait", "facts": ["…"] },
   "suspects": [{ "id", "name", "nickname", "age", "occupation", "relation", "portrait",
@@ -141,15 +151,15 @@ docs/<id>-solution.md      giải thích chuỗi suy luận để kiểm tra log
   },
   "lockedClues": 2,                                       // do tool sinh — chỉ là số lượng
   "hintCosts": [5, 10, 15],                               // bỏ trường này = tắt gợi ý
-  "hints": { "culprit": ["payload×3"], "motive": [...], "method": [...] },   // do tool sinh
-  "questions": {
-    "culprit": { "prompt", "optionsFrom": "suspects" },
-    "motive":  { "prompt", "options": [{ "id", "label" }] },
-    "method":  { "prompt", "options": [{ "id", "label" }] }
+  "hints": { "<phần>": ["payload×3"], … },               // do tool sinh
+  "parts"?: ["mastermind", "target", "motive", "framed", "method"],   // bỏ trống = culprit/motive/method
+  "questions": {                                          // mỗi phần trong parts một mục
+    "<phần>": { "prompt", "optionsFrom": "suspects" },    // chọn trong danh sách nghi phạm (dùng được cho nhiều phần)
+    "<phần>": { "prompt", "options": [{ "id", "label" }] }
   },
-  "scoring": { "culprit": 50, "motive": 25, "method": 25 },
+  "scoring": { "<phần>": điểm, … },                       // vd case-01: culprit 50 / motive 25 / method 25
   "ranks": [{ "min": 100, "title", "text" }, …],          // min = % điểm tối thiểu
-  "answer":   { "algo": "sha256", "salt", "culprit", "motive", "method" },   // do tool sinh
+  "answer":   { "algo": "sha256", "salt", "<phần>": "hash", … },          // do tool sinh
   "solution": { "encoding": "xor-b64", "payload" }                          // do tool sinh
 }
 ```
@@ -179,7 +189,7 @@ docs/<id>-solution.md      giải thích chuỗi suy luận để kiểm tra log
 
 ```jsonc
 {
-  "answers": { "culprit": "s-…", "motive": "m-…", "method": "k-…" },
+  "answers": { "<phần>": "<optionId>", … },              // vd { "culprit": "s-…", "motive": "m-…", "method": "k-…" }
   "contradictions": [{
     "suspect": "s-bao", "topic": "t-bao-night", "clue": "c13",
     "group": "bao-power",                 // nhiều mục cùng group = một mâu thuẫn, trình manh mối nào trong nhóm cũng được
@@ -191,9 +201,9 @@ docs/<id>-solution.md      giải thích chuỗi suy luận để kiểm tra log
     }
   }],
   "lockedClues": [{ /* manh mối đầy đủ như trong "clues" */ "no": 16 }],
-  "hints": { "culprit": ["mơ hồ", "rõ hơn", "gần như chỉ thẳng"], "motive": [...], "method": [...] },
+  "hints": { "<phần>": ["mơ hồ", "rõ hơn", "gần như chỉ thẳng"], … },
   "solution": {
-    "headline", "overview": [], "parts": { "culprit", "motive", "method" },
+    "headline", "overview": [], "parts": { "<phần>": "giải thích", … },
     "chain": [{ "title", "text", "clueIds": [], "key"?: true }],
     "redHerrings": [{ "title", "text", "clueIds": [] }],
     "closing"
@@ -203,7 +213,7 @@ docs/<id>-solution.md      giải thích chuỗi suy luận để kiểm tra log
 
 ## Quy trình thêm hoặc sửa vụ án
 
-1. Sửa `cases/<id>.json` (nội dung công khai, câu hỏi thẩm vấn) và `authoring/<id>.secret.json` (phần bí mật).
+1. Sửa `cases/<id>.json` (nội dung công khai, câu hỏi thẩm vấn) và `authoring/<id>.secret.json` (phần bí mật). Vụ mới thì thêm một dòng vào `cases/index.json`.
 2. `node tools/encode-case.mjs <id>`: sinh salt mới, rồi hash và mã hóa mọi phần bí mật. Tool tự kiểm tra bằng cách giải mã lại.
 3. `node tools/check-case.mjs <id>`: kiểm tra schema, file ảnh (kể cả của manh mối bị khóa), và độ khớp với file bí mật.
 4. Viết hoặc cập nhật `docs/<id>-solution.md`.
@@ -215,6 +225,7 @@ docs/<id>-solution.md      giải thích chuỗi suy luận để kiểm tra log
 - Mỗi phương án sai phải bị loại được bằng chứng cứ.
 - Có 3–4 manh mối gây nhiễu và 1 manh mối then chốt trông vô hại.
 - Câu hỏi thẩm vấn nào nhắc tới manh mối thì nên đặt `requires.clues`, để người chơi không bị lộ thông tin trước khi xem manh mối đó.
+- **Vụ khó (case-02)** dùng "lưới bộ lọc": hung thủ phải thỏa N điều kiện bắt buộc, mỗi người vô tội vòng trong trượt đúng một điều kiện, nên bỏ qua bất kỳ điều kiện nào cũng còn lại đúng 2 người. Ghi bảng nghi phạm × điều kiện và phần kiểm chứng vào `docs/<id>-solution.md`.
 - Bối cảnh case-01 đặt ở năm 2024 để dùng được tên "Quận 7", "TP Thủ Đức" (các đơn vị này đã bị bỏ từ 7/2025).
 
 ## Quy ước code
@@ -224,7 +235,7 @@ docs/<id>-solution.md      giải thích chuỗi suy luận để kiểm tra log
 - Màu và font lấy từ CSS custom properties ở `:root`; không hardcode màu mới trong JS.
 - Vùng bấm tối thiểu 44px trên mobile.
 - Breakpoint:
-  - 720px: tab xuống đáy (dùng nhãn `short`), modal toàn màn hình, bảng thu nhỏ còn 60%;
+  - 720px: tab xuống đáy (dùng nhãn `short`), modal toàn màn hình, bảng thu nhỏ còn 60%, lưới loại trừ ẩn ảnh và cuộn ngang với cột tên đứng yên;
   - 900px: layout 1 cột.
 - Header có `backdrop-filter` trên desktop. Trên mobile phải tắt nó đi, vì nó biến header thành containing block khiến tab bar `position: fixed` không bám được đáy màn hình.
 - Bảng suy luận tự vẽ lại phần bảng (`draw()`) khi kéo thả hoặc nối dây, không gọi `rerender` cả trang, để giữ vị trí cuộn của khung bảng.

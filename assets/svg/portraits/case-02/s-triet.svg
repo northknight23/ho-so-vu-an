@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" role="img" aria-label="Chân dung luật sư Hồ Minh Triết">
+  <rect width="200" height="240" fill="#26303a"/>
+  <circle cx="100" cy="98" r="80" fill="#2f3b47"/>
+  <!-- Vest xanh than, sơ mi trắng, cà vạt xanh ngọc -->
+  <path d="M14 240 C18 184 56 164 100 164 C144 164 182 184 186 240Z" fill="#1d2a3c"/>
+  <path d="M80 166 L100 222 L120 166 C110 162 90 162 80 166Z" fill="#f4f2ec"/>
+  <path d="M95 172 h10 l-2 8 l6 40 l-9 10 l-9 -10 l6 -40z" fill="#2f7f86"/>
+  <path d="M80 166 L94 206 L70 194 L66 172Z M120 166 L106 206 L130 194 L134 172Z" fill="#152030"/>
+  <circle cx="140" cy="200" r="3" fill="#c9a45c"/>
+  <!-- Cổ -->
+  <path d="M85 138 h30 v28 c-9 8 -21 8 -30 0z" fill="#cfa07b"/>
+  <!-- Mặt thon gọn -->
+  <ellipse cx="62" cy="106" rx="6.5" ry="11" fill="#cfa07b"/>
+  <ellipse cx="138" cy="106" rx="6.5" ry="11" fill="#cfa07b"/>
+  <ellipse cx="100" cy="103" rx="38" ry="48" fill="#e0b38f"/>
+  <path d="M65 118 C69 144 85 150 100 150 C115 150 131 144 135 118 C127 140 113 144 100 144 C87 144 73 140 65 118Z" fill="#000" opacity=".07"/>
+  <!-- Tóc hoa râm rẽ ngôi gọn -->
+  <path d="M60 102 C54 64 78 48 102 48 C128 48 148 64 140 102 C138 84 132 74 120 70 C104 66 92 68 84 64 C74 72 64 84 60 102Z" fill="#6f6a64"/>
+  <path d="M84 64 C96 58 112 58 124 66 M90 56 L84 64" stroke="#a7a198" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  <path d="M60 102 C59 92 61 86 64 82 L66 98Z M140 102 C141 92 139 86 136 82 L134 98Z" fill="#b5b0a7"/>
+  <!-- Kính gọng vàng -->
+  <circle cx="84" cy="106" r="11" fill="none" stroke="#c9a45c" stroke-width="2.4"/>
+  <circle cx="116" cy="106" r="11" fill="none" stroke="#c9a45c" stroke-width="2.4"/>
+  <path d="M95 105 h10 M73 104 l-10 -2 M127 104 l10 -2" stroke="#c9a45c" stroke-width="2.4"/>
+  <!-- Lông mày, mắt cười hiền -->
+  <path d="M74 92 q10 -4 19 -1 M107 91 q10 -3 19 1" stroke="#4a4642" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M79 107 q5 -4 10 0 M111 107 q5 -4 10 0" stroke="#1d1d1f" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+  <!-- Mũi, nụ cười lịch sự -->
+  <path d="M100 112 q-4 11 0 13 q4 1 5 -1" stroke="#b78a68" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  <path d="M86 132 q14 9 28 0" stroke="#7a3a33" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M82 130 l3 2 M118 130 l-3 2" stroke="#b78a68" stroke-width="1.6" stroke-linecap="round"/>
+</svg>

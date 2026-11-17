@@ -22,8 +22,9 @@ export function defaultProgress() {
     notes: '',           // nội dung sổ tay
     interrogation: {},   // { [suspectId]: { log: [ {k:'ask',t} | {k:'present',t,c,ok,f?,dup?} ] } }
     board: { cards: [], links: [], zoom: null }, // bảng suy luận (zoom null = tự chọn theo màn hình)
+    grid: null,          // lưới loại trừ { columns: [{id,label}], cells: { "nghiPhạm|cột": "yes"|"no"|"maybe" } }; null = chưa dùng
     hintsUsed: { culprit: 0, motive: 0, method: 0 },
-    submission: null,    // { culprit, motive, method, submittedAt }
+    submission: null,    // { <phần>: lựa chọn, ..., submittedAt } — các phần theo partsOf(caseData)
     result: null,        // { score, max, parts }
     updatedAt: null,
   };

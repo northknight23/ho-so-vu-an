@@ -1,0 +1,14 @@
+[
+  {
+    "id": "case-01",
+    "caseNumber": "Hồ sơ 01",
+    "title": "Ấm Trà Cuối Cùng",
+    "difficulty": "Dễ"
+  },
+  {
+    "id": "case-02",
+    "caseNumber": "Hồ sơ 02",
+    "title": "Két Sắt Không Bị Phá",
+    "difficulty": "Khó"
+  }
+]

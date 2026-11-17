@@ -16,8 +16,17 @@
  */
 import { sha256Hex, sha256Bytes } from './sha256.js';
 
-/** Ba phần của bài nộp, theo đúng thứ tự hiển thị. */
+/** Các phần mặc định của bài nộp (vụ án không khai báo "parts" sẽ dùng bộ này). */
 export const PARTS = ['culprit', 'motive', 'method'];
+
+/**
+ * Danh sách phần câu hỏi của một vụ án, theo đúng thứ tự hiển thị.
+ * Vụ án có thể tự khai báo "parts": ["mastermind", "target", ...]; mỗi id phải có
+ * mục tương ứng trong "questions" và "scoring".
+ */
+export function partsOf(caseData) {
+  return Array.isArray(caseData?.parts) && caseData.parts.length ? caseData.parts : PARTS;
+}
 
 /** Băm một lựa chọn cho một phần câu hỏi. */
 export function hashChoice(salt, part, optionId) {
@@ -32,8 +41,8 @@ export function hintPenalty(costs, used) {
 /**
  * Chấm bài.
  * @param {object} caseData  dữ liệu vụ án (cần .answer, .scoring, .hintCosts)
- * @param {{culprit:string, motive:string, method:string}} submission
- * @param {{culprit:number, motive:number, method:number}} hintsUsed  số gợi ý đã mở mỗi phần
+ * @param {Object<string,string>} submission  lựa chọn của người chơi theo từng phần
+ * @param {Object<string,number>} hintsUsed   số gợi ý đã mở mỗi phần
  * @returns {{score, max, parts: Object<string,{correct, points, max, penalty}>}}
  *
  * Điểm trừ do gợi ý chỉ áp lên phần tương ứng và không làm điểm phần đó xuống dưới 0.
@@ -43,7 +52,7 @@ export function gradeSubmission(caseData, submission, hintsUsed = {}) {
   const parts = {};
   let score = 0;
   let max = 0;
-  for (const part of PARTS) {
+  for (const part of partsOf(caseData)) {
     const partMax = scoring[part] ?? 0;
     const correct = hashChoice(answer.salt, part, submission[part]) === answer[part];
     const penalty = hintPenalty(caseData.hintCosts, hintsUsed[part]);

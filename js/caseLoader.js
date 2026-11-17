@@ -4,6 +4,7 @@
  * validateCase() được dùng chung cho trình duyệt và tools/check-case.mjs,
  * nên chỉ dùng JS thuần, không đụng tới DOM hay fetch.
  */
+import { partsOf } from './answer.js';
 
 /** Các kiểu tài liệu mà js/documents.js biết cách hiển thị. */
 export const DOC_TYPES = ['text', 'chat', 'receipt', 'letter', 'newspaper', 'notice', 'table'];
@@ -19,6 +20,21 @@ export async function loadCase(caseId) {
   const errors = validateCase(data);
   if (errors.length) throw new Error('Dữ liệu vụ án có lỗi:\n- ' + errors.join('\n- '));
   return data;
+}
+
+/**
+ * Danh sách vụ án hiển thị trên trang bìa (cases/index.json).
+ * Thiếu file hoặc lỗi thì trả về mảng rỗng — game vẫn chạy với vụ án hiện tại.
+ */
+export async function loadLibrary() {
+  try {
+    const res = await fetch('cases/index.json', { cache: 'no-cache' });
+    if (!res.ok) return [];
+    const list = await res.json();
+    return Array.isArray(list) ? list.filter((x) => x && SAFE_ID.test(x.id || '')) : [];
+  } catch {
+    return [];
+  }
 }
 
 /**
@@ -83,19 +99,22 @@ export function validateCase(c) {
   // Gợi ý: mỗi phần phải có đúng số cấp bằng số mức trừ điểm
   if (c.hintCosts) {
     need(Array.isArray(c.hintCosts) && c.hintCosts.every((x) => typeof x === 'number'), '"hintCosts" phải là mảng số');
-    for (const part of ['culprit', 'motive', 'method']) {
+    for (const part of partsOf(c)) {
       need(Array.isArray(c.hints?.[part]) && c.hints[part].length === c.hintCosts.length,
         `"hints.${part}" phải có ${c.hintCosts?.length} cấp — hãy chạy tools/encode-case.mjs`);
     }
   }
 
   // Câu hỏi & đáp án
+  // Mỗi phần: hoặc chọn từ danh sách nghi phạm, hoặc có ít nhất 2 lựa chọn riêng
   const q = c.questions || {};
-  need(q.culprit, 'Thiếu "questions.culprit"');
-  for (const part of ['motive', 'method']) {
-    need(Array.isArray(q[part]?.options) && q[part].options.length > 1, `"questions.${part}.options" cần ít nhất 2 lựa chọn`);
+  need(c.parts === undefined || (Array.isArray(c.parts) && c.parts.length > 0), '"parts" phải là mảng id câu hỏi');
+  for (const part of partsOf(c)) {
+    need(q[part]?.prompt, `Thiếu "questions.${part}.prompt"`);
+    need(q[part]?.optionsFrom === 'suspects' || (Array.isArray(q[part]?.options) && q[part].options.length > 1),
+      `"questions.${part}" cần optionsFrom: "suspects" hoặc ít nhất 2 "options"`);
+    need(typeof c.scoring?.[part] === 'number', `Thiếu điểm "scoring.${part}"`);
   }
-  need(c.scoring, 'Thiếu "scoring"');
   need(c.answer && c.answer.salt, 'Thiếu "answer" — hãy chạy: node tools/encode-case.mjs ' + (c.id || '<id>'));
   need(c.solution && c.solution.payload, 'Thiếu "solution" — hãy chạy tools/encode-case.mjs');
 

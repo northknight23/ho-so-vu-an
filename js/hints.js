@@ -1,5 +1,5 @@
 /**
- * Hệ thống gợi ý 3 cấp cho từng phần đáp án (hung thủ / động cơ / cách gây án).
+ * Hệ thống gợi ý 3 cấp cho từng phần đáp án (mỗi câu hỏi trong phần nộp kết luận).
  *
  * - Cấp 1 mơ hồ → cấp 2 rõ hơn → cấp 3 gần như chỉ thẳng; phải mở lần lượt.
  * - Mỗi cấp trừ điểm theo caseData.hintCosts (cộng dồn), chỉ trừ vào phần tương ứng
@@ -8,7 +8,7 @@
  */
 import { el, para, rich } from './dom.js';
 import { openModal, confirmDialog } from './modal.js';
-import { PARTS, decodeHint, hintPenalty } from './answer.js';
+import { partsOf, decodeHint, hintPenalty } from './answer.js';
 
 const LEVEL_NAMES = ['Mơ hồ', 'Rõ hơn', 'Gần như chỉ thẳng'];
 
@@ -74,7 +74,7 @@ export function openHints(app, actions) {
         ? 'Bạn đã nộp kết luận. Đây là những gợi ý bạn đã mở trong lượt chơi này.'
         : `Mỗi phần có 3 cấp gợi ý, mở lần lượt. Cấp càng cao càng rõ và trừ càng nhiều điểm (${costs.map((x) => `−${x}`).join(' / ')}), chỉ trừ vào phần tương ứng.`,
       { class: 'hint__intro' }),
-      PARTS.map(section),
+      partsOf(c).map(section),
     ],
     foot: el('button', { type: 'button', class: 'btn btn--paper', 'data-close': true }, 'Đóng'),
   });

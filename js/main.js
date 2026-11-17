@@ -9,8 +9,9 @@
  *   #/result              điểm + lời giải (chỉ vào được sau khi đã nộp)
  *
  * Chọn vụ án qua query string: index.html?case=case-02 (mặc định case-01).
+ * Trang bìa liệt kê các vụ trong cases/index.json để người chơi chuyển qua lại.
  */
-import { loadCase } from './caseLoader.js';
+import { loadCase, loadLibrary } from './caseLoader.js';
 import { loadProgress, saveProgress, clearProgress, defaultProgress } from './storage.js';
 import { gradeSubmission, decodeSolution, rankFor, contradictionHash } from './answer.js';
 import { initModal, closeModal, confirmDialog } from './modal.js';
@@ -29,7 +30,22 @@ const app = {
   solution: null,       // lời giải đã giải mã (chỉ có sau khi nộp bài)
   revealedClues: [],    // manh mối bị khóa, lộ ra sau khi nộp bài
   rank: null,
+  library: [],          // danh sách vụ án cho trang bìa (cases/index.json)
 };
+
+const DEFAULT_GRID_COLUMNS = ['Động cơ', 'Cơ hội', 'Ngoại phạm'];
+const MAX_GRID_COLUMNS = 6;
+const GRID_CYCLE = { '': 'yes', yes: 'no', no: 'maybe', maybe: '' };
+
+/** Lưới loại trừ của vụ hiện tại (tạo mặc định khi dùng lần đầu). */
+function ensureGrid() {
+  const p = app.progress;
+  if (!p.grid || !Array.isArray(p.grid.columns)) {
+    p.grid = { columns: DEFAULT_GRID_COLUMNS.map((label, i) => ({ id: `g${i + 1}`, label })), cells: {} };
+  }
+  p.grid.cells ||= {};
+  return p.grid;
+}
 
 const persist = () => saveProgress(app.caseData.id, app.progress);
 const addUnique = (arr, id) => { if (!arr.includes(id)) arr.push(id); };
@@ -106,6 +122,46 @@ const actions = {
     }
     persist();
     computeUnlocks(app);
+    actions.rerender();
+  },
+
+  // ----- Lưới loại trừ (tab Sổ tay) -----
+  gridCycle(sid, colId) {
+    const g = ensureGrid();
+    const key = `${sid}|${colId}`;
+    const next = GRID_CYCLE[g.cells[key] || ''];
+    if (next) g.cells[key] = next;
+    else delete g.cells[key];
+    persist();
+    actions.rerender();
+  },
+
+  gridRenameColumn(colId, label) {
+    const col = ensureGrid().columns.find((c) => c.id === colId);
+    if (!col) return;
+    col.label = label.trim().slice(0, 40);
+    persist();
+  },
+
+  gridAddColumn() {
+    const g = ensureGrid();
+    if (g.columns.length >= MAX_GRID_COLUMNS) return;
+    g.columns.push({ id: newId('g'), label: '' });
+    persist();
+    actions.rerender();
+  },
+
+  gridRemoveColumn(colId) {
+    const g = ensureGrid();
+    g.columns = g.columns.filter((c) => c.id !== colId);
+    for (const key of Object.keys(g.cells)) if (key.endsWith(`|${colId}`)) delete g.cells[key];
+    persist();
+    actions.rerender();
+  },
+
+  gridClear() {
+    ensureGrid().cells = {};
+    persist();
     actions.rerender();
   },
 
@@ -189,6 +245,7 @@ const actions = {
     clearProgress(app.caseData.id);
     app.progress = defaultProgress();
     app.solution = null;
+    app.rank = null;
     app.revealedClues = [];
     computeUnlocks(app);
     actions.go('#/');
@@ -252,13 +309,19 @@ async function init() {
   initModal();
   const caseId = new URLSearchParams(location.search).get('case') || DEFAULT_CASE;
   try {
-    app.caseData = await loadCase(caseId);
+    [app.caseData, app.library] = await Promise.all([loadCase(caseId), loadLibrary()]);
   } catch (err) {
     ui.renderError(err.message);
     return;
   }
   numberBaseClues(app.caseData);
   app.progress = loadProgress(app.caseData.id);
+  // Trạng thái từng vụ để hiện trên kệ hồ sơ ở trang bìa
+  for (const item of app.library) {
+    const saved = item.id === app.caseData.id ? app.progress : loadProgress(item.id);
+    item.status = saved.result ? `Đã nộp · ${saved.result.score}/${saved.result.max}`
+      : saved.started ? 'Đang điều tra' : 'Chưa mở';
+  }
   computeUnlocks(app);
   if (app.progress.submission) {
     try { loadSolution(); } catch { /* lỗi sẽ hiện khi vào màn kết quả */ }

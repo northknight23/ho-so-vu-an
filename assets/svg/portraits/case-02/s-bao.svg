@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" role="img" aria-label="Chân dung Lâm Gia Bảo">
+  <rect width="200" height="240" fill="#2d2433"/>
+  <circle cx="100" cy="98" r="80" fill="#3a2f42"/>
+  <!-- Áo khoác da, sơ mi xanh nhạt mở cổ -->
+  <path d="M14 240 C18 186 56 166 100 166 C144 166 182 186 186 240Z" fill="#2a2420"/>
+  <path d="M74 168 L100 236 L126 168 C114 163 86 163 74 168Z" fill="#9db7cf"/>
+  <path d="M84 168 L100 196 L116 168" fill="#c99c76"/>
+  <path d="M74 168 L90 204 L80 214 L66 176Z M126 168 L110 204 L120 214 L134 176Z" fill="#8aa6c0"/>
+  <path d="M64 176 L84 240 M136 176 L116 240" stroke="#1b1714" stroke-width="3"/>
+  <!-- Cổ -->
+  <path d="M84 138 h32 v30 c-9 7 -23 7 -32 0z" fill="#c99c76"/>
+  <!-- Tai + mặt gầy -->
+  <ellipse cx="62" cy="108" rx="6.5" ry="11" fill="#c99c76"/>
+  <ellipse cx="138" cy="108" rx="6.5" ry="11" fill="#c99c76"/>
+  <ellipse cx="100" cy="104" rx="38" ry="47" fill="#ddb08a"/>
+  <path d="M66 122 C70 146 86 152 100 152 C114 152 130 146 134 122 C126 142 114 146 100 146 C86 146 74 142 66 122Z" fill="#000" opacity=".1"/>
+  <!-- Tóc rối -->
+  <path d="M60 106 C52 62 78 44 102 46 C128 46 150 62 140 106 C138 90 132 80 122 76 C126 84 118 84 112 76 C104 84 92 84 88 74 C82 82 72 82 70 76 C64 84 61 94 60 106Z" fill="#191513"/>
+  <path d="M96 48 l-8 -6 M108 47 l6 -7" stroke="#191513" stroke-width="4" stroke-linecap="round"/>
+  <!-- Lông mày nhíu, quầng mắt thâm -->
+  <path d="M74 96 q9 -2 18 2 M108 98 q9 -4 18 -2" stroke="#191513" stroke-width="3.6" fill="none" stroke-linecap="round"/>
+  <ellipse cx="84" cy="107" rx="3.2" ry="3.4" fill="#1d1d1f"/>
+  <ellipse cx="116" cy="107" rx="3.2" ry="3.4" fill="#1d1d1f"/>
+  <path d="M77 114 q7 4 14 0 M109 114 q7 4 14 0" stroke="#7b5a6b" stroke-width="2.4" fill="none" stroke-linecap="round" opacity=".8"/>
+  <!-- Mũi, miệng trễ, râu lún phún -->
+  <path d="M100 110 q-5 12 0 15 q4 1 6 -1" stroke="#b0835f" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+  <path d="M89 135 q11 -3 22 1" stroke="#74392f" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M78 132 C82 148 118 148 122 132 C116 144 84 144 78 132Z" fill="#191513" opacity=".18"/>
+</svg>

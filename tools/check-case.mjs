@@ -12,7 +12,7 @@ import { readFile, access } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import { validateCase } from '../js/caseLoader.js';
-import { PARTS, hashChoice, decodeSolution, contradictionHash, decodeContradiction, decodeHint } from '../js/answer.js';
+import { partsOf, hashChoice, decodeSolution, contradictionHash, decodeContradiction, decodeHint } from '../js/answer.js';
 import { validateSecret, contradictionPayload, solutionPayload } from './case-secrets.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -47,7 +47,7 @@ if (secret && caseData.answer?.salt) {
   const { salt } = caseData.answer;
   errors.push(...validateSecret(caseData, secret));
 
-  for (const part of PARTS) {
+  for (const part of partsOf(caseData)) {
     if (hashChoice(salt, part, secret.answers[part]) !== caseData.answer[part]) errors.push(`Hash đáp án "${part}" không khớp${STALE}`);
   }
   try {
@@ -68,7 +68,7 @@ if (secret && caseData.answer?.salt) {
   const published = Object.values(caseData.interrogations || {}).reduce((s, x) => s + (x.contradictions?.length || 0), 0);
   if (published !== total) errors.push(`Số mâu thuẫn trong vụ án (${published}) khác file bí mật (${total})${STALE}`);
 
-  for (const part of PARTS) {
+  for (const part of partsOf(caseData)) {
     (secret.hints?.[part] || []).forEach((text, level) => {
       try {
         if (decodeHint(id, salt, part, level, caseData.hints[part][level]) !== text) errors.push(`Gợi ý ${part}/${level + 1} khác file bí mật${STALE}`);

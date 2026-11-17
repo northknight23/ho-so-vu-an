@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" role="img" aria-label="Chân dung bà Trịnh Mỹ Kim">
+  <rect width="200" height="240" fill="#3a2430"/>
+  <circle cx="100" cy="98" r="80" fill="#4a2e3d"/>
+  <!-- Tóc dài uốn phía sau -->
+  <path d="M52 110 C44 60 74 40 100 40 C128 40 156 60 148 110 C156 140 160 170 150 196 C140 206 128 200 126 188 L122 130 L78 130 L74 188 C72 200 60 206 50 196 C40 170 44 140 52 110Z" fill="#2a1712"/>
+  <path d="M50 150 c8 10 4 22 -2 30 M150 150 c-8 10 -4 22 2 30" stroke="#4a2a20" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Đầm đỏ rượu -->
+  <path d="M20 240 C24 192 60 172 100 172 C140 172 176 192 180 240Z" fill="#6e1f33"/>
+  <path d="M70 176 C84 186 116 186 130 176" stroke="#8d2b45" stroke-width="3" fill="none"/>
+  <!-- Cổ -->
+  <path d="M87 140 h26 v32 c-8 6 -18 6 -26 0z" fill="#e0b494"/>
+  <!-- Vòng cổ ngọc trai -->
+  <path d="M84 168 C90 180 110 180 116 168" stroke="#efe9dc" stroke-width="4" stroke-dasharray="1 5" stroke-linecap="round" fill="none"/>
+  <!-- Mặt thon -->
+  <ellipse cx="100" cy="104" rx="35" ry="45" fill="#ecc3a3"/>
+  <path d="M68 120 C72 142 86 148 100 148 C114 148 128 142 132 120 C124 138 112 142 100 142 C88 142 76 138 68 120Z" fill="#000" opacity=".06"/>
+  <!-- Bông tai ngọc trai -->
+  <circle cx="64" cy="122" r="4.5" fill="#f4efe4"/>
+  <circle cx="136" cy="122" r="4.5" fill="#f4efe4"/>
+  <!-- Mái tóc rẽ ngôi lệch -->
+  <path d="M64 104 C62 70 82 52 104 54 C126 54 142 70 138 104 C132 86 120 74 106 70 C96 82 80 94 64 104Z" fill="#2a1712"/>
+  <!-- Lông mày cong, mắt kẻ -->
+  <path d="M76 95 q9 -5 17 -1 M108 94 q9 -4 17 1" stroke="#2a1712" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+  <path d="M78 106 q7 -5 14 0 M108 106 q7 -5 14 0" stroke="#1d1d1f" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+  <ellipse cx="85" cy="107" rx="2.8" ry="3" fill="#1d1d1f"/>
+  <ellipse cx="115" cy="107" rx="2.8" ry="3" fill="#1d1d1f"/>
+  <!-- Mũi, môi đỏ -->
+  <path d="M100 111 q-3 9 0 11 q3 1 4 -1" stroke="#c19274" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M90 131 q10 -3 20 0 q-10 7 -20 0z" fill="#a32a3d"/>
+</svg>

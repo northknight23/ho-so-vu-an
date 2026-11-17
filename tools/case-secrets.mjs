@@ -3,13 +3,13 @@
  * kiểm tra file bí mật và dựng các payload (trước khi mã hóa).
  *
  * File bí mật authoring/<id>.secret.json gồm:
- *   answers         { culprit, motive, method }
+ *   answers         { <phần>: id lựa chọn đúng } — các phần theo partsOf(caseData)
  *   contradictions  [{ suspect, topic, clue, group?, response[], unlocks: { topics[], clues["@id"], statement[] } }]
  *   lockedClues     [manh mối đầy đủ + trường "no"] — chỉ lộ ra khi được mở khóa
- *   hints           { culprit: [cấp1, cấp2, cấp3], motive: [...], method: [...] }
+ *   hints           { <phần>: [cấp1, cấp2, cấp3], ... }
  *   solution        { headline, overview, parts, chain, redHerrings, closing }
  */
-import { PARTS } from '../js/answer.js';
+import { partsOf } from '../js/answer.js';
 import { optionsFor } from '../js/caseLoader.js';
 
 /** Trả về danh sách lỗi (rỗng = hợp lệ). */
@@ -18,7 +18,7 @@ export function validateSecret(caseData, secret) {
   const need = (cond, msg) => { if (!cond) problems.push(msg); };
 
   // Đáp án trỏ tới lựa chọn có thật
-  for (const part of PARTS) {
+  for (const part of partsOf(caseData)) {
     const id = secret.answers?.[part];
     const ids = optionsFor(caseData, part).map((o) => o.id);
     need(ids.includes(id), `answers.${part} = "${id}" không có trong lựa chọn: ${ids.join(', ')}`);
@@ -72,7 +72,7 @@ export function validateSecret(caseData, secret) {
   // Gợi ý
   const costs = caseData.hintCosts || [];
   if (costs.length) {
-    for (const part of PARTS) {
+    for (const part of partsOf(caseData)) {
       need(Array.isArray(secret.hints?.[part]) && secret.hints[part].length === costs.length,
         `hints.${part} phải có đúng ${costs.length} cấp (bằng số phần tử hintCosts)`);
     }

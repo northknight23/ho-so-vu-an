@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Sơ đồ tầng trệt biệt thự số 9 khu Bãi Bụt">
+  <defs>
+    <pattern id="grass" width="14" height="14" patternUnits="userSpaceOnUse">
+      <rect width="14" height="14" fill="#cdd3b0"/>
+      <path d="M3 11 l2 -5 M9 12 l1 -4" stroke="#a9b386" stroke-width="1.5" stroke-linecap="round"/>
+    </pattern>
+    <pattern id="tile" width="20" height="20" patternUnits="userSpaceOnUse">
+      <rect width="20" height="20" fill="#e3dac4"/>
+      <path d="M20 0H0V20" fill="none" stroke="#d3c8ad" stroke-width="1"/>
+    </pattern>
+    <pattern id="wood" width="40" height="12" patternUnits="userSpaceOnUse">
+      <rect width="40" height="12" fill="#e8dcc0"/>
+      <path d="M0 12H40M20 0V12" stroke="#d8c9a6" stroke-width="1"/>
+    </pattern>
+    <pattern id="sea" width="24" height="10" patternUnits="userSpaceOnUse">
+      <rect width="24" height="10" fill="#9fb6bd"/>
+      <path d="M0 6 q6 -4 12 0 t12 0" stroke="#86a0a8" stroke-width="1.5" fill="none"/>
+    </pattern>
+    <style>
+      .wall { stroke: #1b2330; stroke-width: 8; fill: none; stroke-linecap: square; }
+      .thin { stroke: #1b2330; stroke-width: 2; fill: none; }
+      .furn { fill: #c9bb97; stroke: #6b604f; stroke-width: 2; }
+      .label { font-family: "Be Vietnam Pro", "Segoe UI", Arial, sans-serif; font-size: 15px; font-weight: 700; fill: #2a2520; letter-spacing: .06em; }
+      .small { font-family: "Be Vietnam Pro", "Segoe UI", Arial, sans-serif; font-size: 11px; fill: #6b604f; }
+    </style>
+  </defs>
+
+  <!-- Nền -->
+  <rect width="800" height="600" fill="#ece3cc"/>
+
+  <!-- Biển + bờ kè + vườn sau -->
+  <rect x="0" y="0" width="800" height="14" fill="url(#sea)"/>
+  <rect x="0" y="14" width="800" height="6" fill="#8d8371"/>
+  <rect x="0" y="20" width="800" height="40" fill="url(#grass)"/>
+  <text x="560" y="45" text-anchor="middle" class="small">VƯỜN SAU · BỜ KÈ RA BIỂN (không có cổng)</text>
+  <!-- Lối mòn từ cửa kính sau ra bờ kè -->
+  <path d="M160 58 C150 44 130 34 104 22" stroke="#a89a78" stroke-width="5" fill="none" stroke-dasharray="6 6" stroke-linecap="round"/>
+  <!-- 2 camera vườn -->
+  <circle cx="44" cy="62" r="5" fill="#7a1f2b"/>
+  <circle cx="756" cy="62" r="5" fill="#7a1f2b"/>
+
+  <!-- Sàn các phòng -->
+  <rect x="40" y="60" width="280" height="240" fill="url(#wood)"/>
+  <rect x="320" y="60" width="80" height="460" fill="url(#tile)"/>
+  <rect x="400" y="60" width="360" height="300" fill="#f1e9d6"/>
+  <rect x="480" y="360" width="280" height="160" fill="url(#tile)"/>
+  <rect x="40" y="300" width="280" height="220" fill="#f1e9d6"/>
+  <rect x="400" y="360" width="80" height="160" fill="#e6dcc3"/>
+
+  <!-- ===== Phòng làm việc ===== -->
+  <rect x="48" y="96" width="22" height="150" class="furn"/>
+  <path d="M52 110 h14 M52 130 h14 M52 210 h14 M52 230 h14" stroke="#6b604f" stroke-width="2"/>
+  <rect x="72" y="114" width="34" height="38" fill="#5d6f84" stroke="#1b2330" stroke-width="2"/>
+  <rect x="78" y="120" width="12" height="8" fill="#e9dfc8"/>
+  <circle cx="98" cy="133" r="4" fill="none" stroke="#c9a45c" stroke-width="2"/>
+  <rect x="150" y="112" width="96" height="42" class="furn"/>
+  <circle cx="232" cy="122" r="6" fill="#f2d27c" stroke="#6b604f"/>
+  <circle cx="198" cy="172" r="13" class="furn"/>
+  <!-- Thi thể (đường viền phấn) -->
+  <path d="M222 196 c10 -6 22 -4 30 2 l22 6 c6 2 6 8 0 10 l-18 2 l10 18 c2 6 -4 8 -8 4 l-14 -16 l-20 6 c-6 1 -8 -5 -3 -8 l12 -8 c-8 -4 -14 -10 -11 -16z" fill="none" stroke="#f4f2ec" stroke-width="2.5" stroke-dasharray="4 3"/>
+  <text x="180" y="280" text-anchor="middle" class="label">P. LÀM VIỆC</text>
+
+  <!-- ===== Hành lang + cầu thang ===== -->
+  <g stroke="#6b604f" stroke-width="2">
+    <path d="M332 80 h56 M332 96 h56 M332 112 h56 M332 128 h56 M332 144 h56 M332 160 h56 M332 176 h56 M332 192 h56"/>
+  </g>
+  <path d="M360 200 V84 l-6 8 M360 84 l6 8" stroke="#1b2330" stroke-width="2" fill="none"/>
+  <text x="360" y="222" text-anchor="middle" class="small">Cầu thang</text>
+  <text x="360" y="236" text-anchor="middle" class="small">lên tầng 2</text>
+  <text x="360" y="236" text-anchor="middle" class="small" dy="14">(phòng ngủ)</text>
+  <text x="360" y="330" text-anchor="middle" class="small" transform="rotate(-90 360 330)">HÀNH LANG</text>
+
+  <!-- ===== Phòng khách ===== -->
+  <rect x="540" y="230" width="170" height="40" rx="8" class="furn"/>
+  <rect x="720" y="160" width="32" height="110" rx="8" class="furn"/>
+  <rect x="580" y="170" width="90" height="44" rx="4" fill="#d8ccab" stroke="#6b604f" stroke-width="2"/>
+  <!-- Kệ cạnh sofa + iPad -->
+  <rect x="490" y="160" width="40" height="40" class="furn"/>
+  <rect x="500" y="168" width="20" height="26" rx="2" fill="#1e2a3d" stroke="#e9dfc8" stroke-width="1.5"/>
+  <text x="580" y="330" text-anchor="middle" class="label">PHÒNG KHÁCH</text>
+
+  <!-- ===== Phòng ăn ===== -->
+  <rect x="110" y="370" width="140" height="70" rx="6" class="furn"/>
+  <text x="180" y="490" text-anchor="middle" class="label">PHÒNG ĂN</text>
+
+  <!-- ===== Tủ kỹ thuật ===== -->
+  <rect x="410" y="400" width="26" height="40" fill="#5d6f84" stroke="#1b2330" stroke-width="2"/>
+  <rect x="440" y="400" width="26" height="40" fill="#8aa0b8" stroke="#1b2330" stroke-width="2"/>
+  <text x="440" y="470" text-anchor="middle" class="small">Đầu ghi · UPS</text>
+  <text x="440" y="484" text-anchor="middle" class="small">Tủ kỹ thuật</text>
+
+  <!-- ===== Bếp ===== -->
+  <rect x="680" y="370" width="72" height="140" class="furn"/>
+  <rect x="540" y="420" width="90" height="40" class="furn"/>
+  <text x="600" y="500" text-anchor="middle" class="label">BẾP</text>
+
+  <!-- ===== Tường ===== -->
+  <path class="wall" d="M40 60 H140 M180 60 H760 V520 H460 M420 520 H40 V60"/>
+  <path class="wall" d="M320 60 V100 M320 140 V300 H40"/>
+  <path class="wall" d="M400 60 V140 M400 180 V520"/>
+  <path class="wall" d="M480 360 H560 M620 360 H760 M480 360 V400 M480 440 V520"/>
+  <path class="wall" d="M320 340 V520"/>
+  <!-- Cửa kính sau (bị cắt) -->
+  <path d="M140 60 H180" stroke="#9fc3cf" stroke-width="6"/>
+  <circle cx="172" cy="60" r="5" fill="none" stroke="#7a1f2b" stroke-width="2.5"/>
+  <text x="160" y="80" text-anchor="middle" class="small">cửa kính</text>
+  <!-- Cửa ra vào -->
+  <path d="M420 520 a40 40 0 0 1 40 -40" class="thin"/>
+
+  <!-- ===== Sân trước + cổng ===== -->
+  <rect x="0" y="520" width="800" height="80" fill="#d9cfb6"/>
+  <path d="M0 594 H340 M460 594 H800" stroke="#1b2330" stroke-width="6"/>
+  <rect x="470" y="548" width="44" height="36" fill="#c9bb97" stroke="#1b2330" stroke-width="2"/>
+  <text x="492" y="571" text-anchor="middle" class="small">Bảo vệ</text>
+  <text x="250" y="562" text-anchor="middle" class="label">SÂN TRƯỚC · CỔNG</text>
+  <text x="640" y="565" text-anchor="middle" class="small">Đường ven biển Bãi Bụt</text>
+</svg>

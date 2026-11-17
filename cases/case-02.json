@@ -1,0 +1,2280 @@
+{
+  "id": "case-02",
+  "schemaVersion": 1,
+  "caseNumber": "HỒ SƠ SỐ 02",
+  "stamp": "HỒ SƠ LẠNH",
+  "difficulty": "Khó",
+  "title": "Két Sắt Không Bị Phá",
+  "tagline": "Biệt thự Bãi Bụt, bán đảo Sơn Trà — 19 tháng sau",
+  "location": "ĐÀ NẴNG · 14/3/2025 → 10/2026",
+  "summary": "Chủ tịch Tập đoàn Lâm Gia bị giết trong phòng làm việc, két sắt mở mà không có một vết cạy. Năm 2025 vụ án khép lại với kết luận \"trộm đột nhập\". Mười chín tháng sau, một chiếc đồng hồ bị bán lậu ở Móng Cái kéo kẻ ra tay về lại hồ sơ — nhưng hắn chưa bao giờ nhìn thấy mặt người đã thuê mình.",
+  "briefing": [
+    "Sáng thứ Bảy **15/3/2025**, chị Nguyễn Thị Thảo, giúp việc, phát hiện ông **Lâm Chấn Hưng** — Chủ tịch HĐQT Tập đoàn Lâm Gia — tử vong trong phòng làm việc tầng trệt biệt thự ở khu Bãi Bụt, Sơn Trà. Cửa kính sau bị cắt, két sắt mở, mất 1,8 tỷ đồng tiền mặt và ba chiếc đồng hồ. Camera ngừng ghi từ 22:40 đến 01:00. Tháng 9/2025, cơ quan điều tra tạm đình chỉ vụ án: **trộm đột nhập, chưa xác định được đối tượng**.",
+    "Tháng 9/2026, công an Móng Cái triệt phá một đường dây tiêu thụ đồng hồ xa xỉ. Một chiếc Patek Philippe bị thu giữ trùng số seri với tài sản mất trong vụ Sơn Trà. Người bán — **Hồ Văn Tư (\"Tư Sẹo\")** — nhận đã đột nhập và gây ra cái chết của ông Hưng, nhưng khai rằng mình chỉ là người làm thuê cho một kẻ giấu mặt trên Telegram tự xưng **\"Anh Ba\"**.",
+    "Ngày 2/10/2026 vụ án được phục hồi điều tra. Bạn nhận toàn bộ hồ sơ cũ năm 2025 cùng các tài liệu mới thu thập. Bảy người thân cận với ông Hưng đều đã được lấy lời khai — và gần như ai cũng có lý do, hoặc có ngoại phạm.",
+    "Nhiệm vụ của bạn: xác định **\"Anh Ba\" là ai**, hắn thật sự muốn lấy gì trong két, vì sao, hắn đã gài ai làm vật thế thân, và hắn đã mở két, tắt camera bằng cách nào. Lần này không có một tờ giấy nào tự nó chỉ ra hung thủ. **Mỗi người vô tội chỉ bị loại bởi một chi tiết** — đọc sai một chỗ, bạn sẽ buộc tội nhầm người."
+  ],
+  "victim": {
+    "id": "victim",
+    "name": "Lâm Chấn Hưng",
+    "age": 63,
+    "occupation": "Chủ tịch HĐQT Tập đoàn Lâm Gia (khách sạn, resort)",
+    "portrait": "assets/svg/portraits/case-02/victim.svg",
+    "facts": [
+      "Tử vong khoảng **22:30 – 23:30 tối thứ Sáu 14/3/2025** tại phòng làm việc tầng trệt, biệt thự khu Bãi Bụt, Sơn Trà.",
+      "Vợ đầu mất năm 2016. Tái hôn với bà Trịnh Mỹ Kim năm 2019; hai người đang ly thân, bà Kim đã chuyển vào TP. Hồ Chí Minh.",
+      "Con trai duy nhất: **Lâm Gia Bảo** (35 tuổi), con của người vợ đầu.",
+      "Theo di chúc lập năm 2018, 12 triệu cổ phần Lâm Gia (LGG) được đưa vào **Quỹ Lâm Gia**, giữ hộ cho Bảo đến năm anh 40 tuổi.",
+      "Dự kiến bay sang Singapore tối 14/3 (chuyến 21:15), nhưng chuyến bay bị hủy lúc chiều.",
+      "Có thói quen uống thuốc ngủ lúc 22 giờ và ngủ ở tầng 2."
+    ]
+  },
+  "suspects": [
+    {
+      "id": "s-bao",
+      "name": "Lâm Gia Bảo",
+      "nickname": "Bảo",
+      "age": 35,
+      "occupation": "Phó Tổng giám đốc khối khách sạn, Tập đoàn Lâm Gia",
+      "relation": "Con trai duy nhất của nạn nhân",
+      "portrait": "assets/svg/portraits/case-02/s-bao.svg",
+      "details": [
+        {
+          "label": "Tài chính",
+          "value": "Nợ cờ bạc khoảng **4 tỷ đồng** (bóng đá qua mạng)"
+        },
+        {
+          "label": "Giấy tờ",
+          "value": "Đổi từ CMND 9 số sang CCCD gắn chip năm 2021"
+        },
+        {
+          "label": "Ghi nhận",
+          "value": "Cãi nhau lớn với bố tại biệt thự sáng 10/3/2025 — chị Thảo nghe thấy hai chữ \"di chúc\""
+        }
+      ],
+      "statement": [
+        "Tôi với bố cãi nhau hôm thứ Hai. Tôi nghe người ta đồn bố đang sửa di chúc, cắt phần của tôi vì chuyện nợ nần. Tôi nóng, nói mấy câu không ra gì. Đó là lần cuối tôi gặp bố.",
+        "Tối thứ Sáu tôi đi hát karaoke sinh nhật thằng bạn ở quán Nhật Hạ tới gần 1 giờ sáng. Tôi tưởng bố đã bay sang Singapore, còn nhắn chúc bố đi đường bình an.",
+        "Tôi nợ thật, tôi biết ai cũng nhìn tôi đầu tiên. Nhưng tôi không thuê ai làm gì bố tôi cả."
+      ],
+      "alibi": "Hát karaoke ở quán Nhật Hạ (Hải Châu) cùng khoảng 10 người bạn, từ khoảng 21:30 đến gần 1:00."
+    },
+    {
+      "id": "s-kim",
+      "name": "Trịnh Mỹ Kim",
+      "nickname": "bà Kim",
+      "age": 39,
+      "occupation": "Chủ chuỗi spa tại TP. Hồ Chí Minh",
+      "relation": "Vợ hai của nạn nhân (đang ly thân)",
+      "portrait": "assets/svg/portraits/case-02/s-kim.svg",
+      "details": [
+        {
+          "label": "Hôn nhân",
+          "value": "Có hợp đồng tiền hôn nhân; đang chuẩn bị thủ tục ly hôn"
+        },
+        {
+          "label": "Nơi ở",
+          "value": "Rời biệt thự chiều 13/3/2025, bay vào TP. Hồ Chí Minh"
+        },
+        {
+          "label": "Két sắt",
+          "value": "Biết mã két cũ (trước 12/3) vì từng sống chung"
+        }
+      ],
+      "statement": [
+        "Chúng tôi ly thân mấy tháng nay. Chiều 13/3 tôi về lấy nốt đồ rồi bay vào Sài Gòn, anh Dũng chở tôi ra sân bay.",
+        "Tối 14/3 tôi ở khách sạn trong Quận 1. Tôi có nhắn hỏi anh ấy tới Singapore chưa, tôi còn gửi hoa sang. Tôi vẫn mong hai người chia tay cho tử tế.",
+        "Hợp đồng tiền hôn nhân đã ghi rõ phần của tôi. Anh ấy sống hay chết, tôi cũng không được thêm đồng nào."
+      ],
+      "alibi": "Ở khách sạn Hoa Sen Sài Gòn (Quận 1) từ tối 13/3."
+    },
+    {
+      "id": "s-phong",
+      "name": "Lâm Chấn Phong",
+      "nickname": "ông Phong",
+      "age": 58,
+      "occupation": "Chủ tịch Công ty CP Đầu tư Phong Lâm; cổ đông 8% Lâm Gia",
+      "relation": "Em trai nạn nhân",
+      "portrait": "assets/svg/portraits/case-02/s-phong.svg",
+      "details": [
+        {
+          "label": "Văn phòng",
+          "value": "Văn phòng đại diện Phong Lâm, **phòng 6B**, tòa nhà 45 Bạch Đằng"
+        },
+        {
+          "label": "Mâu thuẫn",
+          "value": "Ông Hưng dùng quyền Chủ tịch chặn dự án resort Mỹ Khê mà Phong Lâm đã đặt cọc 60 tỷ"
+        },
+        {
+          "label": "Ghi nhận",
+          "value": "Có mặt ở biệt thự chiều 13/3; gọi cho ông Hưng lúc 18:30 ngày 14/3"
+        }
+      ],
+      "statement": [
+        "Anh tôi chặn dự án Mỹ Khê, tôi mất cọc 60 tỷ. Tôi giận, ai cũng biết. Chiều 13/3 tôi tới nói chuyện, anh ấy đang tiếp khách nên tôi ngồi phòng khách chờ một lúc.",
+        "Chiều 14/3 tôi gọi lại. Anh ấy bảo đang trên đường ra sân bay, tuần sau nói chuyện. Thế là hết. Tối đó tôi ở nhà với vợ.",
+        "Anh em ruột thịt, giận thì giận, không ai đi thuê người giết anh mình vì một dự án."
+      ],
+      "alibi": "Ở nhà riêng (quận Ngũ Hành Sơn) cùng vợ suốt tối 14/3."
+    },
+    {
+      "id": "s-vy",
+      "name": "Đoàn Thanh Vy",
+      "nickname": "chị Vy",
+      "age": 44,
+      "occupation": "Giám đốc Tài chính, Tập đoàn Lâm Gia",
+      "relation": "Cộng sự lâu năm của nạn nhân",
+      "portrait": "assets/svg/portraits/case-02/s-vy.svg",
+      "details": [
+        {
+          "label": "Văn phòng",
+          "value": "Ban Tài chính Lâm Gia, **phòng 6C**, tòa nhà 45 Bạch Đằng (tách khỏi trụ sở tầng 8–10)"
+        },
+        {
+          "label": "Quỹ Lâm Gia",
+          "value": "Không trực tiếp quản lý; chỉ nhận báo cáo năm từ bên quản lý quỹ"
+        },
+        {
+          "label": "Ghi nhận",
+          "value": "Nằm trong danh sách nhận email lịch làm việc của ông Hưng"
+        }
+      ],
+      "statement": [
+        "Lần cuối tôi gặp anh Hưng là buổi giao ban thứ Hai 10/3. Sau đó chỉ trao đổi qua email công việc.",
+        "Tối 14/3 tôi bay ra Hà Nội chuyến 21:05 để họp với ngân hàng sáng thứ Bảy. Tới nơi khoảng 22:25 thì về khách sạn ngủ.",
+        "Quỹ Lâm Gia do luật sư quản lý. Báo cáo hằng năm gửi về đều khớp sổ, tôi không thấy gì bất thường."
+      ],
+      "alibi": "Bay chuyến TU 136 Đà Nẵng – Hà Nội, \"khởi hành 21:05\", nghỉ tại khách sạn gần Nội Bài."
+    },
+    {
+      "id": "s-dung",
+      "name": "Phan Văn Dũng",
+      "nickname": "anh Dũng",
+      "age": 40,
+      "occupation": "Tài xế kiêm quản gia",
+      "relation": "Làm cho gia đình ông Hưng 9 năm",
+      "portrait": "assets/svg/portraits/case-02/s-dung.svg",
+      "details": [
+        {
+          "label": "Hệ thống camera",
+          "value": "Tài khoản quản lý **quanly_dung** (đăng nhập trên điện thoại riêng và iPad phòng khách)"
+        },
+        {
+          "label": "Két sắt",
+          "value": "Biết mã két cũ (thường được nhờ lấy giấy tờ)"
+        },
+        {
+          "label": "Lịch",
+          "value": "Nghỉ phép 14–16/3/2025 về Duy Xuyên (Quảng Nam) làm giỗ mẹ"
+        }
+      ],
+      "statement": [
+        "Chiều 13/3 tôi chở bà Kim ra sân bay. Chiều 14/3, 5 giờ tôi xin về quê làm giỗ mẹ. Ông chủ còn dặn tôi cứ nghỉ, ông đi Singapore tới Chủ nhật mới về.",
+        "Tài khoản camera mang tên tôi nhưng ông chủ cũng xem trên cái iPad ở phòng khách. Tôi chưa bao giờ tắt camera, càng không đặt lịch gì.",
+        "Mã két cũ thì tôi biết. Ông đổi mã hôm 12/3 thì không nói với tôi."
+      ],
+      "alibi": "Ở quê Duy Xuyên, Quảng Nam chuẩn bị đám giỗ từ tối 14/3."
+    },
+    {
+      "id": "s-thao",
+      "name": "Nguyễn Thị Thảo",
+      "nickname": "chị Thảo",
+      "age": 46,
+      "occupation": "Giúp việc (8:00 – 18:00 hằng ngày)",
+      "relation": "Làm cho gia đình ông Hưng 6 năm; người phát hiện thi thể",
+      "portrait": "assets/svg/portraits/case-02/s-thao.svg",
+      "details": [
+        {
+          "label": "Ghi nhận",
+          "value": "Ở lại biệt thự tới 19:05 ngày 14/3 để dọn hành lý cho ông Hưng"
+        },
+        {
+          "label": "Sau vụ án",
+          "value": "Nghỉ việc tháng 4/2025; chuyển **120 triệu đồng** về quê ở Quảng Ngãi"
+        },
+        {
+          "label": "Nơi ở",
+          "value": "Phòng trọ ở phường Mân Thái, sống một mình"
+        }
+      ],
+      "statement": [
+        "Tối thứ Sáu ông bảo chuyến bay bị hủy, tôi dỡ đồ trong vali ra. Tôi về lúc 7 giờ. Sáng thứ Bảy 6 giờ 40 tôi tới thì thấy ông nằm trong phòng làm việc.",
+        "Chiều 13/3 nhà nhiều khách lắm: chị Vy, luật sư Triết với cô trợ lý, rồi ông Phong. Ông chủ tiếp từng người trong phòng làm việc, ai chờ thì ngồi phòng khách. Tôi ở dưới bếp.",
+        "Tôi chưa bao giờ biết mã két. Ông mở két là tôi phải ra ngoài."
+      ],
+      "alibi": "Về phòng trọ ở Mân Thái lúc khoảng 19:30, ngủ một mình."
+    },
+    {
+      "id": "s-triet",
+      "name": "Hồ Minh Triết",
+      "nickname": "LS Triết",
+      "age": 52,
+      "occupation": "Luật sư, Trưởng Văn phòng Luật sư Minh Triết",
+      "relation": "Luật sư riêng của ông Hưng 12 năm; người quản lý Quỹ Lâm Gia",
+      "portrait": "assets/svg/portraits/case-02/s-triet.svg",
+      "details": [
+        {
+          "label": "Văn phòng",
+          "value": "VPLS Minh Triết, **phòng 6A**, tòa nhà 45 Bạch Đằng"
+        },
+        {
+          "label": "Gia đình",
+          "value": "Vợ: **Nguyễn Ngọc Hân** (kinh doanh); hai con đang du học"
+        },
+        {
+          "label": "Phương tiện",
+          "value": "Ô tô biển số **43A-286.17**"
+        },
+        {
+          "label": "Lịch hẹn",
+          "value": "Làm việc với ông Hưng tại biệt thự chiều 13/3 và sáng 15/3/2025"
+        }
+      ],
+      "statement": [
+        "Tôi làm luật sư cho anh Hưng mười hai năm. Năm 2018 anh ấy tin tưởng giao tôi quản lý Quỹ Lâm Gia cho tới khi cháu Bảo đủ bốn mươi tuổi.",
+        "Tối 14/3 tôi là diễn giả một hội thảo trực tuyến cho kiều bào ở Canada, từ 22 giờ 30 tới quá nửa đêm — báo cáo Zoom của ban tổ chức ghi rõ. Xong tôi đi ngủ. Sáng 15/3 tôi tới biệt thự đúng hẹn thì công an đã ở đó.",
+        "Tôi không muốn nói xấu ai. Nhưng nếu hỏi ai trong nhà đang cần tiền gấp, thì các anh cũng biết rồi đấy."
+      ],
+      "alibi": "Diễn giả hội thảo trực tuyến \"Thừa kế xuyên biên giới cho kiều bào\" từ 22:28 đến 00:07 (theo báo cáo Zoom)."
+    }
+  ],
+  "categories": [
+    {
+      "id": "report",
+      "label": "Biên bản & lời khai"
+    },
+    {
+      "id": "digital",
+      "label": "Dữ liệu & tin nhắn"
+    },
+    {
+      "id": "paper",
+      "label": "Giấy tờ"
+    },
+    {
+      "id": "money",
+      "label": "Tài chính"
+    }
+  ],
+  "clues": [
+    {
+      "id": "c01",
+      "title": "Biên bản khám nghiệm hiện trường (2025)",
+      "category": "report",
+      "icon": "assets/svg/icons/report.svg",
+      "foundAt": "Đội Cảnh sát hình sự Công an quận Sơn Trà lập tại biệt thự",
+      "summary": "Phòng làm việc tầng trệt: thi thể, két sắt, cửa kính sau, hung khí.",
+      "detail": {
+        "type": "text",
+        "org": "Công an quận Sơn Trà — Đội Cảnh sát hình sự",
+        "heading": "Biên bản khám nghiệm hiện trường",
+        "meta": [
+          {
+            "label": "Thời gian",
+            "value": "07:30 – 12:00, ngày 15/3/2025"
+          },
+          {
+            "label": "Địa điểm",
+            "value": "Biệt thự số 9, khu Bãi Bụt, phường Thọ Quang, quận Sơn Trà"
+          },
+          {
+            "label": "Người phát hiện",
+            "value": "Nguyễn Thị Thảo (giúp việc), lúc 06:40"
+          }
+        ],
+        "paragraphs": [
+          "**Phòng làm việc (tầng trệt):** nạn nhân nằm nghiêng cạnh bàn làm việc, mặc đồ ngủ, vết thương vùng thái dương trái. Cạnh thi thể: một **tượng ngựa bằng đồng** (cao 32 cm) dính máu, bề mặt đã bị lau, không còn vân tay; một **gậy golf** của nạn nhân rơi dưới gầm bàn.",
+          "**Két sắt điện tử** đặt âm tường sau kệ sách: cửa két mở, ổ khóa và bàn phím **nguyên vẹn, không có dấu hiệu cạy phá**. Trong két còn sổ tiết kiệm, giấy tờ nhà đất; không còn tiền mặt và hộp đồng hồ.",
+          "**Cửa kính sau** phòng làm việc (mở ra vườn): một lỗ tròn đường kính khoảng 15 cm bị cắt sát tay nắm, chốt trong đã được mở. Vết giày trên thảm cỏ dẫn ra lối mòn xuống bờ kè.",
+          "**Bàn làm việc:** đèn bàn còn bật. Một tập tài liệu đang mở có tiêu đề \"Quỹ Lâm Gia — báo cáo năm 2024\", nhiều chỗ được khoanh bút đỏ, bên lề ghi tay: _\"Sáng mai hỏi thẳng.\"_ Điện thoại của nạn nhân úp trên bàn.",
+          "**Tầng 2 — phòng ngủ:** giường chưa có người nằm. Trên tủ đầu giường có hộp thuốc ngủ, vỉ thuốc của ngày 14/3 **còn nguyên**.",
+          "**Phòng khách:** không xáo trộn. Trên kệ cạnh sofa có một iPad dùng để xem camera, đang cắm sạc."
+        ]
+      }
+    },
+    {
+      "id": "c02",
+      "title": "Kết luận giám định pháp y",
+      "category": "report",
+      "icon": "assets/svg/icons/autopsy.svg",
+      "foundAt": "Trung tâm Pháp y TP. Đà Nẵng",
+      "summary": "Nguyên nhân và thời điểm tử vong; dấu vết giằng co; thuốc ngủ.",
+      "detail": {
+        "type": "text",
+        "org": "Trung tâm Pháp y TP. Đà Nẵng",
+        "heading": "Kết luận giám định pháp y",
+        "meta": [
+          {
+            "label": "Đối tượng",
+            "value": "Lâm Chấn Hưng, 63 tuổi"
+          },
+          {
+            "label": "Ngày giám định",
+            "value": "15–16/3/2025"
+          }
+        ],
+        "paragraphs": [
+          "**Nguyên nhân tử vong:** chấn thương sọ não do vật tày tác động mạnh vào vùng thái dương trái. Hình dạng vết thương phù hợp với đế của tượng ngựa bằng đồng thu tại hiện trường.",
+          "**Thời điểm tử vong:** trong khoảng **22:30 – 23:30 ngày 14/3/2025**.",
+          "Có vết bầm ở cổ tay phải và cẳng tay — phù hợp với **giằng co** trước khi chết.",
+          "**Không phát hiện thuốc ngủ** (zolpidem) trong máu. Nồng độ cồn: âm tính.",
+          "Không có dấu hiệu bị trói, bị đầu độc hay bị tấn công tình dục."
+        ]
+      }
+    },
+    {
+      "id": "c03",
+      "title": "Nhật ký két sắt điện tử K-90",
+      "category": "digital",
+      "icon": "assets/svg/icons/safe.svg",
+      "foundAt": "Trích xuất từ bộ nhớ két sắt bởi kỹ thuật viên hãng Kingsafe (16/3/2025)",
+      "summary": "Mọi lần mở, đóng, đổi mã của két sắt trong phòng làm việc.",
+      "detail": {
+        "type": "table",
+        "heading": "Kingsafe K-90 · Seri KS90-2306-0418 · Nhật ký sự kiện",
+        "meta": "Trích xuất ngày 16/3/2025 · Hiển thị từ 10/3 đến 15/3/2025",
+        "columns": [
+          "Thời điểm",
+          "Sự kiện",
+          "Phương thức"
+        ],
+        "rows": [
+          [
+            "10/03 08:15",
+            "Mở két",
+            "Mã người dùng 1"
+          ],
+          [
+            "10/03 08:19",
+            "Đóng két",
+            "—"
+          ],
+          [
+            "12/03 21:02",
+            "Mở két",
+            "Mã người dùng 1"
+          ],
+          [
+            "12/03 21:10",
+            "**Đổi mã người dùng 1**",
+            "Mã người dùng 1 (cũ)"
+          ],
+          [
+            "12/03 21:14",
+            "Đóng két",
+            "—"
+          ],
+          [
+            "13/03 14:42",
+            "Mở két",
+            "Mã người dùng 1"
+          ],
+          [
+            "13/03 14:49",
+            "Đóng két",
+            "—"
+          ],
+          [
+            "14/03 22:58",
+            "Mở két",
+            "**MÃ CHỦ (MASTER)**"
+          ],
+          [
+            "14/03 23:31",
+            "Cảnh báo: cửa két mở quá 30 phút",
+            "Chuông bị tắt từ cài đặt"
+          ]
+        ],
+        "footnotes": [
+          "Két chỉ có 1 mã người dùng. Mã chủ (MASTER) là mã cố định theo số seri, in trên thẻ niêm phong giao kèm phiếu bảo hành, dùng để mở két khi quên mã người dùng. **Mã chủ không thể thay đổi.**",
+          "Bàn phím không ghi nhận lần nhập sai nào trong cả tháng 3/2025."
+        ]
+      }
+    },
+    {
+      "id": "c04",
+      "title": "Nhật ký hệ thống camera an ninh",
+      "category": "digital",
+      "icon": "assets/svg/icons/cctv.svg",
+      "foundAt": "Trích xuất từ đầu ghi hình tại tủ kỹ thuật biệt thự",
+      "summary": "Ai, bằng thiết bị nào, đã làm cho 8 camera ngừng ghi đêm 14/3?",
+      "detail": {
+        "type": "table",
+        "heading": "Hệ thống camera Biệt thự số 9 · Nhật ký quản trị",
+        "meta": "8 camera · Đầu ghi có UPS và nguồn máy phát dự phòng · Hiển thị 13/3 – 15/3/2025",
+        "columns": [
+          "Thời điểm",
+          "Sự kiện",
+          "Tài khoản",
+          "Thiết bị"
+        ],
+        "rows": [
+          [
+            "13/03 15:20:14",
+            "Tạo **lịch #3 — Chế độ riêng tư**: 14/03 22:40 → 15/03 01:00 (8 camera ngừng ghi)",
+            "quanly_dung",
+            "**iPad-PhongKhach** (Wi-Fi nội bộ 192.168.1.23)"
+          ],
+          [
+            "13/03 15:20:41",
+            "Tắt thông báo nhắc lịch #3 trên ứng dụng",
+            "quanly_dung",
+            "iPad-PhongKhach (Wi-Fi nội bộ)"
+          ],
+          [
+            "14/03 22:00:05",
+            "Mất điện lưới → chuyển sang UPS + máy phát. **Ghi hình bình thường.**",
+            "hệ thống",
+            "—"
+          ],
+          [
+            "14/03 22:40:00",
+            "**Chế độ riêng tư BẬT** (theo lịch #3) — 8 camera ngừng ghi",
+            "hệ thống",
+            "—"
+          ],
+          [
+            "15/03 00:02:31",
+            "Có điện lưới trở lại",
+            "hệ thống",
+            "—"
+          ],
+          [
+            "15/03 01:00:00",
+            "Chế độ riêng tư TẮT (theo lịch #3) — ghi hình trở lại",
+            "hệ thống",
+            "—"
+          ]
+        ],
+        "footnotes": [
+          "Hệ thống có 2 tài khoản quản trị: **lam.hung** (chủ nhà) và **quanly_dung** (quản lý). Lịch #1 và #2 do lam.hung tạo năm 2024 cho các buổi tiệc gia đình.",
+          "Thao tác từ \"iPad-PhongKhach\" chỉ thực hiện được khi thiết bị kết nối Wi-Fi bên trong biệt thự. Trong ngày 13/3 không ghi nhận thao tác nào từ điện thoại của tài khoản quanly_dung."
+        ]
+      }
+    },
+    {
+      "id": "c05",
+      "title": "Sổ ra vào cổng bảo vệ 13–14/3",
+      "category": "paper",
+      "icon": "assets/svg/icons/notebook.svg",
+      "foundAt": "Chòi bảo vệ cổng trước biệt thự",
+      "summary": "Ai tới, ai đi trong hai ngày cuối cùng.",
+      "detail": {
+        "type": "table",
+        "heading": "Sổ ghi khách ra vào — Bảo vệ Biệt thự số 9",
+        "meta": "Bảo vệ trực: Lê Văn Sang · Chép lại từ sổ tay",
+        "columns": [
+          "Ngày",
+          "Vào",
+          "Ra",
+          "Người / phương tiện",
+          "Ghi chú"
+        ],
+        "rows": [
+          [
+            "13/3",
+            "07:55",
+            "18:05",
+            "Chị Thảo (giúp việc)",
+            ""
+          ],
+          [
+            "13/3",
+            "14:00",
+            "15:30",
+            "Bà Đoàn Thanh Vy — xe 43A-551.20",
+            "Hẹn làm việc với ông chủ"
+          ],
+          [
+            "13/3",
+            "14:30",
+            "16:05",
+            "LS Hồ Minh Triết + 01 trợ lý nữ (Mai) — xe 43A-286.17",
+            "Hẹn làm việc với ông chủ"
+          ],
+          [
+            "13/3",
+            "16:40 (về)",
+            "14:50",
+            "Xe nhà 43A-199.99 — anh Dũng lái, chở bà Kim",
+            "Ra sân bay, mang 3 vali. Về một mình"
+          ],
+          [
+            "13/3",
+            "15:00",
+            "15:45",
+            "Ông Lâm Chấn Phong — taxi",
+            "Không có hẹn, ông chủ cho vào"
+          ],
+          [
+            "14/3",
+            "07:50",
+            "19:05",
+            "Chị Thảo (giúp việc)",
+            "Ở lại muộn dọn hành lý"
+          ],
+          [
+            "14/3",
+            "08:00",
+            "17:05",
+            "Anh Dũng",
+            "Nghỉ phép 14–16/3"
+          ],
+          [
+            "14/3",
+            "—",
+            "—",
+            "22:00 mất điện khu vực",
+            "Cổng chuyển sang máy phát"
+          ]
+        ],
+        "footnotes": [
+          "Sau 19:05 ngày 14/3 không có người hay xe nào qua cổng trước cho tới sáng 15/3.",
+          "Cửa kính sau phòng làm việc nhìn ra vườn và bờ kè, **không đi qua cổng trước** nên không được ghi sổ."
+        ]
+      }
+    },
+    {
+      "id": "c06",
+      "title": "Thông báo tạm ngừng cung cấp điện",
+      "category": "paper",
+      "icon": "assets/svg/icons/notice.svg",
+      "foundAt": "Dán tại bảng tin khu biệt thự Bãi Bụt",
+      "summary": "Lịch cúp điện khu vực đúng tối xảy ra án mạng.",
+      "detail": {
+        "type": "notice",
+        "org": [
+          "TỔNG CÔNG TY ĐIỆN LỰC MIỀN TRUNG",
+          "ĐIỆN LỰC SƠN TRÀ"
+        ],
+        "number": "Số: 112/TB-ĐLST",
+        "date": "Đà Nẵng, ngày 10 tháng 3 năm 2025",
+        "title": "Thông báo",
+        "subtitle": "V/v tạm ngừng cung cấp điện để bảo trì lưới",
+        "body": [
+          "Kính gửi: Quý khách hàng sử dụng điện khu vực Bãi Bụt, phường Thọ Quang.",
+          "Để bảo dưỡng trạm biến áp Bãi Bụt 2, Điện lực Sơn Trà thông báo lịch tạm ngừng cung cấp điện như sau:",
+          {
+            "list": [
+              "**Thời gian:** từ 22h00 đến 24h00, thứ Sáu ngày 14/3/2025.",
+              "**Phạm vi:** toàn bộ khu biệt thự Bãi Bụt và tuyến đường ven biển từ cột 47 đến cột 63."
+            ]
+          },
+          "Đề nghị Quý khách hàng chủ động sử dụng nguồn dự phòng cho các thiết bị quan trọng. Trân trọng."
+        ],
+        "signerTitle": "GIÁM ĐỐC",
+        "stamp": "ĐIỆN LỰC SƠN TRÀ",
+        "signer": "Nguyễn Hữu Lộc"
+      }
+    },
+    {
+      "id": "c07",
+      "title": "Danh mục tài sản bị mất (hồ sơ bảo hiểm)",
+      "category": "money",
+      "icon": "assets/svg/icons/watch.svg",
+      "foundAt": "Hồ sơ yêu cầu bồi thường do gia đình nộp cho bảo hiểm, 20/3/2025",
+      "summary": "Tiền mặt, ba chiếc đồng hồ kèm số seri — và những gì gia đình không biết.",
+      "detail": {
+        "type": "table",
+        "heading": "Bảo hiểm Hòa Bình — Bảng kê tài sản thiệt hại",
+        "meta": "Hợp đồng bảo hiểm tài sản nhà ở số HB-DN-22-07814 · Người kê khai: Lâm Gia Bảo",
+        "columns": [
+          "#",
+          "Tài sản",
+          "Đặc điểm nhận dạng",
+          "Giá trị kê khai"
+        ],
+        "rows": [
+          [
+            "1",
+            "Tiền mặt (VND và USD)",
+            "Cất trong két",
+            "1.800.000.000đ"
+          ],
+          [
+            "2",
+            "Đồng hồ Patek Philippe Nautilus",
+            "Seri **7 418 226**",
+            "3.100.000.000đ"
+          ],
+          [
+            "3",
+            "Đồng hồ Rolex Daytona",
+            "Seri M42K7719",
+            "1.250.000.000đ"
+          ],
+          [
+            "4",
+            "Đồng hồ Omega Speedmaster",
+            "Seri 88 204 615",
+            "290.000.000đ"
+          ]
+        ],
+        "footnotes": [
+          "Ghi chú của giám định viên bảo hiểm: gia đình **không kê khai giấy tờ nào bị mất**. Người kê khai cho biết không ai trong nhà nắm rõ trong két có những giấy tờ gì ngoài sổ tiết kiệm và giấy tờ nhà đất (vẫn còn)."
+        ]
+      }
+    },
+    {
+      "id": "c08",
+      "title": "Biên bản ghi lời khai chị Nguyễn Thị Thảo (2025)",
+      "category": "report",
+      "icon": "assets/svg/icons/report.svg",
+      "foundAt": "Lấy lời khai tại Công an quận Sơn Trà, chiều 15/3/2025",
+      "summary": "Người giúp việc kể lại ngày 13 và 14/3 trong biệt thự.",
+      "detail": {
+        "type": "text",
+        "org": "Công an quận Sơn Trà — Đội Cảnh sát hình sự",
+        "heading": "Biên bản ghi lời khai",
+        "meta": [
+          {
+            "label": "Người khai",
+            "value": "Nguyễn Thị Thảo, 46 tuổi, giúp việc"
+          },
+          {
+            "label": "Thời gian",
+            "value": "14:00 – 15:40, ngày 15/3/2025"
+          }
+        ],
+        "paragraphs": [
+          "**Về ngày 13/3:** _\"Chiều đó nhà có khách liên tục. Chị Vy tới trước, rồi luật sư Triết với cô trợ lý, rồi ông Phong tới không báo trước. Ông chủ tiếp từng người trong phòng làm việc, đóng cửa. Ai chờ thì ngồi ở phòng khách, cái iPad xem camera để trên kệ ngay cạnh sofa. Tôi ở dưới bếp pha trà, bưng lên rồi xuống, không để ý ai ngồi đâu lúc nào. Khoảng 3 giờ kém anh Dũng chở bà Kim ra sân bay.\"_",
+          "**Về ngày 14/3:** _\"Tôi ở lại xếp vali cho ông đi Singapore. Khoảng 5 rưỡi chiều ông bảo chuyến bay bị hủy, tôi dỡ đồ ra. Khoảng 6 rưỡi ông Phong gọi tới. Ông chủ đang ngồi ngay phòng khách mà nói vào điện thoại: 'Anh đang trên đường ra sân bay, chuyện dự án để tuần sau', rồi cúp máy. Tôi thấy lạ, ông chỉ cười bảo: 'Tránh được ngày nào hay ngày đó.'\"_",
+          "_\"Ông dặn tôi sáng thứ Bảy tới sớm pha trà vì 9 giờ luật sư tới làm việc. Tôi về lúc 7 giờ tối. Ông có thói quen 10 giờ uống thuốc ngủ rồi lên lầu, người quen trong nhà ai cũng biết.\"_",
+          "**Về két sắt:** _\"Tôi không biết mã. Ông mở két là tôi phải ra ngoài. Mấy hôm trước ông có cất một phong bì màu nâu vào két, tôi chỉ thấy vậy.\"_"
+        ]
+      }
+    },
+    {
+      "id": "c09",
+      "title": "Email của trợ lý lúc 17:50 ngày 14/3",
+      "category": "digital",
+      "icon": "assets/svg/icons/letter.svg",
+      "foundAt": "Hộp thư công việc của trợ lý Lê Thu Hà",
+      "summary": "Thông báo hủy chuyến bay và dời lịch làm việc — gửi cho ai?",
+      "detail": {
+        "type": "text",
+        "org": "Thư điện tử — Tập đoàn Lâm Gia",
+        "heading": "[Lịch anh Hưng] Hủy chuyến bay tối nay — DỜI LỊCH làm việc với LS Triết",
+        "meta": [
+          {
+            "label": "Từ",
+            "value": "Lê Thu Hà (Trợ lý Chủ tịch)"
+          },
+          {
+            "label": "Đến",
+            "value": "LS Hồ Minh Triết; Đoàn Thanh Vy; Phan Văn Dũng"
+          },
+          {
+            "label": "Thời gian",
+            "value": "17:50, thứ Sáu 14/3/2025"
+          }
+        ],
+        "paragraphs": [
+          "Kính gửi anh chị,",
+          "Chuyến bay TU 811 Đà Nẵng – Singapore 21:15 tối nay của anh Hưng **bị hủy** do sự cố kỹ thuật. Anh Hưng **ở lại Đà Nẵng**, chuyến bay được đổi sang tối Chủ nhật 16/3.",
+          "Theo chỉ đạo của anh Hưng: buổi làm việc với LS Triết **dời từ 9h00 thứ Hai 17/3 lên 9h00 sáng mai, thứ Bảy 15/3**, tại biệt thự. Anh Hưng đề nghị LS mang theo **toàn bộ sổ sách và chứng từ lưu ký của Quỹ Lâm Gia** để đối chiếu.",
+          "Anh Dũng vẫn nghỉ phép theo lịch. Chị Vy vẫn ra Hà Nội như kế hoạch.",
+          "Trân trọng, Thu Hà."
+        ]
+      }
+    },
+    {
+      "id": "c10",
+      "title": "Nhật ký điện thoại ông Hưng chiều tối 14/3",
+      "category": "digital",
+      "icon": "assets/svg/icons/chat.svg",
+      "foundAt": "Trích xuất điện thoại của nạn nhân",
+      "summary": "Cuộc gọi và tin nhắn từ lúc chuyến bay bị hủy đến khi ông chết.",
+      "detail": {
+        "type": "table",
+        "heading": "Điện thoại Lâm Chấn Hưng · Cuộc gọi & tin nhắn 14/3/2025",
+        "meta": "Không cài ứng dụng Telegram",
+        "columns": [
+          "Giờ",
+          "Loại",
+          "Người liên hệ",
+          "Nội dung / thời lượng"
+        ],
+        "rows": [
+          [
+            "17:31",
+            "SMS đến",
+            "TU Airlines",
+            "\"Chuyến TU 811 DAD–SIN 21:15 ngày 14/03 đã bị hủy. Quý khách vui lòng liên hệ…\""
+          ],
+          [
+            "17:44",
+            "Gọi đi",
+            "Lê Thu Hà (trợ lý)",
+            "3 phút 12 giây"
+          ],
+          [
+            "18:30",
+            "Gọi đến",
+            "Lâm Chấn Phong",
+            "4 phút 05 giây"
+          ],
+          [
+            "19:55",
+            "SMS đến",
+            "Lâm Gia Bảo",
+            "\"Bố bay an toàn nhé. Chuyện hôm thứ Hai con xin lỗi bố.\" — _Đã xem 20:02, không trả lời_"
+          ],
+          [
+            "21:15",
+            "Zalo đến",
+            "Trịnh Mỹ Kim",
+            "\"Anh tới Sing chưa? Em gửi hoa qua khách sạn bên đó rồi. Mình nói chuyện tử tế với nhau được không anh.\" — _Đã xem 21:30_"
+          ],
+          [
+            "22:05",
+            "Gọi đi",
+            "Hồ Minh Triết",
+            "**Không trả lời**"
+          ],
+          [
+            "22:06",
+            "SMS đi",
+            "Hồ Minh Triết",
+            "\"Mai 9h. Mang đủ chứng từ lưu ký. Không cần giải thích qua điện thoại.\""
+          ]
+        ],
+        "footnotes": [
+          "Sau 22:06 không còn thao tác nào trên điện thoại."
+        ]
+      }
+    },
+    {
+      "id": "c11",
+      "title": "Bài báo: Triệt phá đường dây đồng hồ lậu ở Móng Cái",
+      "category": "paper",
+      "icon": "assets/svg/icons/newspaper.svg",
+      "foundAt": "Báo Biên Cương, số ra ngày 21/9/2026",
+      "summary": "Vụ án không liên quan đã kéo hồ sơ Sơn Trà sống lại.",
+      "detail": {
+        "type": "newspaper",
+        "paper": "BIÊN CƯƠNG",
+        "section": "Pháp luật",
+        "date": "Thứ Hai, 21/9/2026",
+        "headline": "Triệt phá đường dây tiêu thụ đồng hồ xa xỉ không rõ nguồn gốc",
+        "lead": "Công an TP. Móng Cái vừa bắt giữ 4 đối tượng, thu giữ 37 đồng hồ hiệu, trong đó có tài sản liên quan một vụ án mạng xảy ra tại Đà Nẵng năm 2025.",
+        "byline": "Thanh Sơn",
+        "body": [
+          "Ngày 18/9, tại một cửa hàng cầm đồ ở phường Trần Phú, lực lượng chức năng bắt quả tang Hồ Văn Tư (41 tuổi, quê Quảng Nam, biệt danh \"Tư Sẹo\") đang giao một chiếc Patek Philippe Nautilus cho khách mua từ bên kia biên giới.",
+          "Đối chiếu dữ liệu, chiếc đồng hồ có số seri **7 418 226** — trùng khớp với tài sản bị mất trong vụ đột nhập khiến một doanh nhân ở quận Sơn Trà, Đà Nẵng tử vong tháng 3/2025. Vụ án này đã bị tạm đình chỉ điều tra từ tháng 9/2025.",
+          "Bước đầu, Tư khai nhận đã đột nhập biệt thự theo \"đơn đặt hàng\" của một người liên lạc qua Telegram. Hồ sơ đã được chuyển cho Công an TP. Đà Nẵng để phục hồi điều tra."
+        ]
+      }
+    },
+    {
+      "id": "c12",
+      "title": "Biên bản ghi lời khai Hồ Văn Tư (2026)",
+      "category": "report",
+      "icon": "assets/svg/icons/report.svg",
+      "foundAt": "Trại tạm giam Công an TP. Đà Nẵng, 25/9/2026",
+      "summary": "Kẻ ra tay kể lại cách hắn được thuê, được chỉ đường và được trả tiền.",
+      "detail": {
+        "type": "text",
+        "org": "Công an TP. Đà Nẵng — Phòng Cảnh sát hình sự",
+        "heading": "Biên bản ghi lời khai bị can",
+        "meta": [
+          {
+            "label": "Người khai",
+            "value": "Hồ Văn Tư, 41 tuổi, quê Duy Xuyên, Quảng Nam"
+          },
+          {
+            "label": "Thời gian",
+            "value": "08:30 – 11:45, ngày 25/9/2026"
+          }
+        ],
+        "paragraphs": [
+          "_\"Đầu tháng 3/2025 có một tài khoản Telegram tên 'Anh Ba' nhắn cho tôi, nói được người trong nhóm đồ cũ giới thiệu. Việc là vào một biệt thự ở Sơn Trà lấy **một phong bì nâu** trong két. Công 600 triệu, đưa trước một nửa. Tiền với đồng hồ trong két thì cho tôi luôn, coi như làm giống trộm.\"_",
+          "_\"Anh Ba chỉ hết: chủ nhà bay đi Singapore tối thứ Sáu, camera sẽ 'ngủ' từ 10 giờ 40 tới 1 giờ, vào bằng cửa kính sau phòng làm việc, mã két nhắn riêng. Tối thứ Sáu khoảng 8 giờ kém, Anh Ba nhắn ông chủ không đi nữa nhưng **vẫn phải làm tối đó**, nói ông ấy uống thuốc ngủ ngủ trên lầu, không sao đâu.\"_",
+          "_\"Tôi cắt kính vào lúc gần 11 giờ, bấm mã là két mở ngay. Đang gom đồ thì ông chủ đi xuống, cầm cây gậy golf. Hai bên giằng co, tôi vớ được cái tượng đồng… Tôi không định giết ông ấy. Xong tôi gọi Telegram cho Anh Ba, Anh Ba nghe máy, bảo bình tĩnh, lấy hết cho giống trộm, mang phong bì theo.\"_",
+          "_\"Sáng hôm sau tôi bỏ phong bì vào tủ gửi đồ siêu thị theo lời dặn. Anh Ba chuyển nốt tiền sau mấy ngày. Tôi chưa bao giờ gặp mặt, nghe giọng cũng không ra — giọng bị app biến đổi, nghe như máy. Chỉ nhớ Anh Ba nói năng từ tốn, toàn chữ giấy tờ: 'theo thỏa thuận', 'bàn giao'.\"_",
+          "_\"Có lần Anh Ba buột miệng: 'Cậu ấm nhà đó nợ ngập đầu, có chuyện gì người ta nghĩ tới nó trước.' Tôi đoán là bố con nhà đó có chuyện.\"_"
+        ]
+      }
+    },
+    {
+      "id": "c13",
+      "title": "Tin nhắn Telegram giữa Tư và \"Anh Ba\"",
+      "category": "digital",
+      "icon": "assets/svg/icons/chat.svg",
+      "foundAt": "Khôi phục từ điện thoại thu giữ của Hồ Văn Tư",
+      "summary": "Toàn bộ chỉ đạo của kẻ giấu mặt, theo từng mốc thời gian.",
+      "detail": {
+        "type": "chat",
+        "contact": "Anh Ba",
+        "avatar": "B",
+        "owner": "Điện thoại của Hồ Văn Tư · tài khoản @anhba_dn",
+        "messages": [
+          {
+            "divider": "03/03/2025"
+          },
+          {
+            "from": "them",
+            "text": "Việc nhỏ, tiền lớn. 600. Một nửa trước. Quan tâm thì trả lời.",
+            "time": "20:14"
+          },
+          {
+            "from": "me",
+            "text": "viec gi",
+            "time": "20:31"
+          },
+          {
+            "from": "them",
+            "text": "Một phong bì trong két. Biệt thự ở Sơn Trà. Chủ đi vắng. Tiền với đồng hồ trong két là của anh, ngoài 600.",
+            "time": "20:33"
+          },
+          {
+            "divider": "06/03/2025"
+          },
+          {
+            "from": "them",
+            "text": "Đã chuyển 300 theo thỏa thuận. Kiểm tra.",
+            "time": "21:10"
+          },
+          {
+            "from": "me",
+            "text": "nhan r",
+            "time": "21:12"
+          },
+          {
+            "divider": "13/03/2025"
+          },
+          {
+            "from": "them",
+            "text": "Tối thứ Sáu 14/3. Ông ấy bay chuyến 21:15. Camera nghỉ từ 22:40 tới 1:00. Cửa kính sau phòng làm việc, tầng trệt, nhìn ra vườn.",
+            "time": "21:48"
+          },
+          {
+            "from": "them",
+            "text": "Phong bì nâu, góc trên ghi tay \"DC 12/3\". Đó là thứ duy nhất tôi cần. Mã két gửi sau.",
+            "time": "21:49"
+          },
+          {
+            "divider": "14/03/2025"
+          },
+          {
+            "from": "them",
+            "text": "Mã: 7 4 0 9 2 6. Dùng xong xóa tin.",
+            "time": "08:12"
+          },
+          {
+            "from": "them",
+            "text": "Ông ấy KHÔNG đi nữa. Vẫn làm, tối nay. Không có tối nào khác.",
+            "time": "19:42"
+          },
+          {
+            "from": "them",
+            "text": "Ông ấy uống thuốc ngủ lúc 10 giờ, ngủ trên lầu. Làm cho êm.",
+            "time": "19:43"
+          },
+          {
+            "from": "me",
+            "text": "o nha thi gia khac",
+            "time": "19:50"
+          },
+          {
+            "from": "them",
+            "text": "Thêm 100 khi bàn giao. Đừng liên lạc trước khi xong việc.",
+            "time": "19:52"
+          },
+          {
+            "from": "me",
+            "text": "co chuyen r",
+            "time": "23:19"
+          },
+          {
+            "status": "📞 Cuộc gọi thoại Telegram · 23:20 · 2 phút 06 giây · ĐÃ KẾT NỐI"
+          },
+          {
+            "divider": "15/03/2025"
+          },
+          {
+            "from": "them",
+            "text": "Tủ gửi đồ số 47, siêu thị Hàn Thị, đường Ngô Quyền. Bỏ vào, gửi mã tủ. Xóa hết sau đó.",
+            "time": "08:40"
+          },
+          {
+            "from": "me",
+            "text": "xong. tu 47 ma 3381",
+            "time": "09:05"
+          },
+          {
+            "divider": "20/03/2025"
+          },
+          {
+            "from": "them",
+            "text": "Đã chuyển nốt theo thỏa thuận. Từ giờ không liên lạc.",
+            "time": "09:35"
+          }
+        ]
+      }
+    },
+    {
+      "id": "c14",
+      "title": "Sao kê tài khoản đứng tên Nguyễn Thị Hoa",
+      "category": "money",
+      "icon": "assets/svg/icons/bank.svg",
+      "foundAt": "Ngân hàng TMCP Hải Đăng cung cấp theo yêu cầu của cơ quan điều tra",
+      "summary": "Hai lần tiền chảy tới Hồ Văn Tư qua một tài khoản thuê.",
+      "detail": {
+        "type": "table",
+        "heading": "Ngân hàng TMCP Hải Đăng · Sao kê tài khoản 0611 0042 7759",
+        "meta": "Chủ tài khoản: NGUYEN THI HOA · Kỳ: 01/03/2025 – 31/03/2025",
+        "columns": [
+          "Thời gian",
+          "Giao dịch",
+          "Nơi thực hiện",
+          "Số tiền"
+        ],
+        "rows": [
+          [
+            "06/03 20:51",
+            "Nộp tiền mặt",
+            "Máy CDM — ATM Nguyễn Văn Linh, Hải Châu",
+            "+300.000.000"
+          ],
+          [
+            "06/03 21:05",
+            "Chuyển khoản tới HO VAN TU",
+            "Ứng dụng di động",
+            "−300.000.000"
+          ],
+          [
+            "20/03 09:14",
+            "Nộp tiền mặt **tại quầy**",
+            "**Phòng giao dịch Lê Duẩn**, Đà Nẵng",
+            "+400.000.000"
+          ],
+          [
+            "20/03 09:30",
+            "Chuyển khoản tới HO VAN TU",
+            "Ứng dụng di động",
+            "−400.000.000"
+          ]
+        ],
+        "footnotes": [
+          "Bà Nguyễn Thị Hoa (Cần Thơ) khai đã **bán tài khoản kèm SIM nhận OTP** qua một nhóm Facebook tháng 2/2025 với giá 2 triệu đồng, không biết người mua là ai.",
+          "Giấy nộp tiền ngày 20/3 ghi người nộp \"Nguyễn Thị Hoa\" nhưng chữ ký không khớp chữ ký mẫu. Camera quầy giao dịch đã bị ghi đè sau 90 ngày.",
+          "Phòng giao dịch Lê Duẩn nằm ở tầng trệt tòa nhà **Hải Đăng Tower**."
+        ]
+      }
+    },
+    {
+      "id": "c15",
+      "title": "Thông tin thuê bao đăng ký tài khoản \"Anh Ba\"",
+      "category": "digital",
+      "icon": "assets/svg/icons/sim.svg",
+      "foundAt": "Nhà mạng cung cấp theo yêu cầu của cơ quan điều tra",
+      "summary": "Số điện thoại dùng để lập tài khoản Telegram @anhba_dn đứng tên ai?",
+      "detail": {
+        "type": "text",
+        "org": "Nhà mạng di động — Trích xuất thông tin thuê bao",
+        "heading": "Thuê bao 0889 47 1352",
+        "meta": [
+          {
+            "label": "Ngày kích hoạt",
+            "value": "01/03/2025, tại đại lý SIM Minh Phát (Hải Châu)"
+          },
+          {
+            "label": "Chủ thuê bao",
+            "value": "**LÂM GIA BẢO**"
+          },
+          {
+            "label": "Giấy tờ đăng ký",
+            "value": "CMND số 201 6** *** (cấp năm 2009) — ảnh chụp bản giấy"
+          },
+          {
+            "label": "Dịch vụ dùng",
+            "value": "Duy nhất 1 SMS nhận mã kích hoạt Telegram (01/03/2025 22:17)"
+          }
+        ],
+        "paragraphs": [
+          "Ảnh giấy tờ lưu tại đại lý là ảnh chụp một **bản sao có chứng thực**: góc dưới còn thấy một phần dấu đỏ \"SAO Y BẢN CHÍNH\" và chữ ký của cán bộ chứng thực.",
+          "Số CMND này đã bị thu hồi khi chủ thẻ đổi sang CCCD gắn chip năm 2021. Đại lý không đối chiếu với cơ sở dữ liệu dân cư khi kích hoạt.",
+          "Chủ đại lý không nhớ mặt người tới đăng ký."
+        ]
+      }
+    },
+    {
+      "id": "c16",
+      "title": "Thư tay ông Hưng gửi con trai",
+      "category": "paper",
+      "icon": "assets/svg/icons/letter.svg",
+      "foundAt": "Do Lâm Gia Bảo giao nộp khi hồ sơ được phục hồi (10/2026)",
+      "summary": "Lá thư cha gửi con, gửi đi một ngày trước khi những người khác biết chuyện.",
+      "note": "Phong bì có dấu bưu điện Sơn Trà **13/3/2025**. Do Bảo đã chuyển nhà, thư được chuyển tiếp; dấu bưu tá ghi **\"Đã phát 17/3/2025\"** — hai ngày sau khi ông Hưng mất.",
+      "detail": {
+        "type": "letter",
+        "date": "Sơn Trà, đêm 12/3/2025",
+        "greeting": "Bảo,",
+        "body": [
+          "Hôm thứ Hai bố con mình nói với nhau nhiều câu không nên nói. Bố viết thư vì nói trực tiếp thì hai bố con lại cãi.",
+          "Bố đã tự tay viết lại di chúc, ký rồi, cất trong két. Quỹ Lâm Gia sẽ **giải thể**. Mười hai triệu cổ phần sẽ về thẳng tên con, với một điều kiện: con giữ được hai năm không đụng tới cờ bạc. Bố tin con làm được.",
+          "Người bố giao giữ quỹ mấy năm nay đã làm bố thất vọng. Thứ Hai tới bố sẽ nói chuyện thẳng với người đó, rồi mang di chúc ra phòng công chứng — **không qua văn phòng cũ nữa**.",
+          "Đừng kể với ai chuyện này cho tới khi mọi thứ xong xuôi."
+        ],
+        "closing": "Thương con,",
+        "signature": "Bố"
+      }
+    },
+    {
+      "id": "c17",
+      "title": "Di chúc năm 2018 (bản sao công chứng)",
+      "category": "paper",
+      "icon": "assets/svg/icons/registry.svg",
+      "foundAt": "Lưu tại Văn phòng công chứng Hải Châu",
+      "summary": "Di chúc lập Quỹ Lâm Gia — vẫn có hiệu lực nếu không có di chúc mới hơn.",
+      "detail": {
+        "type": "text",
+        "org": "Văn phòng công chứng Hải Châu — Bản sao",
+        "heading": "Di chúc",
+        "meta": [
+          {
+            "label": "Người lập",
+            "value": "Lâm Chấn Hưng"
+          },
+          {
+            "label": "Công chứng",
+            "value": "Số 2018/0514/DC, ngày 15/5/2018"
+          },
+          {
+            "label": "Hồ sơ lập tại",
+            "value": "Văn phòng Luật sư Minh Triết (số hồ sơ LG/DC-18)"
+          }
+        ],
+        "paragraphs": [
+          "**Điều 2.** 12.000.000 (mười hai triệu) cổ phần Công ty CP Tập đoàn Lâm Gia (mã LGG) được đưa vào **Quỹ Lâm Gia** để giữ hộ cho con trai tôi là Lâm Gia Bảo cho đến khi Bảo đủ 40 tuổi (năm 2030).",
+          "**Điều 3.** Người quản lý Quỹ Lâm Gia: **Luật sư Hồ Minh Triết**, Văn phòng Luật sư Minh Triết. Người quản lý toàn quyền đại diện Quỹ thực hiện các quyền của cổ đông, kể cả việc **thực hiện giao dịch bảo đảm khi cần thiết để bảo toàn giá trị Quỹ**, và báo cáo cho tôi mỗi năm một lần.",
+          "**Điều 4.** Trường hợp tôi qua đời trước năm 2030, Quỹ tiếp tục do người quản lý nêu tại Điều 3 điều hành cho tới thời hạn trên.",
+          "**Hồ sơ kèm theo:** bản sao có chứng thực CMND của người lập di chúc và của Lâm Gia Bảo (CMND số 201 6** ***); giấy chứng nhận sở hữu cổ phần."
+        ]
+      }
+    },
+    {
+      "id": "c18",
+      "title": "Email của chị Vy gửi ông Hưng ngày 11/3",
+      "category": "digital",
+      "icon": "assets/svg/icons/letter.svg",
+      "foundAt": "Hộp thư cá nhân của ông Hưng",
+      "summary": "Giám đốc tài chính phát hiện điều bất thường ở Quỹ Lâm Gia.",
+      "detail": {
+        "type": "text",
+        "org": "Thư điện tử — Tập đoàn Lâm Gia",
+        "heading": "[MẬT] Cổ phần của Quỹ Lâm Gia đang bị phong tỏa",
+        "meta": [
+          {
+            "label": "Từ",
+            "value": "Đoàn Thanh Vy (Giám đốc Tài chính)"
+          },
+          {
+            "label": "Đến",
+            "value": "Lâm Chấn Hưng (riêng)"
+          },
+          {
+            "label": "Thời gian",
+            "value": "16:20, thứ Ba 11/3/2025"
+          }
+        ],
+        "paragraphs": [
+          "Anh Hưng,",
+          "Khi chốt danh sách cổ đông cho đại hội năm nay, em đối chiếu với dữ liệu lưu ký thì thấy toàn bộ **12.000.000 cổ phần của Quỹ Lâm Gia đang ở trạng thái \"phong tỏa — cầm cố\" từ tháng 8/2024**.",
+          "Sổ cổ đông nội bộ và báo cáo năm 2024 của Quỹ do văn phòng luật gửi về đều **không ghi nhận** việc này. Em đã đề nghị cơ quan lưu ký cấp bản xác nhận chi tiết (bên nhận cầm cố, khoản nợ được bảo đảm).",
+          "Em đề nghị anh **chưa trao đổi với bên quản lý quỹ** cho tới khi có đủ giấy tờ. Em sẽ báo anh trực tiếp.",
+          "Vy."
+        ]
+      }
+    },
+    {
+      "id": "c19",
+      "title": "Phiếu bảo hành & bàn giao két sắt K-90",
+      "category": "paper",
+      "icon": "assets/svg/icons/safe.svg",
+      "foundAt": "Hồ sơ của đại lý Kingsafe Đà Nẵng",
+      "summary": "Thẻ mã chủ của két được giao cho ai, gửi đi đâu.",
+      "detail": {
+        "type": "receipt",
+        "shop": "KINGSAFE — ĐẠI LÝ ĐÀ NẴNG",
+        "lines": [
+          "128 Nguyễn Văn Linh, Hải Châu",
+          "Hotline: 1900 6868"
+        ],
+        "title": "PHIẾU BẢO HÀNH & BÀN GIAO",
+        "meta": [
+          {
+            "label": "Khách hàng",
+            "value": "Lâm Chấn Hưng"
+          },
+          {
+            "label": "Địa chỉ lắp",
+            "value": "Biệt thự số 9, Bãi Bụt"
+          },
+          {
+            "label": "Model",
+            "value": "K-90 âm tường"
+          },
+          {
+            "label": "Seri",
+            "value": "KS90-2306-0418"
+          },
+          {
+            "label": "Ngày lắp",
+            "value": "10/06/2023"
+          }
+        ],
+        "items": [
+          {
+            "name": "Két điện tử K-90",
+            "qty": 1,
+            "unit": 68500000,
+            "price": 68500000
+          },
+          {
+            "name": "Thẻ mã chủ (niêm phong)",
+            "qty": 1,
+            "unit": 0,
+            "price": 0
+          }
+        ],
+        "total": {
+          "label": "TỔNG CỘNG",
+          "value": 68500000
+        },
+        "footer": [
+          "Thẻ mã chủ: bàn giao tại đại lý ngày 14/06/2023",
+          "cho anh PHAN VĂN DŨNG (đại diện chủ nhà)",
+          "theo yêu cầu gửi lưu giữ tại văn phòng",
+          "luật sư của khách hàng.",
+          "Mã chủ cố định theo seri — KHÔNG đổi được.",
+          "Bảo hành 5 năm."
+        ]
+      }
+    },
+    {
+      "id": "c20",
+      "title": "Sổ giao nhận lễ tân tầng 6 — tòa nhà 45 Bạch Đằng (2023)",
+      "category": "paper",
+      "icon": "assets/svg/icons/notebook.svg",
+      "foundAt": "Quầy lễ tân chung tầng 6, tòa nhà 45 Bạch Đằng",
+      "summary": "Hành trình của phong bì thẻ mã chủ sau khi rời biệt thự.",
+      "detail": {
+        "type": "table",
+        "heading": "Sổ giao nhận hồ sơ — Lễ tân chung tầng 6",
+        "meta": "Tòa nhà 45 Bạch Đằng · Trích tháng 6/2023",
+        "columns": [
+          "Ngày",
+          "Người giao",
+          "Nội dung",
+          "Nơi nhận",
+          "Ghi chú lễ tân"
+        ],
+        "rows": [
+          [
+            "13/06",
+            "Bưu điện",
+            "02 thư bảo đảm",
+            "6C — Ban Tài chính Lâm Gia",
+            "Chị Vy ký nhận"
+          ],
+          [
+            "14/06",
+            "**P.V. Dũng**",
+            "01 phong bì niêm phong \"Thẻ mã chủ — két K-90 — Lâm Chấn Hưng\"",
+            "6A — VPLS Minh Triết",
+            "LS Triết đi công tác tới 21/6. **Lưu tủ hồ sơ chung tầng 6.** Mép phong bì có băng dính dán lại."
+          ],
+          [
+            "16/06",
+            "Shipper",
+            "01 hộp tài liệu",
+            "6B — VPĐD Phong Lâm",
+            "Ông Phong ký nhận"
+          ],
+          [
+            "19/06",
+            "Bưu điện",
+            "01 thư",
+            "6A — VPLS Minh Triết",
+            "Lưu tủ chung"
+          ],
+          [
+            "21/06",
+            "—",
+            "Phong bì thẻ mã chủ K-90 + 01 thư",
+            "6A — VPLS Minh Triết",
+            "**LS Hồ Minh Triết ký nhận**"
+          ]
+        ],
+        "footnotes": [
+          "Tủ hồ sơ chung đặt sau quầy lễ tân, **không khóa riêng từng ngăn**. Nhân viên của cả ba đơn vị 6A, 6B, 6C đều có chìa khóa tủ.",
+          "Từ 21/6/2023 phong bì được cất trong két của VPLS Minh Triết."
+        ]
+      }
+    },
+    {
+      "id": "c21",
+      "title": "Bảng chỉ dẫn tòa nhà 45 Bạch Đằng",
+      "category": "paper",
+      "icon": "assets/svg/icons/notice.svg",
+      "foundAt": "Ảnh chụp tại sảnh tòa nhà",
+      "summary": "Ai làm việc ở tầng nào trong tòa nhà ven sông Hàn.",
+      "detail": {
+        "type": "table",
+        "heading": "45 BẠCH ĐẰNG — BẢNG CHỈ DẪN",
+        "meta": "Tòa nhà văn phòng hạng A · Quận Hải Châu",
+        "columns": [
+          "Tầng",
+          "Đơn vị"
+        ],
+        "rows": [
+          [
+            "1",
+            "Sảnh — Quầy cà phê — Bảo vệ"
+          ],
+          [
+            "2 – 5",
+            "Văn phòng cho thuê"
+          ],
+          [
+            "6",
+            "**6A** Văn phòng Luật sư Minh Triết · **6B** Văn phòng đại diện Công ty CP Đầu tư Phong Lâm · **6C** Ban Tài chính — Tập đoàn Lâm Gia · Lễ tân chung tầng 6"
+          ],
+          [
+            "7",
+            "Phòng họp cho thuê"
+          ],
+          [
+            "8 – 10",
+            "Tập đoàn Lâm Gia — Trụ sở chính"
+          ],
+          [
+            "11",
+            "Nhà hàng Sông Hàn"
+          ]
+        ],
+        "footnotes": [
+          "Thang máy tầng 6 cần thẻ từ của một trong ba đơn vị trên tầng."
+        ]
+      }
+    },
+    {
+      "id": "c22",
+      "title": "Thông tin chuyến bay TU 136 ngày 14/3",
+      "category": "paper",
+      "icon": "assets/svg/icons/plane.svg",
+      "foundAt": "Thiên Ưng Airlines cung cấp theo yêu cầu của cơ quan điều tra",
+      "summary": "Chuyến bay Đà Nẵng – Hà Nội mà chị Vy nói mình đã đi.",
+      "detail": {
+        "type": "table",
+        "heading": "Thiên Ưng Airlines · Dữ liệu khai thác chuyến TU 136 (DAD → HAN)",
+        "meta": "Ngày 14/03/2025 · Tàu bay A321 · Hành khách: DOAN THANH VY · Ghế 2A",
+        "columns": [
+          "Mốc",
+          "Theo kế hoạch",
+          "Thực tế"
+        ],
+        "rows": [
+          [
+            "Gửi tin nhắn báo chậm chuyến cho khách",
+            "—",
+            "19:58"
+          ],
+          [
+            "Bắt đầu lên tàu bay",
+            "20:35",
+            "22:05"
+          ],
+          [
+            "Khách DOAN THANH VY quét thẻ lên tàu",
+            "—",
+            "22:11"
+          ],
+          [
+            "Đóng cửa tàu bay",
+            "20:55",
+            "22:27"
+          ],
+          [
+            "Cất cánh",
+            "21:05",
+            "**22:41**"
+          ],
+          [
+            "Hạ cánh Nội Bài",
+            "22:25",
+            "**23:58**"
+          ]
+        ],
+        "footnotes": [
+          "Lý do chậm chuyến: tàu bay về muộn từ chặng trước.",
+          "Tàu bay A321 khai thác nội địa **không có dịch vụ Wi-Fi hay điện thoại trên không**. Hành khách phải bật chế độ máy bay từ khi đóng cửa tàu bay đến khi hạ cánh."
+        ]
+      }
+    },
+    {
+      "id": "c23",
+      "title": "Hóa đơn khách sạn của bà Kim",
+      "category": "money",
+      "icon": "assets/svg/icons/receipt.svg",
+      "foundAt": "Khách sạn Hoa Sen Sài Gòn cung cấp",
+      "summary": "Kim ở đâu, với ai, và đã làm gì lúc 21:40 tối 14/3.",
+      "detail": {
+        "type": "receipt",
+        "shop": "KHÁCH SẠN HOA SEN SÀI GÒN",
+        "lines": [
+          "Đồng Khởi, Quận 1, TP. Hồ Chí Minh"
+        ],
+        "title": "HÓA ĐƠN THANH TOÁN — PHÒNG 1806",
+        "meta": [
+          {
+            "label": "Khách đăng ký",
+            "value": "Trịnh Mỹ Kim"
+          },
+          {
+            "label": "Số khách",
+            "value": "02 (01 nam đi cùng)"
+          },
+          {
+            "label": "Nhận phòng",
+            "value": "13/03/25 18:50"
+          },
+          {
+            "label": "Trả phòng",
+            "value": "16/03/25 11:20"
+          }
+        ],
+        "items": [
+          {
+            "name": "Phòng Deluxe hướng sông",
+            "qty": 3,
+            "unit": 4200000,
+            "price": 12600000
+          },
+          {
+            "name": "14/03 20:30 Ăn tối tại phòng (2 suất)",
+            "qty": 1,
+            "unit": 1850000,
+            "price": 1850000
+          },
+          {
+            "name": "14/03 21:40 Dịch vụ hoa quốc tế: giao Orchid Bay Hotel, Singapore — người nhận Mr LAM CHAN HUNG — giao 08:00 ngày 15/03",
+            "qty": 1,
+            "unit": 3200000,
+            "price": 3200000
+          },
+          {
+            "name": "14/03 23:05 Minibar",
+            "qty": 1,
+            "unit": 640000,
+            "price": 640000
+          }
+        ],
+        "total": {
+          "label": "TỔNG CỘNG",
+          "value": 18290000
+        },
+        "footer": [
+          "Ghi chú lễ tân: đơn hoa đặt qua quầy concierge,",
+          "khách yêu cầu viết thiệp \"Chúc anh chuyến đi bình an — K.\"",
+          "Hoa đã giao 15/03 nhưng khách sạn bên nhận báo không có khách."
+        ]
+      }
+    },
+    {
+      "id": "c24",
+      "title": "Báo cáo người tham dự hội thảo trực tuyến",
+      "category": "digital",
+      "icon": "assets/svg/icons/laptop.svg",
+      "foundAt": "Ban tổ chức hội thảo gửi theo đề nghị của LS Hồ Minh Triết",
+      "summary": "Chứng cứ ngoại phạm của luật sư Triết cho đêm 14/3.",
+      "detail": {
+        "type": "table",
+        "heading": "Zoom — Báo cáo người tham dự",
+        "meta": "Hội thảo \"Thừa kế xuyên biên giới cho kiều bào\" · Xuất theo **giờ Việt Nam (UTC+7)**",
+        "columns": [
+          "Người tham dự",
+          "Vai trò",
+          "Vào phòng",
+          "Rời phòng",
+          "Thời lượng"
+        ],
+        "rows": [
+          [
+            "Ban tổ chức — Hội Doanh nhân Việt Toronto",
+            "Chủ trì",
+            "22:15",
+            "00:12",
+            "117 phút"
+          ],
+          [
+            "**Hồ Minh Triết**",
+            "**Diễn giả**",
+            "**22:28 (14/3)**",
+            "**00:07 (15/3)**",
+            "99 phút"
+          ],
+          [
+            "Người tham dự (63 tài khoản)",
+            "Khách",
+            "22:20 – 22:45",
+            "23:40 – 00:12",
+            "—"
+          ]
+        ],
+        "footnotes": [
+          "Báo cáo chỉ ghi thời điểm vào/rời phòng họp; **không ghi trạng thái micro, camera** hay thời điểm phát biểu.",
+          "Diễn giả không rời phòng họp lần nào trong suốt 99 phút."
+        ]
+      }
+    },
+    {
+      "id": "c25",
+      "title": "Chương trình hội thảo của ban tổ chức Toronto",
+      "category": "paper",
+      "icon": "assets/svg/icons/laptop.svg",
+      "foundAt": "Thư mời gửi người đăng ký tham dự",
+      "summary": "Lịch trình từng phần của buổi hội thảo đêm 14/3.",
+      "detail": {
+        "type": "text",
+        "org": "Hội Doanh nhân Việt tại Toronto (VBAT)",
+        "heading": "Chương trình hội thảo trực tuyến: Thừa kế xuyên biên giới cho kiều bào",
+        "meta": [
+          {
+            "label": "Ngày",
+            "value": "Thứ Sáu, 14/3/2025"
+          },
+          {
+            "label": "Múi giờ",
+            "value": "**Giờ Toronto (EDT, UTC−4)**"
+          },
+          {
+            "label": "Hình thức",
+            "value": "Zoom Webinar"
+          }
+        ],
+        "paragraphs": [
+          {
+            "list": [
+              "**11:30** — Khai mạc, giới thiệu diễn giả",
+              "**11:35 – 12:15** — Phần 1: \"Di chúc và tài sản tại Việt Nam\" — LS Hồ Minh Triết (Đà Nẵng)",
+              "**12:15 – 12:25** — Giải lao",
+              "**12:25 – 13:00** — Phần 2: Hỏi đáp trực tiếp cùng LS Triết",
+              "**13:00** — Bế mạc"
+            ]
+          },
+          "_Lưu ý: từ ngày 9/3/2025, Toronto đã chuyển sang giờ mùa hè (EDT). Khách mời ở châu Á vui lòng quy đổi giờ cho chính xác._"
+        ]
+      }
+    },
+    {
+      "id": "c26",
+      "title": "Thông báo hoãn phiên tòa ngày 20/3/2025",
+      "category": "paper",
+      "icon": "assets/svg/icons/notice.svg",
+      "foundAt": "Hồ sơ vụ việc tại Tòa án nhân dân TP. Hội An",
+      "summary": "Lịch xét xử của một vụ dân sự do LS Triết tham gia.",
+      "detail": {
+        "type": "notice",
+        "org": [
+          "TÒA ÁN NHÂN DÂN",
+          "THÀNH PHỐ HỘI AN"
+        ],
+        "number": "Số: 31/TB-TA",
+        "date": "Hội An, ngày 18 tháng 3 năm 2025",
+        "title": "Thông báo",
+        "subtitle": "V/v hoãn phiên tòa sơ thẩm vụ án dân sự",
+        "body": [
+          "Kính gửi: Các đương sự và người đại diện theo ủy quyền trong vụ án tranh chấp hợp đồng thuê tài sản số 12/2024/TLST-DS.",
+          "Phiên tòa sơ thẩm dự kiến mở lúc **8h00 ngày 20/3/2025 được hoãn** do nguyên đơn có đơn xin hoãn vì lý do sức khỏe. Thời gian mở lại phiên tòa sẽ được thông báo sau.",
+          {
+            "list": [
+              "Nơi nhận: Nguyên đơn; bị đơn; **LS Hồ Minh Triết** (người đại diện theo ủy quyền của bị đơn) — đã gửi qua thư điện tử ngày 18/3/2025."
+            ]
+          }
+        ],
+        "signerTitle": "THẨM PHÁN",
+        "stamp": "TAND TP. HỘI AN",
+        "signer": "Trần Thị Mỹ Duyên"
+      }
+    }
+  ],
+  "scene": {
+    "title": "Hiện trường: tầng trệt Biệt thự số 9",
+    "map": "assets/svg/scene/case-02-villa.svg",
+    "alt": "Sơ đồ tầng trệt biệt thự số 9 khu Bãi Bụt: phòng làm việc, phòng khách, bếp, cổng bảo vệ và vườn sau",
+    "description": "Sơ đồ tầng trệt biệt thự. Cổng trước có chòi bảo vệ; phía sau là vườn và bờ kè ra biển, không có cổng. Bấm vào các điểm đánh số để xem chi tiết.",
+    "hotspots": [
+      {
+        "id": "h-body",
+        "label": "Vị trí thi thể",
+        "x": 30,
+        "y": 34,
+        "clueIds": [
+          "c01",
+          "c02"
+        ],
+        "text": [
+          "Ông Hưng nằm nghiêng cạnh bàn làm việc, mặc đồ ngủ. Tượng ngựa bằng đồng nằm cách đó nửa mét, gậy golf rơi dưới gầm bàn."
+        ]
+      },
+      {
+        "id": "h-safe",
+        "label": "Két sắt âm tường",
+        "x": 12,
+        "y": 22,
+        "clueIds": [
+          "c03",
+          "c19"
+        ],
+        "text": [
+          "Cửa két mở. Bàn phím, bản lề, ổ khóa nguyên vẹn — không một vết xước.",
+          "Trên kệ sách che két có một khoảng trống: nơi ông Hưng hay để hộp đồng hồ."
+        ]
+      },
+      {
+        "id": "h-desk",
+        "label": "Bàn làm việc",
+        "x": 24,
+        "y": 22,
+        "clueIds": [
+          "c01",
+          "c10"
+        ],
+        "text": [
+          "Đèn bàn còn bật. Tập \"Quỹ Lâm Gia — báo cáo năm 2024\" mở dở, nhiều chỗ khoanh bút đỏ. Bên lề: \"Sáng mai hỏi thẳng.\"",
+          "Điện thoại của ông Hưng úp trên bàn."
+        ]
+      },
+      {
+        "id": "h-glass",
+        "label": "Cửa kính sau",
+        "x": 20,
+        "y": 8,
+        "clueIds": [
+          "c01",
+          "c12"
+        ],
+        "text": [
+          "Lỗ tròn cắt sát tay nắm. Bên ngoài là vườn cỏ, lối mòn xuống bờ kè — không có camera nào nhìn thẳng vào cửa này ngoài 2 camera vườn."
+        ]
+      },
+      {
+        "id": "h-ipad",
+        "label": "iPad trên kệ cạnh sofa",
+        "x": 64,
+        "y": 30,
+        "clueIds": [
+          "c04",
+          "c08"
+        ],
+        "text": [
+          "Chiếc iPad luôn mở ứng dụng camera, đăng nhập sẵn tài khoản quanly_dung, không cài mật khẩu màn hình để ông Hưng tiện xem.",
+          "Nó nằm ngay cạnh chỗ khách ngồi chờ."
+        ]
+      },
+      {
+        "id": "h-living",
+        "label": "Phòng khách — chỗ khách chờ",
+        "x": 74,
+        "y": 42,
+        "clueIds": [
+          "c05",
+          "c08"
+        ],
+        "text": [
+          "Bộ sofa da nơi khách ngồi chờ ông Hưng tiếp trong phòng làm việc. Từ đây không nhìn thấy cửa phòng làm việc."
+        ]
+      },
+      {
+        "id": "h-kitchen",
+        "label": "Bếp",
+        "x": 74,
+        "y": 78,
+        "clueIds": [
+          "c08"
+        ],
+        "text": [
+          "Chị Thảo làm việc chủ yếu ở đây. Từ bếp không nhìn thấy phòng khách."
+        ]
+      },
+      {
+        "id": "h-tech",
+        "label": "Tủ kỹ thuật — đầu ghi camera, UPS",
+        "x": 55,
+        "y": 70,
+        "clueIds": [
+          "c04",
+          "c06"
+        ],
+        "text": [
+          "Đầu ghi 8 kênh, bộ lưu điện UPS và công tắc chuyển nguồn máy phát. Đầu ghi không bị phá, dây không bị cắt."
+        ]
+      },
+      {
+        "id": "h-gate",
+        "label": "Cổng trước — chòi bảo vệ",
+        "x": 50,
+        "y": 95,
+        "clueIds": [
+          "c05"
+        ],
+        "text": [
+          "Bảo vệ trực 24/24, ghi sổ mọi người và xe qua cổng. Cổng là lối vào duy nhất từ phía đường."
+        ]
+      }
+    ]
+  },
+  "interrogations": {
+    "s-triet": {
+      "intro": [
+        "Luật sư Triết ngồi xuống, đặt cặp da lên đùi, mỉm cười lịch sự. Ông trả lời chậm rãi, từng chữ rõ ràng như đọc văn bản."
+      ],
+      "topics": [
+        {
+          "id": "t-triet-night",
+          "question": "Đêm 14/3 ông ở đâu, làm gì?",
+          "answer": [
+            "Tôi là diễn giả hội thảo trực tuyến cho Hội Doanh nhân Việt ở Toronto, từ 22 giờ 30 tới quá nửa đêm. Ban tổ chức có báo cáo Zoom, tôi đã nộp cho các anh.",
+            "Anh Hưng có gọi tôi lúc 10 giờ, nhưng lúc đó tôi đang chuẩn bị lên phát biểu nên không nghe được. Tôi cứ nghĩ sáng mai gặp rồi nói."
+          ]
+        },
+        {
+          "id": "t-triet-fund",
+          "question": "Quỹ Lâm Gia hiện nay ra sao?",
+          "answer": [
+            "Nguyên vẹn. Mười hai triệu cổ phần, báo cáo năm nào tôi cũng gửi anh Hưng, có chữ ký đầy đủ.",
+            "Tôi giữ quỹ cho cháu Bảo như giữ của nhà mình."
+          ]
+        },
+        {
+          "id": "t-triet-meeting",
+          "question": "Buổi làm việc 9 giờ sáng 15/3 để làm gì?",
+          "answer": [
+            "Rà soát giấy tờ định kỳ thôi. Anh Hưng là người kỹ tính, năm nào cũng vậy.",
+            "Sáng đó tôi tới lúc 8 giờ 50 thì thấy công an đã chăng dây."
+          ]
+        },
+        {
+          "id": "t-triet-safe",
+          "question": "Ông có biết mã két hay thẻ mã chủ của két?",
+          "answer": [
+            "Mã két là chuyện riêng của thân chủ, tôi không bao giờ hỏi.",
+            "Thẻ mã chủ thì đúng là năm 2023 anh Hưng gửi văn phòng tôi giữ hộ. Phong bì niêm phong, tôi cất trong két văn phòng, chưa từng mở ra."
+          ]
+        },
+        {
+          "id": "t-triet-0320",
+          "question": "Sáng 20/3/2025 ông ở đâu?",
+          "requires": {
+            "clues": [
+              "c14"
+            ]
+          },
+          "answer": [
+            "Ngày 20/3… Sáng đó tôi dự phiên tòa ở Tòa án Hội An, vụ tranh chấp hợp đồng thuê. Đi từ sớm, gần trưa mới về.",
+            "Các anh có thể kiểm tra hồ sơ vụ việc."
+          ]
+        },
+        {
+          "id": "t-triet-bao",
+          "question": "Ông nghĩ gì về Lâm Gia Bảo?",
+          "answer": [
+            "Cháu Bảo không xấu, chỉ là sa đà. Nợ cờ bạc mấy tỷ, chủ nợ tìm tới tận công ty.",
+            "Tôi không muốn nói xấu ai. Nhưng hôm thứ Hai cháu cãi bố về chuyện di chúc, cả nhà đều nghe."
+          ]
+        }
+      ],
+      "fallback": [
+        "(Triết liếc tờ giấy rồi đẩy lại, nụ cười không đổi.) Tôi không thấy tài liệu này liên quan gì đến câu hỏi.",
+        "Với tư cách luật sư, tôi khuyên các anh nên đặt câu hỏi cụ thể hơn.",
+        "Tôi đã trả lời điều này rồi."
+      ],
+      "contradictions": [
+        {
+          "hash": "06d950f5f6cb6bbb19895e9c39ba13393da22f6845118f00d269dd35c20701d9",
+          "payload": "5iO/VPD+H0UWHwbaiGAHK9DnRjpwEJ+CscGC+zcfESkB9YhhGxOSClPEpnFQrEkeF+Gez6Oi4IRnM6AEha6RixgH5MTb3SH1trh7Y2PjDvl6gz0XT7dKbeZ8LZ1dcRU9N02nDRDjV6rKlhnxf/CTPk40Y642ZLf64Pkvz1+k2i11sR5pjZvSFbs9PFoDHXPgZmhR+Zt0cJfVQ5kBeeQ/tIcqy/3Fj3YNdI/s2IK86JPMfyjP1p3n+ElE6fOKCPs/PGgCpiVo/77kOYDk9ItiuwpCeMgxYp2oHyIqQwNMOsyChzp+IlTuGGHUIXdOHcqYvPykP9GfdlJW+fImaaRcnlih6DBdLac2sROW21RelmuHO9fnPs4/0Op1W8ZOTAxAAYvCuLsh+1DiIPOqtLBWEsPWJl8t0PjXzjSnUvrhlv5RFQodBYrP3531/T5sjPFRJPG7v/OG7balNj7gBUk/vouxMkmX+hcPRX+ClmYmjYryjzOfiAdCsD08vdjGQj5Gj1WcZIe+BB0Izo9NM1EfFPz/1mIy/VJ8mHw66oL/cUiFtWB7xDTK56hwra+k3dKC22/wLgAY5z6umdASitnrtGD5N/F1Zw=="
+        },
+        {
+          "hash": "2ec2dca5c29c2dafda7f12d4e1a12c6380bdbf410f2d9f5e19c33f062afc9f71",
+          "payload": "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"
+        },
+        {
+          "hash": "4d8713480eba355fea821c4400c7d646365a89938a0f4a782103edf62b115e28",
+          "payload": "bWBRvuryxY1pV3p7v7iQRiiywpI0+Zi524SY27wAIu5EfJmzZVtK9IizjQEt/8FR+Og3uAfCdwqeKCJe2tvlL/WzYirj5MI0D89NuXRT4FjTLtix+pGx2QP3EuPXgg5XgUW7Usi7A7YJ3tx0MKI9zjxCFtHuQcVQayNbGyHsNR/3s4sks9a99ngdZVKt4u8G2SWrXuo+MnOZXyXua1OpFHVy3AC7cqoVXuBhFFy52B6nMzkU9cP6B9fVROIWIONhK3ug2kv0NcjAqyCDMlR1WpF1rkswdHP3Yf17XXbiIG9XOrgHfSIr7KBj9CEJDmOHuAh8yrN0dUAVd4lpzvkC7oGIgNw0BKC9kUtcu/7Yd7fujH3UYo/vCCIiBgO8gFMrH7NHWNUMEapM7upEsvn7/w8X78Z1iflZRb1d18zKwiMwoBd5J26Tj8vTb1FrjQjyyH6yhK9tPjPanZb4ZYd8RaD9KHtdjMNrbI1B3VSNuQNw4WTQT9xfyj5CkrXtgp2naWumSxqMpUu33ruus7K7Gn4BICgmR/yRRu9vm822tvHJHtgad5Oksw3LvdU+Q2MZdF4aWZOFkse7XXSYME6dvQSTJBE3gWanpwmJmmbe6zhoRHoemnM31R+LqvpuS+Lc+WiLtksl4Y1ztIDB8upe4ooLH07psaI6WafoCmDCECgjzsLv+XGgf51n00fTSb8ces1+OzniLbybm3f85ee6fNQcCy23VDNrOZmDiXanSJKpITZ4EpnDn4I64Xbd8S/eOfLaynnj+zkjwR8ro9pbYkErARWdZX9fELAszWmVHG65onoTZc8+jMmbjtJVJyzy9r2t5grUsv5FaFTarGi4i7gUqXJEg9wMPcOKU1BP4ELCx9jB6pSRQ9x0IOqWQbzEBAj18Syqut8xJkSgCC0U+sETRu7VuxxatCQyEF34hykLadLj3uBvaDivgqE8Ji7n0eAtulOH/msfrr1n5vh1KJ8kkzbk1KlLx3xY/HYw+M5u0uXJwwFkxydxFg7wBIJfrTOKgrBZdkJfOgLuCfhpj1RQf7S0cK151BUIX1ughc8RFg8DF/vxvR2radvcdekO6nSvaRb3syzBvOSRvChkUK8sTvp4mqhBWGDFjyZrz+nNZK/pshmpZZJQjCPPngAqB1oAr0Bf9pgOwuLmkV4jbIqc0DCrvqWs5Bo6rDbNZFSGh1dOEGWlWVUGwMuQ/6ZGzqG2177aRsxs2DcQb3OnWxA3rUMsdlas39IOilmtJ3n/P16O7ZJr0Me5hQ=="
+        },
+        {
+          "hash": "50a07b66b2e76994930744a05517f746cb165ec7775194cf7524b1db337cd80e",
+          "payload": "QX/LZdo3eHuO52werg8o+/8mpepgOdHs6QxcmG5NXf4l9kpx4E2VxQ9LXvxTJHXYXCQbQgZnEa4j0NWyPrbHnqLuAref4AAGTCT9RWOnr800mkSeYtroomoZJGr6pD26aHBW61wM+QtTMXr85zuMHLmFe+yO9iBWi/pVk9JGl/uzw44al8hMadxhebwx4CtIuMv+28qz38/ZfMFnm40JKVMoy8ASOZ0l2TB0qzlJJl+oJzSrdzfrT+yy7bIvQv41h/vs/vkGrtMTL6sZMVOKtkdwYVSpbswuT10d/r4ZnPsxtjjW4ZhVeqcgfj7kdvLwiVM3ilWdTifvV7Mp2WPlrG8COWyBd4QE/CecYwtm+81lWXIrRCrYnY2cdHoJsa3err2R0/JMnTNrZBcLGSogJuIWDGb9NHdG7z1fEeowEpjXm6CsEWBGSWFrakZwRlCXrtNrpMayr1tVOHGsyro0M/hZXLfPZud+Pk0ng9EvVCWosmwE/Akan9UzVp5BK3nfwjMBtCKB4g/ZeK1urRHrR/dG+dB+7qFMSD7tEHU35rAMoozQXUTrVUTLnaqnsi7BvZ6dUQXyWv9hW5OVaAkkTa3r647dSSjNCtbAG8frQnTH91l11ypZstPUASU/JEB1WtO96CUTfc3ldNtlsikv5ym+lkWbQMzJatIPumyzoAdOoimwJ4OGWBH015Q="
+        },
+        {
+          "hash": "6bd56c3808a1fbcda578b9ba5fac1bbbc702205eb6d51aac5a6a120a58f70e5f",
+          "payload": "NwD1S5y8cpv1U2ubVl4/aj9M/3YIX+KO33AeM9Qk3jmDltJUqPDrXrk8XIpykgiC65ZA4eCIEVgRUWpyHmCRhawrlC+mXrwe1VHrMLrvYnIiayl4ltATZ1kyD3ClqUedN7zZXUmlWcsheF411ObAt50QsfNR0oPihfd2fvrryi1ePxPqBNrdgg8dlMB7h45+2BzVDWFP9yVNfJWkvMf+H65ViLtn1aaMw9JeRYj2oUKiweKBL1HMjyNKx9IEkoNt4/4LWS0dJGk2EJGNgd5FhOQf3oea9JXQ9an2GixN4zkqUZSn9kr29ZGZ7bRtG4GZAuX4Hr6BD1CAPXYlrrVvWncpxiN2sZzdnLoGNQfMCG+fxriZCgRCiCtX1AF4iQQK6IqnsZVUPtqdcO0LzDQdTDxqfItPjwNVsRudcmBAZ9da/rrlha3GmbsaVq2ll2a42ckJl6ZRMPoENkOTDw/p2+Kx/fEsJHsPpduIh/vQaeGYAbao/qJWhwssVtEboqqz/8QBO70JIGj8JXFdv+EyJMCpYrIC8eR+0nM9SRlG6Fa9jkbSZ9LApIc3zy6+vFV0blT0SGMRXkBLSpAw7Q2Gm7EeBhFYEY7fQR1nJYfzhdibnHoH7sKoUi965Ah9wRqfqVW7lyIeE9zUjDvAu8bDehbVB+13gubORsGMso/NN0s6zr6lqIjs3TPRoHVBkhl+rwvvL470"
+        },
+        {
+          "hash": "b13be5ae7f6f62cb92ee85c8aeed271b06ca4d42db3ac93f136b03d3766c6f2d",
+          "payload": "0692b/+cVMLYnXphExRL9npBAjqN4oiDB+MBd67RnJOFTaoVOvwVaUGAJCqYIiZRC5gLMyKz5Snbq3xdCbEd09SCghKvKgxIsC3shj6g785bVyxEp0A0RJStRLI1w/2VSlIIlhZ6tFKByCuFZzFYM/xxQJDQbouSpIpN0O0d5DNRmOyDavJmhKR3N63Dty1baqAq/AxupbYG3/qhV5W8DVtvnkwpzXikAymG3L4gza8FC093409SvSq4DKBWqvzoYuOmP7IDfBCz5qI0sjs/z+Fn/y5+YJyDDSOYXEMHmgNJIW6jEo7HeLFz803Eht3vDK+GOfn9Fa/0hY/98dqK/WQwacNcAj/vu5JCjYXBWKPQdnHmpvNwbDWccxBrrFNluqS4YAWjZrp6tohcYtVEl6VSWY7UaE7ik3G6z4AJovkK22T2wEn4Cqn02RgXHZyTBLL09a0GlbDZmtoAhZczAQylOLsG9xi3rzJW1pW4MlA01gmy2oNEDKSY+KT5kKNNK5Cqz49HPD/29M0Up1g5H8ZSHRIhOZIAczDRiCZ0ZRNMM+6q7mpzT/gZldIjeHkjRRL4ukOjJeiYHpp+8X7/i/HWd5+0b7E7mzuVw5zd6UAmtOvpibeag7LxC8EcnAOLYy+7+ZF9sXGIjVckYLfe6sChzKEZo8uMdOz9FnuTZd3t7PI78GE+FFplWNQ="
+        },
+        {
+          "hash": "d5fafb2f0035f6f8f8bcdd21cf48bc881e400643b5d79bb19cc22019e33f65ab",
+          "payload": "/n/6a1nNoZl3m+nErncEr/KQK7hT/6l9cosTBveP9pQbUUdd4RM1JznnlNS/fyiF/e3h0H7mZ6GbSFq+vnJ78FYe/YA2IjNSkHVBdj0XfCuco0dTfwjdlQjrK4VRPMjqk3qgygSXjNJt1BPzWSaKZXaWffIIsBh47s6bKZyDfgL+9+rHnCss0SEdDIMKOgcAKVIH3Vdr7bc+2RNDk1XUGDF0uuJZ4t/G/ghx67zYzBPuWkqi5rjD7ctnPgFc7hT+l8MkxX1udK+7FlKaiZsxTgIbsOTmBCIhIt//jYqNTuqpvbh5aA9ZTsqZfL3odNmHxmwkIft9nLm6nbtF+WQeqFyTuA36uMHAPBigZPBxRU2VT3goVU4YTUHDb8GbXgA3nrJ/R9Jb6q6raYEq7Ru1H9EyQ2nWZGRNn7/ByTUwUeyPlzvGZ68sLkvWrWWLv1Rnfw3rFvKZWNyZU5SirWJYsEvqWALdxodK6qRa3uV0xptJvhjV0SNj5mSdUHMBmeqfr+qJFnux0Xn06FxVRhOKCOXRT1RDmpDPYGXRkHHuaje0z58afiV1CjalG6qJ46EmSDXHB6VGeOB6v5XWH57DOH/Rkr5QLYX649NjWJsejqdb0J1qcV0F8yThW2VkGlDMwqkD3vUwvlYujdTPI9f5KR4hmwcS/0Cyc8AN9l77oXs73nFOdGnXqgBeiIuTbSuE4vBHRkRz895bemmTi5yNXRmMfXpXXJ8l/X6HF28Sjr/j/YeXAKbVtX7q1GmDg8SrWgv9ZynyptdE1bCrGGF01vtCu8HDbpB1ceslGcG0XZca2SulXjzuxZeuwPMxibZtLrV0W1S6iQZyuPa157IIpQ1DQtQr8+ZoGZ75fTsavQazX6deBuCbKld2Q4P07PUA3M36SzYue2JtzFPevBmMTr+fUkIAqXG83qIYFYrgFnxNlzBYzgV+BK39gta1VAzyfgId3Lcg2r7hal0RMO10x6gZZTQ8/CsMJuKoQrYx8Jf9Hp9oLqCV+jF3NrTsxkTLZCbiE2DiGbwqy/UAOJcV2ZuOnMgwkB2FizdK4xt/sY52gW24xn1+PvhEIUCRGocmWFTqiceYiw1bWAQdkG7RLNZoRXU="
+        },
+        {
+          "hash": "dece4c6860de4edd74c97ca6aa6659fa5777e755724bb218fae34dbcf38d86c8",
+          "payload": "rYqXFsmERfjecwbYFsKPYm9UNULmK+tgks/5I5WUaIN6v3OXKGNzHOrZ1CUfcGU9up7Cz68KJz/nm9mAx3Cctpm1KRLBtMhcaGZQe/71/7UwOtGA63p+Wh/FFaTuV+xIv9FeSM7BB2SphqhSKP7bgMbyeW83nDfESMKPpkuJqIdco/9tt1fi5Oq3CjtJiZ5+zuDfstXtVHIRfSspLTv/L8/tCS7MvduIh34GeMlLA2L5uU78+6bhjlIsey8KxB87Yd0oSB8Jsikie5F3nOi5ZDDBoN17gsrG67td1Yy3jIIXNZVjmwx++NF8xqY2nSR0PpuUNQ+G6o+l8IkGw0OSG8cWZ3GbeIavfI9kLpezKUVuQpPMHzOqEp9+vJ39HEwNqNHS5XwnARqiBWDR4laJgzKQ5wArVuwK3STFf0mZXbpwzTfXn0WbkiYBN0SkDTuVHXOFNKDzB2kmxR4qOycG8cLHZpGmGq24iaC7C93FbcKct2ZtWIINVxpqZwgAyGcdjgtWKvMOjIOjKpYMhoLI2pzDudoxiQS1FDoXCWRw906deI+t7DTQNyigE4XgegoKINgyPAF0AA2YdYwjhuK0hr9OSiQBAA8nExySO6+couyUaEXsSsypZvqu2Q=="
+        },
+        {
+          "hash": "e64d7e5142bb259b4fb5653ba9c33a960b197f9bcad172d8bfe44c1e61b8b2e4",
+          "payload": "CPl/xD7aMA8ainoe92H+N937aWqjLG8RNsoiODWsiUd1yhz8aJn5j4ZGHEIGsvJEeZH96uBJRnKuppLKHZLLZUutXy+WfrwjVNbJvrE7Ey8y0H+myxkB4H5vsZ4ebJHpSlxNoyDgDvOEXd+m5+V3FfbEQhpcnkFjHwJUgqSwHDlrL/QnxVQk5BKCDRNurDVVa9adJTM9Yy+5FhUpE0bXXwoNJISnoW9Iw9hqxLRYYeQ5TQJB4SYHPg6zLXNHdM8P1g6r6E8jQ9mG0D2WquWO8/KCPAgxDWi0WoFK5NRfaU6OZ37Li8wTTFfb4Y2ZF3bwQc34g3wRmsy6MsAaSZgMSxdBQi+baLVE0WdRe9EV03MbnKAMxoDJZfwqwJng35hUtyyA7KYhhFVBVCQVgEewuzspecSKl6cEqX+n2B+UjqSXUyh8vpGUBaSuFr89lrMj/Xuq0SyAO+3XUG3XY48AxA8G1BRakuuwf7HySMdMKO3IvFqZ5JinWAJklCQziRLcehQ44/0mbmSslNTuQ1P1MWYqyWe0j5EM1nccWSIL9YP/orAGC+EbrjVrMLOTT7okqnxzidNaoHRl5EXmh+I/+ncYHTU+j/z9TbyVJPPIPnFNQsFYrgwK75TFzfFVEy303+3rWBGruC3b7ahL4RO1Ob1L8BQ8bxGxjDMOn//EJnMCCsXxDNZdn4g2lV5KX3tWTzd2OBEs8I4pe3yJ2hqdJWLLkn87YeBtna3u8Lz1OP0DgcvX3VxfiY71zLy411LbLnrVj4nfqEaV+i3frBoa1sMaYu9yA9vZQ3UR9Djhx3lXLofNH2eDwywEniFTm+QYcKQj8Ou6FUQgsW/jVntI5WRMmmGj1aguBnDSs803SPU6uw2WFRt5WQl42sAkbnVCiw/Xgo3vhCbDWtAHDjgEJ3ixfeXk88JwaAIXWmdDlVVA4/D8ISgq7Q9JvjMszAXG6tOV1AtC/Tyb6F/l8H1CIcE81JJ5gsgKoMqyATkAy5VdTKD1oPjNm2Ogj631KVSoOvF9PzFIumKCh2bNdLOFLkYWeFk7GojgXL6WP48sLnEVQNfia7iM7KkgPyDNKI7XoqKN3X1xGyzesRosBLGY1ynzs4X/E2UrW7C6F5NlPnhH6/Zx1BNepQfT8VykI5WlPIYNJSawiweowYzSLn0hGOFy1zk1TD8cCViP1dZ69ForpQdzP1/MBAz+Tqer/R5W9GEO0+TrC5ajn41+odYPyvNLdiQUqBRezdY5teGqnBwKguE6XMI2VlgJZQ=="
+        }
+      ]
+    },
+    "s-phong": {
+      "intro": [
+        "Ông Phong ngồi bệ vệ, hai tay khoanh trước ngực. Ông không giấu cơn bực mỗi khi nhắc tới anh trai."
+      ],
+      "topics": [
+        {
+          "id": "t-phong-call",
+          "question": "Cuộc gọi lúc 18:30 ngày 14/3 hai anh em nói gì?",
+          "answer": [
+            "Tôi gọi để nói lần cuối về dự án Mỹ Khê. Anh ấy bảo đang trên đường ra sân bay, tuần sau tính. Bốn phút, toàn tôi nói, anh ấy ậm ừ.",
+            "Tôi đinh ninh anh ấy đã sang Singapore."
+          ]
+        },
+        {
+          "id": "t-phong-project",
+          "question": "Mâu thuẫn về dự án Mỹ Khê là gì?",
+          "answer": [
+            "Phong Lâm đặt cọc 60 tỷ để liên doanh với Lâm Gia làm resort. Anh Hưng dùng quyền Chủ tịch bác đề án, cọc coi như mất.",
+            "Tôi giận, tôi đã nói những câu khó nghe ở cuộc họp. Nhưng giận là một chuyện."
+          ]
+        },
+        {
+          "id": "t-phong-13",
+          "question": "Chiều 13/3 ông tới biệt thự làm gì?",
+          "answer": [
+            "Tới không hẹn trước. Anh ấy đang tiếp luật sư Triết trong phòng làm việc, tôi ngồi ngoài phòng khách chờ chừng hai chục phút rồi được gọi vào. Nói chuyện được mươi phút thì anh ấy đuổi về.",
+            "Trong phòng khách lúc đó còn ai thì tôi không để ý, tôi đang bực."
+          ]
+        },
+        {
+          "id": "t-phong-office",
+          "question": "Văn phòng của ông ở đâu?",
+          "answer": [
+            "Phòng 6B, tòa 45 Bạch Đằng. Cùng tầng với văn phòng luật của Triết và Ban Tài chính của Vy, chung một quầy lễ tân.",
+            "Năm 2023 mới dọn tới."
+          ]
+        },
+        {
+          "id": "t-phong-night",
+          "question": "Tối 14/3 ông ở đâu?",
+          "answer": [
+            "Ở nhà với vợ, xem ti vi, ngủ sớm. Ai làm chứng ngoài vợ tôi thì không có."
+          ]
+        }
+      ],
+      "fallback": [
+        "Cái này thì hỏi tôi làm gì?",
+        "(Phong nhíu mày.) Tôi không hiểu anh muốn ám chỉ gì.",
+        "Tôi nói rồi, tôi không biết."
+      ],
+      "contradictions": [
+        {
+          "hash": "629ea74329ce338a977e973647fd2c067c2579c38873333c370f5f14b62332b1",
+          "payload": "U9dPVf+hzFXtfelDT9PUhuiMLCGmXxGQwMrU5UnPDCVv3bDLqGf2YcqLXhXwFeGHH8INapnT4oCdv9bLro1GEZaRTxbg+dt7jGG8bdOo4OmI6edtaPFlm1SxikRq+TXfeIm7CqZHgnHRsbNXUNzLfrte0ckbSLziZsHn6FjkoQiVm4YAFtCgrlYRRCpWQcF4EZAfsmx2SGtSpeXWkoKMUiTbLzmeDl2+SNvLZcvftjKDYta3/sCP6gVv0RdLlHF0aJ90k5WxNUMUloUPx6rhRrYX3uHYi8qhHrUkCp63b0kgZXMLC2EHUs1mKs36sY6ctFVv3KfB7IL1oPMGBlvub7uAVvdkR7MA2T7SqZWo+rdD/2a3k+PBCeUC00MEfCmC9oGHmU/QeGybKeawn1zpT6mr28imRKPOe22pTjjpKBhjyiREOUEoHD4izomAUYRqfVgasdT0h2rMJNkANnEk/i6jVB2gs4BO7T9p4jRDW7jwUAbnkNHo7BdbaK9hbE8EUonwu7Gr3cBXDLogYVQDdU0GPGNRl93DUNmpLj02FfKNIjIEJTYTdlU3YuuyeL4Do9JtzBdBTbB+4AmU3OBTd0v9M85oPAY4uFbcJoQE3Gp/eQ4ynGP2dgV/GJj24pTRXay7abnfDIijNnf/Daqdi4DW1upP6IjU4iJmmnnvS9USDCHBTyMbCNA="
+        },
+        {
+          "hash": "b0561a0a0166767e1e13b764ca90762c1b3038979a6f39f0d8df130c0f8b0aaa",
+          "payload": "MEMiJmG29YTg2nuEpXQ/9H0+Ge3oF6S1gFZJZxQkyR4jXk1C+hWcOKYI/U5wFLYEJCsQdT6gDKckNyq6TnvyKmEHvEzF/xvvydeTEWX0RHk2o9xFU2MEfcKfeWjTxabHvFmy0TQAw8YgoP/XFT4cSUv4/iHVirGYwq2seoRg8C1YJ648N44OnXhOJEbzavtclSaquV92FrDPBlKN1f1t7gEW3+KRybCEAMFmawf5LQQ0NaUr3jLJdGHcAm5QwDv0QajUjvarui3KHgOJwM5Y8f2q5voIGNzKkM9QbzYJOgH03IGhmt+BNyOBD3rxHfMkFX35/9VIaF09arMnLUG5DUK6lfqeejnA5z/iLi9ds2r2jFjh3AzmIZle/36XjPgGfIj/v6aeQxUUqIG5eUA1P7fwztQJCxJmXIIlDuME5SJY/m1bzNlMAnJ/1G6PhjIzSUh2GUf7KB2I7rs+ViRXf9qetSdVnSWnWDVA9sL8w0FLglCNyX7kOy1bKB6GKI5CMCkrYQvZn3eftkiHW/NWrh2rNwGhJS7u3nRXqeIeykoA3x2W2vRlg0fJ7hwGk0g6Gz6ORWInKate92wRAJAV4dBb41SEn6I6rly/7O6lcNu4IIxJEl42k1Rj2BOw63R6m0QS2sg0MAMS4KLk5Un90mNVjyOZ45ih7AMgT6ApTFpI+4VN3xLiLuE="
+        }
+      ]
+    },
+    "s-vy": {
+      "intro": [
+        "Chị Vy ngồi thẳng, đặt điện thoại úp xuống bàn. Chị trả lời ngắn gọn, thỉnh thoảng nhìn ra cửa như sợ có người nghe."
+      ],
+      "topics": [
+        {
+          "id": "t-vy-fund",
+          "question": "Quỹ Lâm Gia có vấn đề gì không?",
+          "answer": [
+            "Quỹ do luật sư quản lý, tôi không trực tiếp nắm. Báo cáo năm tôi nhận được đều khớp sổ.",
+            "Tôi không thấy gì bất thường."
+          ]
+        },
+        {
+          "id": "t-vy-last",
+          "question": "Lần cuối chị gặp ông Hưng là khi nào?",
+          "answer": [
+            "Buổi giao ban sáng thứ Hai 10/3. Sau đó chỉ trao đổi công việc qua email."
+          ]
+        },
+        {
+          "id": "t-vy-night",
+          "question": "Tối 14/3 chị ở đâu?",
+          "answer": [
+            "Tôi bay chuyến 21:05 ra Hà Nội để sáng thứ Bảy họp với ngân hàng. Tầm 22:25 hạ cánh, về khách sạn gần sân bay ngủ luôn."
+          ]
+        },
+        {
+          "id": "t-vy-email",
+          "question": "Chị có nhận email của trợ lý lúc 17:50 không?",
+          "requires": {
+            "clues": [
+              "c09"
+            ]
+          },
+          "answer": [
+            "Có. Tôi đọc lúc đang trên taxi ra sân bay. Anh Hưng ở lại và dời lịch với luật sư lên sáng thứ Bảy."
+          ]
+        },
+        {
+          "id": "t-vy-office",
+          "question": "Văn phòng của chị ở đâu?",
+          "answer": [
+            "Ban Tài chính ngồi ở phòng 6C, tòa 45 Bạch Đằng — tách khỏi trụ sở tầng 8–10 cho yên tĩnh. Chung quầy lễ tân với văn phòng luật và văn phòng Phong Lâm.",
+            "Tôi làm ở đó từ trước khi két nhà anh Hưng được lắp."
+          ]
+        }
+      ],
+      "fallback": [
+        "Cái này tôi không rõ.",
+        "(Vy lắc đầu.) Tôi chỉ làm tài chính, chuyện này ngoài phạm vi của tôi.",
+        "Tôi không có gì để nói thêm."
+      ],
+      "contradictions": [
+        {
+          "hash": "4063a49aecba54de52bd964b98587a72dee7fd6fc11c22610f520f87474cb0d8",
+          "payload": "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"
+        },
+        {
+          "hash": "c4a5a2072aaddf963a1f17cfaa95edc4aef3efe8590a5fecf0531805281219a6",
+          "payload": "nXGWTpi7qYc4CuPdp7MbE1RmpEVF4QZOt2F0CSz9/ij/UrRVvfOXj+LSG8pZht7PJ+TdreHxYpfO72F4U05bhs8S51ZlwGa555z3vogrQwQ5PwrdUpPKJRt4WYe+UOlENtBifYIbISFWkl/hOlSPBaazNJ9CV+YFD6rAnqQMDlJWg8heDHBgEmUQ3icmbHRFYbomzVylc4kMrEPKpiBxEZh0yIa5Yev/5IKPjHw4pQ1TrhM+y40JP488LjOQ9v+exCYYJOU3SYyAp+iJ6oG6EQgj8LM4lNbGu0sDHD0qJlFk3eTXjCez8HnGrpbM/SHNCQsJWz4QgHQ04eAAK32/g0DP2EUM5pLVpx95wE0bh+Q2gXQoCdTCAdHQn9cr/8ekXeGkWJd086M55ocOT3mqPt8i90DxEJznL6c2hShU4rL5Sg+up5VQzn93XEHyNuuUywVpxQjZlKtXVAXu4TrBvpdXXTYnXBpK9Mum/q4mJRQhfvCNMOtHzhJkRDmKQr7Y0BKrLrIa01naH8FjStFGzBU2hyLYrHKY0KgIDL9SSXf8gqP61Eg2+PJbuFysWhPU82/87CUSeybw6DA2R7ZwaKbiy3mwPHhxL8OPupRSsV6Dj8Yz+ZFbrSPBY2g+DAcsONGnpAjl/Y7vTYvfUd8v0MJDdy662NEB"
+        },
+        {
+          "hash": "f75fe5c175a6e100c50812db3d88c8111a329b57e7e94cc39032e3674c94cde4",
+          "payload": "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"
+        }
+      ]
+    },
+    "s-dung": {
+      "intro": [
+        "Anh Dũng ngồi mép ghế, hai bàn tay to bè đặt trên đầu gối. Anh trả lời thật thà, đôi khi lúng túng."
+      ],
+      "topics": [
+        {
+          "id": "t-dung-camera",
+          "question": "Tài khoản camera quanly_dung dùng ở đâu?",
+          "answer": [
+            "Tôi đăng nhập trên điện thoại của tôi với cái iPad để ở phòng khách. Ông chủ không rành mấy cái app, nên cứ mở iPad ra là xem được, không cần mật khẩu.",
+            "Tôi chưa bao giờ đặt lịch tắt camera. Có tắt cũng là ông chủ tắt khi có tiệc."
+          ]
+        },
+        {
+          "id": "t-dung-13",
+          "question": "Chiều 13/3 anh ở đâu?",
+          "answer": [
+            "Chở bà Kim ra sân bay, ba cái vali to. Đi từ khoảng 3 giờ kém, chờ bà làm thủ tục xong mới về, tới nhà gần 5 giờ.",
+            "Về thì khách khứa về hết rồi."
+          ]
+        },
+        {
+          "id": "t-dung-night",
+          "question": "Đêm 14/3 anh ở đâu?",
+          "answer": [
+            "Ở quê Duy Xuyên, nhà anh tôi, làm cỗ cho đám giỗ mẹ sáng 15/3. Họ hàng thức tới khuya, nhưng cũng không ai để ý từng phút tôi làm gì."
+          ]
+        },
+        {
+          "id": "t-dung-code",
+          "question": "Anh có biết mã két không?",
+          "answer": [
+            "Mã cũ thì biết, ông chủ hay nhờ lấy giấy tờ. Hôm 12/3 ông đổi mã, không nói với tôi. Ông dặn: 'Từ giờ đừng hỏi mã nữa.'"
+          ]
+        },
+        {
+          "id": "t-dung-card",
+          "question": "Thẻ mã chủ của két sắt đã đi đâu?",
+          "requires": {
+            "clues": [
+              "c19"
+            ]
+          },
+          "answer": [
+            "Năm 2023 ông chủ sai tôi mang phong bì đó lên văn phòng luật sư ở tầng 6, 45 Bạch Đằng. Luật sư đi vắng, tôi gửi lễ tân.",
+            "Phong bì niêm phong, tôi giao nguyên như lúc nhận."
+          ]
+        }
+      ],
+      "fallback": [
+        "Cái này… tôi không biết.",
+        "(Dũng gãi đầu.) Tôi chỉ là tài xế, mấy giấy tờ này tôi không rành.",
+        "Tôi nói thật hết rồi."
+      ],
+      "contradictions": [
+        {
+          "hash": "396f39228521d05872ec8ea83143632c906c78cd3d878cbf679ef487baad365d",
+          "payload": "c4DMdTG92jmcrJgSGhdFNpwkHNEgp8zRND+jw60whTfAe1XdarAu3X1HRpbrVqh9Fmt/dl78o1XRRAT4u7GxI+vUusrzosmB42eZx6qt4xEu4V2CSNtuoA2mnIvC6K4IGYt6bnhAjxAzOa2yYC+J1XhM3+o1JPy9Ke3dLU919G/g0PVVryBEL8Iy4mPwMPtZnCO5jjn/TE5EJnQQrmbSQa5HItauV7cID+P9t0UphTKQ2Go1N5YZCJ4GfTiFwme/sWww5jNMzZcwwxhEMC5cu+JOUjc6yWwwD9JZ/dh7+OMrlwlRnsUV6CCKYV3cG1Z4rFs/GUx5LA3fTxQLaUSf9tmhrvY3pR13QzmlP136nu/SwCLCOLtA4nEqkKSe3H3cjynBtU9gbMjdUZuQP30TL583LFCstLOvWmvEDeZNiW4dFk9Q67sGutWilAIXsVH5wIq0KhniwTkFZpiXZS1fCbp6rRqZ7OkQ+Vb1KogCc7RwZOasljt/6GFgvXilTN6Xaqlv9BSFAALklXTbtT6Ng4sCaAVeNi8/g6mEy0I0KImTPPkZmRz/tBLYI3r2jMmeEbiudh+4IQZ99Upof8wR9lC+"
+        },
+        {
+          "hash": "f9e9f9c2b9c85bb52e89d4ed2bba83575296831f09735973595a8b826633c02b",
+          "payload": "lVXNlSgpqOJFLctQFjdVZl4LxB4GsFWol6CZyB++P4o/r95c7lnvOnr/C1SEtOMK3u6dWvzd95kb/Pk+XJCQ61qpglpNgfylveOo49HAiQPp4qk6Q/bc0rFDIjCXM9uhpEHmNx2AlBZNS1ReOjIDNN9NCxL+s6Tkpfi8k8OaWxqIpv8dhmfXJS+Qh9TAShLTAr+xVJTi73+/nnBZiPTWRFApz3Xp2JVPhQgnzuoDSpbiGooIoYSI7/csHhbc6A/5JzvTVbls430p2N+BgIUj8x45m1RqjrSozT8BoMLmZCcDSAi62malCCw7W33KbcCfmY9ViCdqo8/eWFm8MmyKQHr1O1EjjhF3+jiG783V658+xL2KqIi7ysGEzyIyAWVrZHe9jUzSTlcSy/VhpdPTWA7IokWY4SCNEYFX3pTKoR8Meq5HJiZPQlatMvUAnJM9FQe16Lj+HT+CqD7agnsmoiHmIO7DOzGRcBJigPF0kx6pSHV1ncAzIVvn346bqze+utIuxSToBM7YZ/36mZVn7DtH7atRPcne0x9n+37LvpEdENZlmw435hsE"
+        }
+      ]
+    },
+    "s-kim": {
+      "intro": [
+        "Bà Kim đeo kính râm cho tới khi ngồi xuống. Giọng bà mệt mỏi nhưng dứt khoát."
+      ],
+      "topics": [
+        {
+          "id": "t-kim-night",
+          "question": "Tối 14/3 bà ở đâu, với ai?",
+          "answer": [
+            "Ở khách sạn Hoa Sen, Quận 1. Một mình. Tôi ăn tối trong phòng rồi đi ngủ sớm."
+          ]
+        },
+        {
+          "id": "t-kim-divorce",
+          "question": "Chuyện ly hôn và tài sản thế nào?",
+          "answer": [
+            "Có hợp đồng tiền hôn nhân từ năm 2019. Ly hôn thì tôi được căn hộ ở Sài Gòn và năm tỷ. Anh ấy mất, theo di chúc tôi cũng chỉ được chừng đó.",
+            "Tôi không có lý do gì để anh ấy chết."
+          ]
+        },
+        {
+          "id": "t-kim-msg",
+          "question": "Vì sao bà nhắn \"Anh tới Sing chưa?\" lúc 21:15?",
+          "requires": {
+            "clues": [
+              "c10"
+            ]
+          },
+          "answer": [
+            "Vì tôi tưởng anh ấy đã bay. Lịch đi Singapore đặt từ tháng trước, cả nhà ai cũng biết. Tôi còn đặt hoa gửi sang khách sạn bên đó.",
+            "Không ai báo với tôi chuyến bay bị hủy."
+          ]
+        },
+        {
+          "id": "t-kim-safe",
+          "question": "Bà có biết mã két sắt không?",
+          "answer": [
+            "Mã cũ thì có, là ngày cưới của anh ấy với vợ đầu. Anh ấy đổi lúc nào tôi không biết."
+          ]
+        }
+      ],
+      "fallback": [
+        "Tôi không biết cái này.",
+        "(Kim cười nhạt.) Hỏi tôi chuyện công ty thì tôi chịu.",
+        "Tôi trả lời đủ rồi."
+      ],
+      "contradictions": [
+        {
+          "hash": "2bef92283655f5720c2b6368c539b548ba82137baddb5539aaadabe0c7254701",
+          "payload": "e6BC3iYrGwHE7fgOsn8nlLvQqOHKREbseNtbARV6DXuD6v1b1Wkb+vPB8dCJZIFwbvUZdjlM7dm09hEsKMzpA+ZEBv+Osbga+sRMrN99Tq3U7zbM99JvxK+HwUQgGOS6TcQxFZTUyyTNkZpuPPLBRdi5kHMi//aAcBnnr3XkpXvOF+BgTyxquaZV0cjRjwNd9KuI8s5VjftkmoRqr4CGI6Ayba0fxVWW4Za/Iq3opX2B/EScGR1WITxRZ7E+UQQyhx8a7rnNLb2YeF72VdC18PZR+eo6gYghQ9L3LVutyFyOQkuKkLFbXPkPtKfnadxAq7wcrsQ7rpsH4uxTAZmbQshIOYksvigJlW0/Frv5RGMmCcofZNoK/Kb/p3XaLT42lI+2wYgfgc2XTzoLUy62DokxDFG9tFnZQ7InTCihkJpsQXx5oiCpNXHBvyUdTf97rZ9L3XACJ38sdJ2/MuovU0UN0izRbvFLR1N3aaK9vcdEHrjuluZsovhBG0X591iNk1fucsO3LjgUV3EQSnn/iSdPhiPepB8Ug8z6zadGW/s2SZOBJvi3XM5DbXai7uUrIf8ID7rxeiHGiC133s/pSltrZcaNK8VwjCGosrYsZrBmyCX4C5NyK6lqKAYMGv54vifffuGOCIFHSILTGxE1ExzW"
+        }
+      ]
+    },
+    "s-bao": {
+      "intro": [
+        "Bảo đến muộn mười phút, mắt thâm quầng. Anh ngồi xuống, xoay xoay chiếc bật lửa trong tay."
+      ],
+      "topics": [
+        {
+          "id": "t-bao-night",
+          "question": "Tối 14/3 anh ở đâu?",
+          "answer": [
+            "Đi hát sinh nhật thằng Toàn ở karaoke Nhật Hạ, Hải Châu. Từ chín rưỡi tới gần một giờ sáng.",
+            "Uống cũng nhiều, nhớ không rõ từng lúc."
+          ]
+        },
+        {
+          "id": "t-bao-quarrel",
+          "question": "Hôm 10/3 anh cãi nhau với bố về chuyện gì?",
+          "answer": [
+            "Tôi nghe đồn bố đang sửa di chúc, cắt phần của tôi vì chuyện nợ nần. Tôi tới hỏi thẳng, bố không nói gì, tôi nóng lên.",
+            "Tôi nói 'bố sửa thì sửa, con không cần'. Đó là câu cuối cùng tôi nói trực tiếp với bố."
+          ]
+        },
+        {
+          "id": "t-bao-debt",
+          "question": "Khoản nợ 4 tỷ của anh?",
+          "answer": [
+            "Cá độ bóng đá qua mạng. Chủ nợ nhắn đòi mỗi ngày. Tôi định xin bố thêm một lần cuối… rồi chuyện thành ra vậy."
+          ]
+        },
+        {
+          "id": "t-bao-sim",
+          "question": "Vì sao thuê bao lập tài khoản \"Anh Ba\" lại đứng tên anh?",
+          "requires": {
+            "clues": [
+              "c15"
+            ]
+          },
+          "answer": [
+            "Tôi không đăng ký cái SIM nào như thế! Số CMND đó là CMND cũ, tôi đổi CCCD từ 2021, thẻ cũ bị cắt góc rồi.",
+            "Ai đó dùng bản sao giấy tờ của tôi."
+          ]
+        },
+        {
+          "id": "t-bao-copy",
+          "question": "Bản sao có chứng thực CMND cũ của anh từng nộp ở đâu?",
+          "requires": {
+            "topics": [
+              "t-bao-sim"
+            ]
+          },
+          "answer": [
+            "Bản sao công chứng thì… năm 2018, lúc bố làm hồ sơ quỹ, tôi phải đi sao y mấy bản nộp cho văn phòng luật. Ngoài ra chắc ngân hàng, lúc mở tài khoản hồi sinh viên.",
+            "Từ hồi đó tôi không sao y lại lần nào."
+          ]
+        }
+      ],
+      "fallback": [
+        "Cái này thì tôi chịu.",
+        "(Bảo bật nắp bật lửa, đóng lại.) Liên quan gì tới tôi?",
+        "Tôi nói hết những gì tôi biết rồi."
+      ],
+      "contradictions": [
+        {
+          "hash": "45dfa5fc787a796670960cfbf3dc27aa46facc041a5375ebbfd45c4fdd897c57",
+          "payload": "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"
+        },
+        {
+          "hash": "b3b37ed0118908b6039a189673f25875429d49d3ff9775522ddadb7add178bc4",
+          "payload": "ufDX8Unh1h3/RRFPmjbGs9klg7+17Y+r105I9nle0wwd9/6lcjyJ4ymijiZOJO2MSIa4lo4fpfmTg4D/uwc4QPufoylKTOLq06F1lyDPTkQknjp4WNbjDbocBHNGzKG9UipcF33UWRobZFmxtd9suF9amcuI2HwLO022LIB1rmb4bJdPRvzz7Z1te8Pq6yhDzLb0ecscvL2BlSxVfOK+4KyNfszrSDj2Wwdxi+dPkFNUzSm16NuhGaQh1bpw97DqsNI5sD0Zn3yByXt4CdXX4lxEY0oTJkK6hbcCS+C7jpQ5Q+UXrxyicuUK/C+jNW5ywytwB+qXZkmANYV5IwWBuf3XuoxGh016BzbRKDljN+L5svZR32rf/DkemrlDkb2lDsNqQRvE67pe2PUlnNby/x4IiSHciastIv6iCxJa1BHifDeEL02V0ioyw317bW/5u2Tps0TAHOQ6SNSAQ9ifY9y8dUIP6q0w9rNz0AETIC2TmYnr066QHjg/Y208LUZCv8zTQdrgFCP93XlnynCq1KmD0d57L8A6buiD9TBcAIotetbmJi0q/C9iRC3K5rko"
+        }
+      ]
+    },
+    "s-thao": {
+      "intro": [
+        "Chị Thảo ngồi co ro, hai tay nắm chặt quai túi. Chị nói nhỏ, giọng Quảng Ngãi nặng."
+      ],
+      "topics": [
+        {
+          "id": "t-thao-call",
+          "question": "Chị nghe được gì trong cuộc gọi lúc 18:30 ngày 14/3?",
+          "answer": [
+            "Ông Phong gọi. Ông chủ đang ngồi ở phòng khách mà nói: 'Anh đang trên đường ra sân bay, chuyện dự án để tuần sau.' Rồi cúp máy.",
+            "Tôi hỏi sao ông nói vậy, ông cười: 'Tránh được ngày nào hay ngày đó.'"
+          ]
+        },
+        {
+          "id": "t-thao-13",
+          "question": "Chiều 13/3 ai đã ngồi ở phòng khách?",
+          "answer": [
+            "Khách ngồi chờ ở đó hết: chị Vy, luật sư với cô trợ lý, ông Phong. Tôi bưng trà lên rồi xuống bếp, không để ý ai ngồi lúc nào.",
+            "Cái iPad xem camera để trên kệ cạnh sofa, ai ngồi đó cũng với tới được."
+          ]
+        },
+        {
+          "id": "t-thao-night",
+          "question": "Tối 14/3 chị làm gì sau khi về?",
+          "answer": [
+            "Tôi về phòng trọ ở Mân Thái, ăn tô mì rồi ngủ. Ở một mình, không ai làm chứng."
+          ]
+        },
+        {
+          "id": "t-thao-money",
+          "question": "Vì sao chị nghỉ việc và chuyển 120 triệu về quê?",
+          "answer": [
+            "Ông chủ mất rồi, nhà không còn ai, tôi ở lại làm gì. Tiền đó là ông cho mượn từ Tết để thằng con tôi đi Nhật, có giấy ông ký. Tôi chuyển về cho nó đóng học phí tiếng.",
+            "Tôi biết người ta xì xào. Tôi làm ở nhà ông sáu năm, ông đối xử tốt với tôi."
+          ]
+        },
+        {
+          "id": "t-thao-pills",
+          "question": "Ai biết thói quen uống thuốc ngủ của ông Hưng?",
+          "answer": [
+            "Người trong nhà ai cũng biết. Khách quen hay ở lại muộn cũng biết — mười giờ là ông bảo 'tôi phải uống thuốc rồi', luật sư, chị Vy đều từng nghe."
+          ]
+        }
+      ],
+      "fallback": [
+        "Tôi không biết chữ nghĩa giấy tờ này.",
+        "(Thảo lắc đầu.) Tôi chỉ ở dưới bếp thôi.",
+        "Tôi nói hết rồi, thật đó."
+      ],
+      "contradictions": [
+        {
+          "hash": "263379db986c34cc2657e9b955bdc150f8ee740f9107c1c0b7d96f7d63dfee2e",
+          "payload": "gbkiBfVlO6QXwtmBh6UNpvF5qj+M+v/NXMNtOr79mt91KEjvKbUlo64BdlP8muTLvsA5+nL84VQqArw/1M+H5T4de2ZyruByRO9Rl1on8qfRpGWvhA4VSKz4LV0Jsrk0MBnUoxlaA2MmkOzy9a/2mKI7JopI98NgNN2M/Tuv5XOLduLSri6nZJ088yEjRC7wutS70dsK/fp6u0dwZfB//160ez7R/o91GN43RVcm9PFpv763QOk3nWpl2GVFcF5ZgIlfVM8szE5NktWQiCkXcm1O674LzEfKqDMjgMgpIAi0zlab+RHIzdanyvCaeMGHd3y9PFxWaIwfE5tLyPUPvtMEb3EomscAQxMKqlSDw6qdHDUZYO+qStQVJZjYxQDO9Nbr0bltkO0ydYpghg0RdSTelLcejkg4tpz+AHIbvAaS0/YF8cgJmwiXVDs1bXE2C8cwkSJXkVFq/GyyREVoZ1ATW9qFV6uuVq5VjwQ7hBFPizYYvyn3yQ6dPtzqB4IUhA06D/KdFOCYQNK7x1bt6sKQGwG4G4JvpPvotinlCQXDiAIUMG9GRViB8byT3ppA53s+rZqjmqSRfVkawRgpS40EtQuqY8sX8o/SDXSoKaPitOqQxzOUkjNkdufoWxlC3RUJ6W9MOCtJ/7wJmsCEk0fVF6bezkwTtUhG1mn5hGf/5qCCyQPMdX9vrtads1uG08rOPJUkfv0YEnLtxdc1UG6VlvU="
+        }
+      ]
+    }
+  },
+  "hintCosts": [
+    5,
+    10,
+    15
+  ],
+  "parts": [
+    "mastermind",
+    "target",
+    "motive",
+    "framed",
+    "method"
+  ],
+  "questions": {
+    "mastermind": {
+      "prompt": "Ai là \"Anh Ba\" — kẻ chủ mưu thuê Hồ Văn Tư?",
+      "optionsFrom": "suspects"
+    },
+    "target": {
+      "prompt": "Thứ \"Anh Ba\" thật sự muốn lấy trong két là gì?",
+      "options": [
+        {
+          "id": "x-cash",
+          "label": "Tiền mặt và đồng hồ hiệu"
+        },
+        {
+          "id": "x-seal",
+          "label": "Con dấu và sổ cổ đông của Tập đoàn Lâm Gia"
+        },
+        {
+          "id": "x-fund",
+          "label": "Sổ sách, chứng từ lưu ký của Quỹ Lâm Gia"
+        },
+        {
+          "id": "x-will",
+          "label": "Bản di chúc ông Hưng tự tay viết ngày 12/3/2025"
+        },
+        {
+          "id": "x-prenup",
+          "label": "Hợp đồng tiền hôn nhân với bà Kim"
+        }
+      ]
+    },
+    "motive": {
+      "prompt": "Động cơ của kẻ chủ mưu là gì?",
+      "options": [
+        {
+          "id": "m-debt",
+          "label": "Lấy tiền trả nợ cờ bạc và giữ phần thừa kế trước khi bị cắt"
+        },
+        {
+          "id": "m-divorce",
+          "label": "Giành phần tài sản lớn hơn trước khi ly hôn"
+        },
+        {
+          "id": "m-project",
+          "label": "Trả thù vì dự án Mỹ Khê bị chặn, mất 60 tỷ tiền cọc"
+        },
+        {
+          "id": "m-pledge",
+          "label": "Che giấu việc đã lén đem cổ phần Quỹ Lâm Gia đi cầm cố cho công ty của vợ mình"
+        },
+        {
+          "id": "m-silence",
+          "label": "Bịt miệng ông Hưng vì ông phát hiện mình biển thủ tiền tập đoàn"
+        },
+        {
+          "id": "m-money",
+          "label": "Chỉ vì tiền mặt và đồng hồ trong két"
+        }
+      ]
+    },
+    "framed": {
+      "prompt": "Kẻ chủ mưu đã cố tình gài ai làm vật thế thân?",
+      "optionsFrom": "suspects"
+    },
+    "method": {
+      "prompt": "\"Anh Ba\" đã làm camera ngừng ghi và mở két bằng cách nào?",
+      "options": [
+        {
+          "id": "k-power",
+          "label": "Chờ đêm cúp điện khu vực để camera tắt; mở két bằng mã cũ"
+        },
+        {
+          "id": "k-remote",
+          "label": "Dùng điện thoại của Dũng tắt camera từ xa; mã két do Dũng cung cấp"
+        },
+        {
+          "id": "k-ipad",
+          "label": "Đặt lịch \"chế độ riêng tư\" trên iPad phòng khách chiều 13/3; mở két bằng mã chủ in trên thẻ bảo hành"
+        },
+        {
+          "id": "k-crack",
+          "label": "Tư tự vô hiệu đầu ghi camera và bẻ khóa két bằng thiết bị chuyên dụng"
+        },
+        {
+          "id": "k-victim",
+          "label": "Ông Hưng tự tắt camera để tiếp người quen; két mở bằng mã người dùng mới"
+        }
+      ]
+    }
+  },
+  "scoring": {
+    "mastermind": 40,
+    "target": 10,
+    "motive": 20,
+    "framed": 15,
+    "method": 15
+  },
+  "ranks": [
+    {
+      "min": 100,
+      "title": "Thám tử hồ sơ lạnh",
+      "text": "Mười chín tháng, bảy nghi phạm, một kẻ giấu mặt — và bạn không để lọt một mắt xích nào."
+    },
+    {
+      "min": 80,
+      "title": "Điều tra viên sắc sảo",
+      "text": "Bạn đã tìm ra gần hết sự thật."
+    },
+    {
+      "min": 50,
+      "title": "Có tố chất phá án",
+      "text": "Bạn đi đúng hướng nhưng còn bỏ sót vài mảnh ghép."
+    },
+    {
+      "min": 0,
+      "title": "\"Anh Ba\" đã qua mặt bạn",
+      "text": "Một chi tiết bị đọc sai là đủ để kết tội nhầm người."
+    }
+  ],
+  "answer": {
+    "algo": "sha256",
+    "salt": "43409867120f5aa04b5b7d7accc8abbd",
+    "mastermind": "cccc5513fcb667ef70967d8066e0913e3891f5d29535be51344ece258cc605be",
+    "target": "102a56a293223d6f6b34bc89c277260ff789cb1d2f651f2b096c6cc4558583f5",
+    "motive": "1404af05802877a77dfae21bfe6156607c669886f62c5cf333df4dba86e9612f",
+    "framed": "14134319d8986f2a6f8c31e9fe45ff4cace53993486d19171114b4e565bbf57f",
+    "method": "95c5e3f4aca60ea414aedb22d496b95e4eadd08994fc1c09639d1fb442e2026e"
+  },
+  "solution": {
+    "encoding": "xor-b64",
+    "payload": "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"
+  },
+  "lockedClues": 4,
+  "hints": {
+    "mastermind": [
+      "Uf/Dl+AgSA1p/N2uLf5Ml+v8e6iNssCLc90L8q8PRkM4fhLhzAEav5Z1tE0OQ0/9FOZENyGuTQ/jZRtsZNFdjvnsSU8sU9zL5BVsdrKdSBrLeABaDLlii1VzpOd6vmigmgH2nEiwULjh0eenlirAVSxt0Qx2ZaRPaVcdobw8SMP/5fgUaDFvBqy3PeJ7vbexoyJ8qJM4uyrFjJlPlONTnjpD77uA2l6twij/Gqitn/m+HDZmN4WEqQUdvJ/CIb3p0WgGybnwW0o4N3DeUphL94gtjHAgJt2BbBaznOTN5lcEUn48eWtMD5gqbjSzYaPahsHe0yacnwq/wjXIjD/zS4x1eXch+Ih7N/uxhjAgHCFO1DUK+cnvux30WlOcbPddzh4lLgEmAtzvFMC3RmZXAunRBL2hm5BsC/C9Drd9A9tI2P8nLnxUgTdHnmF3QXw=",
+      "ArI+cNspaLSOShqdJwBOatxghwvr6FLK4r8IK8BmOcOa9NHrqMOI5XWT08XHo0LQNd4PB7kehJuqcmBFyATFav0dmO8z0XvZvyfV1n4ng7nn2gpYeKwYoIt6k/Azh8nnhAHyqNqDBswdkqE4DoaYdwxqLKNGqH35pEr4F2uXobMN+vQl9f2Nvxiwh/WBWkAhux26h4ae1dwjCFJuDNsOJApXKpfQp+urnglUJ8IKdLvBhdUB9zmnWtk9wa2B1ZFh7XBWTFEhTMehf9FxC9eg28Is2jV9Ip0FAow10OXlWuRtyXHk40+8dg3dh9qhhPwwLB44bqTKcUJ6OLc4Tk32SyQhwmuWE7SUEbkhelV8IZEKbHRRjBx1MyG2kRQx+BVaij6bsrBkfEw9Va4TKHY9xZ0dx9//rM+EEAZEtEryoLJbdpZj3/CtkwCLFzLfne/vs9ur6LxSkZ88FaPvrHMhWXFsB6bkubgpyQj/IlbcaQY7eMN+G+atdLpFIBtWxVhvvKljSIaXAc+43CemYMyf7yzD6jkgWcai1Vgbuyl6kZE=",
+      "79Nee8B3zw0dZ22vy/dF7gg4u/6CUYXQAMvdHpLNC6I5hK3hEGbSyO1e86PKZq8mZZL0xvuyJLuRuVkjVKksaaHVFV7yR01PnDvXd4MpPrYhHroRShRuw7Yy/Tq40+DeRItNb006nO6CJqLIH+V18CpLdRqojqpL18QDrTFvoG2ASW3KePtQfkcD897lAT0675mi+cQvsq+0dk28grr1fV+QaA9Pa4sfHsI4ru+i4Z+SqrcdUoKLNYfTVNhtf5Q1Bzf52pK0CVZoqZLSuCQ/7Zm9bbeDqWiN2nHotx2zwjiqisYBpoU7DdaKEWkz9F6xSWEetPcoOhcdrJfDyuv0YItgeE07I8lqfW9i9qlyn3w="
+    ],
+    "target": [
+      "lqORiDPjss7CcZ1DMGOygox18nbyMWllevz/hHUgbKnJVC0XtRyym5LItOsAdqLfuGMUZst9LzJOypDORqRwnLpm7Nx+41mLJx2BWs+qFV3sXg5FCEyBRdpnMcAlEHDCPwKmb1V55Es=",
+      "KZckgOwcdo152whS9aPz9Jhv2h8ZUoIK6v8PhzQRE05+RGlP70Egz0uMpYvr0h8+odtZw3R9LhGVunaIRo+Bh1fDbpf3v/XiNpdy5ox1JXAxN59VNNu0IfdEFlT0VY5AhLQlKMx725ig0s4kQ8DLIm2DnG6c4+j8qCBNKaBkAzG8E/ot+Po7bXHd9A5UsSPDyj9gIP1XN+Za6VoqPX8Da7o=",
+      "S3855kNZhYmiGTTVtL1bD2Y34VyyspUuuGA4cdcb6APRLxwaDCRBWWkWRXtq65dwNG66FN4J2VoMVxmbMNx6JuC1s+i591RRMT6gTFRfQqdLYxgWnCYYjlw6JKz5nRtOY8LZAgIEM31hKPAcV4kTk5YF1NgPBFWiYAz3HDFXHdMPxjth7/llDhMdDiGpBRjrMjpz0fz30z46ptWDmw=="
+    ],
+    "motive": [
+      "KXDwOm2kcnUJXeahAB0bzHiqIgM5DumGpKbSFCvaRsTKgoa/+cF0ljhJeEyL96W+rXSVUB/RGicxtM+VJcRj/Ebacp223Syyq4CMKLPpr0WvGVVuEqKgyvWZIl4ZurJsuJt/0JGRsVRt627d9k/oMFJXNX/sOC3Yrf03w3iF",
+      "Vl7ebILkJy3AQdOi3D2woo7rRD0gojoHAf64ch89S63KnwSi8JSaMUOD1700GQYwkf1vrIkS2q7CuBNAEHB4ODPPN90Co7hC1pRiSanq+1EMlj/v9dMim8Wr+TBbHL2pDUAehPji/nhk6PYW5EdrG2l+uUwpWZIMDzifoiMXfMrFbN12I9/OV4boB9fR8OlUzTLeYihqISWmRkl/jk5GHoZtPBUZsvXsTd4f/OKqmns2b/1j5vlgAc59EnFdayy09ltwNKQ8R61oBixrmw==",
+      "P1obqZhrH+w8qVTT4z/oD8nBadztmP0pkBWslzRBQAA2THt7UltWfOZGrQ7ffcWvTW17kRAZ0XlzZNicr1L1RJasO2963EcPNnrNmU4ctYkrAtbXGaOHSG0epAyWqQROri4cb1PoS2uT51rqTaKxZy3wrOwK/PdiS/mOC5RuiiV+Bhq/FXuw0SpY/nJjjriOtwZNuIskAEtIYeUL2DB/UmI1FYiGYqtXrYDLy5CiiPcH3jawNqsLBwc="
+    ],
+    "framed": [
+      "1DAh9DyB+nU0BkB1qD5JZo6Q0l882InB62YqQKR01K+PZOoNLB/PxNa+1eVijPPEKg4XEgraVc8HcCoN7L02P7WvXOEylS389Pusbpm/SE9GD46vrTDkdtLm7jf4dVjWRC01XRNK3CKMGydjzVK9iESaQLNzMx4mfi3lLomxoizEQsWIoGVtXy6vWaPfWk5aCmCPlbnXT6CQ7VlXOYJW6gH2Cn29PfFjfd/NNOa8k44OIZqqF3MO2iEr2Rtf+RLwxAT7WNQ=",
+      "UW13EUBemjaN7iDjvRiZZLsDIVEa1RcWI7pTQG+x+IsNdQo90SVNczQyxo57v65WR6CzBuxqlZrA/eiPyMHpVx8rfLMXMWZMk5JH/TrWDipxx+1N/QPbAQZR3aN90IDrem4f9wct2TvZl25RWwBJv5m/E3Xf4oIVt+dcRPU4yTJ91wnhN7Fdyi5LTZHTpfJrM/czQDp/iDj8icd7T+QGAvBuqi5Q5swM5C0lPwi6hcdvol1Bk6KubFX2geo4HqlBJKrEqPYlIjW/iaPU5Q==",
+      "UPjqieMglzEk7aot257QGJW4nK5FvQuRf0AGSkW9hHltSVeGQ3wCQqal4xdHfqhcf6RAo9vRtzazIWjyrSpnUzu8Gpjkqs9t06tkY2+8LEcce/GMbNTFE34tsFnw678ec/7fMGFgFqyl1isRYEI+LGI7zGgmNDPLaolmFDyqaR9loPXmsw0eFO09ic+HV2h+p63D3I1coKV/KEPicSf2dhQ5C95IXL266RJKFReL7XEdEEFk4kbmkJD1mcRcKxw/CAELUyzh5rYl3m9dwMDWM8LVaTY5mazElw/vYFEOoVXx"
+    ],
+    "method": [
+      "McBkf9M35JLlHbsIJZ4DrxfEKKn8DbvbrwH6RzwPyQLTCv1l0TzQBeD+xPBbvLZ9SZE/5DpITNC9LIvWj2UD+wwWwYUkcQa7P8J7e0MP8HRO6SLomltyOkWTE8NzwbvhcY9GU3Zo1KW20coz35AyJnNYIb1oyJTVWrovdZIuoMwFsccUrF4EcyX5BrlTaCmv+Ff5",
+      "CykDaDgCu9zMfMDTVziHfH6jkuVK+VJgyUkNEPUhWcHAnlEoDUo2UzlFdNotnCaCNihM+asShRP2PSMg9ET56mVc9AfeUAaBAlE0LRzwOBiUrCKIjOUTNsS+4vPpExOxenusn/lpzTojUGCxvrJbkyl6+BRfJrl+wYRJ8wnIAqWl/d2H/E51ZqBuXmfmWK3ijA83hiSKlRoaOjmaxt5URr66RQz+LLfk2wDGEHJzD85cWTrfx+XZNz8=",
+      "EorxydcG+hE1JhR37MJrMITpXKX5fGLJW72GiDeVPBN0ggkLPezG7or+DGlARe8h+ACXjUF4wMmJZH+YXjsdV8LbhgKnnuF1W1ouB3RwxGW7arFcQ1Y8UYHdMKGSgAbYd7gRQzHk9LC9LSfVWxhSeCDJa06BMfDGBfgVjAUBmpFUb2Mg+VGiBpD6UjperRqu301r0GWSyKnhxJGXY2gf5nlI83tR9YD3vu6LZ1MAx/hMnYVHPHRuCrep2A=="
+    ]
+  }
+}
