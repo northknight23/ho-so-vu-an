@@ -35,7 +35,7 @@ Năm phần chấm độc lập. Mỗi phần có 3 cấp gợi ý (−5 / −10
 | Phan Văn Dũng | ✓ tự tay mang phong bì (dán lại mép) | ✓ email 17:50 | ✓ ở quê, không ai để ý | **✗** chở bà Kim ra sân bay 14:50–16:40 | trong |
 | Nguyễn Thị Thảo | **✗** thẻ chưa từng qua biệt thự | ✓ có mặt, nghe cuộc gọi 18:30 | ✓ ở một mình | ✓ bưng trà ở phòng khách | trong |
 | Trịnh Mỹ Kim | ✗ | ✗ tin 21:15 + đơn hoa 21:40 | ✓ | ✗ đã đi sân bay | ngoài |
-| Lâm Gia Bảo | ✗ | ✗ tin 19:55 "Bố bay an toàn" | ✗ đang hát (MM-29) | ✗ không có trong sổ cổng | ngoài |
+| Lâm Gia Bảo | ✗ làm ở tầng 8–10, thẻ không mở được tầng 6 (MM-21) | ✗ tin 19:55 "Bố bay an toàn" | ✗ đang hát (MM-29) | ✗ không có trong sổ cổng | ngoài |
 
 ### Kiểm chứng (đã chạy bằng script)
 
@@ -73,13 +73,14 @@ Mỗi người vòng trong trượt **đúng một** bộ lọc, nên bỏ sót 
 | 14/6/2023 | Dũng nhận thẻ mã chủ tại đại lý, mang lên lễ tân tầng 6. Phong bì nằm trong tủ chung tới 21/6, sau đó Triết ký nhận | MM-19, MM-20 |
 | 5/7/2024 | Vợ Triết (Nguyễn Ngọc Hân) lập Công ty Hải Triều | MM-28 (khóa) |
 | 22/8/2024 | Triết ký cầm cố 12 triệu cổ phần của quỹ cho khoản vay 180 tỷ của Hải Triều | MM-27 (khóa) |
-| 1/3/2025 | SIM đăng ký bằng bản sao CMND cũ của Bảo; tài khoản Telegram @anhba_dn được lập | MM-15 |
-| 3/3 | Anh Ba thuê Tư; ngày 6/3 chuyển trước 300 triệu (nộp qua máy CDM) | MM-13, MM-14 |
 | 11/3 16:20 | Vy phát hiện cổ phần bị phong tỏa, báo riêng cho ông Hưng | MM-18 |
 | 12/3 tối | Ông Hưng tự viết di chúc mới (phong bì "DC 12/3"), đổi mã két lúc 21:10, viết thư cho Bảo | MM-03, MM-16 |
-| 13/3 14:00–16:05 | Vy, Triết, Phong lần lượt tới biệt thự. Lúc 14:42 két được mở (ông Hưng cho Triết xem phong bì). Lúc 15:20 Triết đặt lịch #3 trên iPad | MM-03, MM-04, MM-05, MM-08 |
-| 13/3 21:48 | Anh Ba gửi Tư hướng dẫn chi tiết, mô tả phong bì "DC 12/3" | MM-13 |
-| 14/3 08:12 | Anh Ba gửi mã chủ | MM-13 |
+| 13/3 14:00–16:05 | Vy, Triết, Phong lần lượt tới biệt thự. Lúc 14:42 ông Hưng mở két lấy bản lưu di chúc 2018 ra hỏi Triết; Triết thấy phong bì "DC 12/3". Ông Hưng hẹn Triết sáng thứ Hai 17/3 mang sổ sách quỹ tới | MM-03, MM-05, lời khai Triết, Phong, Vy |
+| 13/3 15:20 | Triết ngồi chờ ở phòng khách, đặt lịch #3 trên iPad | MM-04, MM-08 |
+| 13/3 18:40 – 19:02 | SIM đăng ký bằng bản sao CMND cũ của Bảo; tài khoản Telegram @anhba_dn được lập; Triết mua tài khoản ngân hàng thuê của bà Hoa | MM-15, MM-14 |
+| 13/3 20:14 – 21:10 | Anh Ba thuê Tư ("việc gấp: tối mai"), nộp 300 triệu qua máy CDM lúc 20:51, chuyển cho Tư | MM-13, MM-14 |
+| 13/3 21:48 | Anh Ba gửi Tư hướng dẫn chi tiết, mô tả phong bì "DC 12/3", "mã két gửi sau" | MM-13 |
+| 14/3 08:12 | Anh Ba gửi mã chủ (Triết lấy thẻ từ két văn phòng buổi sáng) | MM-13 |
 | 14/3 17:31–17:50 | Chuyến bay bị hủy. Email của trợ lý dời buổi đối chiếu chứng từ lưu ký lên **9h sáng 15/3** | MM-09, MM-10 |
 | 14/3 18:30 | Phong gọi; ông Hưng nói dối là đang ra sân bay | MM-08, MM-10 |
 | 14/3 19:42 | "Ông ấy KHÔNG đi nữa. Vẫn làm, tối nay." | MM-13 |
@@ -89,7 +90,7 @@ Mỗi người vòng trong trượt **đúng một** bộ lọc, nên bỏ sót 
 | 14/3 22:58 | Tư mở két bằng MASTER. Ông Hưng (không uống thuốc ngủ) đi xuống, hai bên giằng co, ông bị giết | MM-02, MM-03, MM-12 |
 | 14/3 23:20 | Tư gọi; Triết nghe máy trong giờ giải lao của hội thảo | MM-13, MM-24, MM-25 |
 | 15/3 08:40–09:05 | Phong bì được bỏ vào tủ gửi đồ số 47; 8:50 Triết có mặt ở biệt thự "đúng hẹn" | MM-13, lời khai |
-| 17/3 | Thư của ông Hưng tới tay Bảo | MM-16 (ghi chú) |
+| 17/3 | Thư của ông Hưng tới tay Bảo; anh không dám mở, cất tới 10/2026 — vì vậy năm 2025 không ai biết trong két từng có di chúc | MM-16 (ghi chú), MM-07 |
 | 18/3 | Tòa Hội An báo hoãn phiên tòa ngày 20/3 cho Triết | MM-26 |
 | 20/3 09:02–09:31 | Xe của Triết đỗ ở Hải Đăng Tower; 09:14 nộp 400 triệu tại quầy PGD Lê Duẩn ở tầng trệt | MM-14, MM-30 (khóa) |
 
@@ -149,9 +150,11 @@ Mỗi người vòng trong trượt **đúng một** bộ lọc, nên bỏ sót 
 | Dũng | Thẻ mã chủ (cần đã xem MM-19) | MM-20 | lời khai: tự dán lại mép |
 | Dũng | Tài khoản camera | MM-04 | lời khai: lúc đó đang ở sân bay |
 | Kim | Ở khách sạn một mình | MM-23 | lời khai: có người đi cùng; đơn hoa |
-| Bảo | Tối 14/3 | MM-15 | **MM-29** |
+| Bảo | SIM đứng tên anh, "tôi không đăng ký" (cần đã xem MM-15) | MM-13 (tài khoản Anh Ba nghe máy lúc 23:20) | **MM-29** |
 | Bảo | Cãi bố về di chúc | MM-16 | lời khai: chỉ biết nội dung thư sau đám tang |
-| Thảo | Ai ngồi phòng khách 13/3 | MM-04 | lời khai: chính chị có mặt |
+| Thảo | Phòng khách 13/3, "không ai đụng iPad" | MM-04 | lời khai: có người ngồi sát kệ lúc 15:20; chính chị cũng có mặt |
+
+Nguyên tắc: mỗi mâu thuẫn phải là **manh mối bác bỏ trực tiếp điều nghi phạm vừa nói**. Không dùng kiểu "trình một giấy tờ bất kỳ rồi nghi phạm tự khai thêm".
 
 ## 8. Những điểm có thể bị bắt bẻ
 
@@ -159,7 +162,11 @@ Mỗi người vòng trong trượt **đúng một** bộ lọc, nên bỏ sót 
 - *"Phong có thể đoán anh trai nói dối."* Tin nhắn 19:42 khẳng định chắc chắn "KHÔNG đi nữa", đó là thông tin chứ không phải phỏng đoán. Phong không có nguồn nào để biết.
 - *"Vy biết hết mọi chuyện, sao không phải Vy?"* Vy là người phát hiện và báo cho ông Hưng. Bà không có lợi gì khi di chúc 2018 còn hiệu lực, và đang ở trên máy bay lúc 23:20.
 - *"Ai biết thói quen uống thuốc ngủ?"* Ai thân với ông Hưng cũng biết (lời Thảo). Đây không phải bộ lọc.
-- *"Ai biết phong bì ghi 'DC 12/3'?"* Người được xem phong bì lúc két mở 14:42 ngày 13/3, tức Vy hoặc Triết. Chi tiết này thống nhất với lời giải nhưng không được dùng làm bộ lọc, vì hồ sơ không nói rõ ông Hưng đang tiếp ai lúc đó.
+- *"Ai biết phong bì ghi 'DC 12/3'?"* Người có mặt trong phòng làm việc lúc két mở 14:42 ngày 13/3. Ghép lời khai của Phong ("anh ấy đang tiếp luật sư Triết") với lời Triết ("anh Hưng mở két lấy bản lưu di chúc 2018") thì đó là Triết. Đây là chứng cứ **xác nhận thêm**, không phải bộ lọc bắt buộc.
+- *"Sao năm 2025 không ai nhắc tới bản di chúc mất tích?"* Chỉ ông Hưng, Triết (và có thể Vy) biết nó tồn tại. Bảo nhận thư ngày 17/3 nhưng không dám mở tới 10/2026; bảng kê bảo hiểm (MM-07) ghi rõ gia đình không biết trong két có giấy tờ gì.
+- *"Sao chuẩn bị gấp vậy — chỉ trong một tối?"* Phong bì chỉ xuất hiện từ đêm 12/3, Triết thấy nó chiều 13/3, và ông Hưng bay tối 14/3. Mọi thứ (SIM 18:40, Telegram 19:02, tài khoản thuê, lời mời Tư 20:14) dồn vào tối 13/3 chính là dấu vết: kẻ chủ mưu biết về phong bì từ chiều hôm đó.
+- *"Anh Ba có thể là hai người (một người nhắn, một người nghe máy)?"* Tư mô tả một giọng duy nhất, cùng lối nói giấy tờ trong tin nhắn và cuộc gọi. Lời giải coi Anh Ba là một người.
+- *"Khoản vay của Hải Triều đã quá hạn chưa?"* Đáo hạn 22/8/2027, nên lúc thẩm vấn (10/2026) Triết vẫn có thể nói "sẽ tất toán đúng hạn".
 
 ## 9. Gợi ý 3 cấp
 
