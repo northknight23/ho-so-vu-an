@@ -67,7 +67,10 @@ export function validateSecret(caseData, secret) {
       unlockedLocked.add(id);
     }
   }
-  for (const id of lockedIds) need(unlockedLocked.has(id), `lockedClues "${id}" không được mâu thuẫn nào mở khóa`);
+  // Chế độ có đồng hồ: câu hỏi (người, nơi, chủ đề) mở manh mối bị khóa
+  if (caseData.mode === 'timed') problems.push(...validateTimedSecret(caseData, secret, allClueIds, lockedIds, unlockedLocked));
+
+  for (const id of lockedIds) need(unlockedLocked.has(id), `lockedClues "${id}" không được mâu thuẫn hay câu hỏi nào mở khóa`);
 
   // Gợi ý
   const costs = caseData.hintCosts || [];
@@ -84,6 +87,77 @@ export function validateSecret(caseData, secret) {
     for (const id of item.clueIds || []) need(allClueIds.has(id), `Lời giải "${item.title}" trỏ tới manh mối không tồn tại: ${id}`);
   }
   return problems;
+}
+
+/** Kiểm tra phần bí mật của chế độ có đồng hồ. Ghi id manh mối được mở vào unlockedLocked. */
+function validateTimedSecret(caseData, secret, allClueIds, lockedIds, unlockedLocked) {
+  const problems = [];
+  const need = (cond, msg) => { if (!cond) problems.push(msg); };
+  const N = caseData.clock.days * caseData.clock.slots.length;
+  const people = new Set([...caseData.suspects.map((s) => s.id), ...(caseData.people || []).map((p) => p.id)]);
+  const places = new Set(caseData.locations.map((l) => l.id));
+  const leads = new Map(caseData.leads.map((q) => [q.id, q]));
+  const nodes = secret.logic?.time?.nodes || {};
+  const seen = new Set();
+
+  for (const a of secret.asks || []) {
+    const tag = `${a.person}@${a.place}/${a.lead}`;
+    need(people.has(a.person), `asks ${tag}: không có người "${a.person}"`);
+    need(places.has(a.place), `asks ${tag}: không có nơi "${a.place}"`);
+    need(leads.has(a.lead), `asks ${tag}: không có chủ đề "${a.lead}"`);
+    need(!seen.has(tag), `asks ${tag}: khai báo hai lần`);
+    seen.add(tag);
+    need(Array.isArray(a.window) && a.window.length && a.window.every((t) => Number.isInteger(t) && t >= 1 && t <= N),
+      `asks ${tag}: "window" phải là các lượt trong 1..${N}`);
+    need(Array.isArray(a.answer) && a.answer.length, `asks ${tag}: thiếu "answer"`);
+    // Người phải thực sự có mặt ở nơi đó trong mọi lượt của cửa sổ: A(x) = { t ∈ W(x) : σ(p,t) = l }
+    for (const t of a.window || []) {
+      need(caseData.schedule?.[a.person]?.[t - 1] === a.place, `asks ${tag}: lượt ${t} người này không có mặt ở "${a.place}" theo lịch`);
+    }
+    if (a.clue) {
+      const id = String(a.clue).replace(/^@/, '');
+      need(lockedIds.has(id), `asks ${tag}: clue "${a.clue}" không có trong lockedClues`);
+      unlockedLocked.add(id);
+      // Đối chiếu với mô hình logic: cửa sổ = A(x), tiên quyết của chủ đề = R(x)
+      if (nodes[id]) {
+        need(JSON.stringify([...a.window].sort((x, y) => x - y)) === JSON.stringify([...nodes[id].A].sort((x, y) => x - y)),
+          `asks ${tag}: window [${a.window}] khác A(${id}) = [${nodes[id].A}] trong logic.time`);
+        const R = [...(leads.get(a.lead)?.requires?.clues || [])].sort();
+        need(JSON.stringify(R) === JSON.stringify([...nodes[id].R].sort()),
+          `asks ${tag}: requires của chủ đề [${R}] khác R(${id}) = [${nodes[id].R}]`);
+      }
+    }
+  }
+  for (const q of leads.values()) {
+    for (const id of q.requires?.clues || []) need(allClueIds.has(id), `leads ${q.id}: requires.clues "${id}" không tồn tại`);
+  }
+
+  const acc = secret.accusation || {};
+  const suspects = caseData.suspects.map((s) => s.id);
+  need(suspects.includes(acc.culprit), `accusation.culprit "${acc.culprit}" không phải nghi phạm`);
+  need(Array.isArray(acc.keys) && acc.keys.every((k) => allClueIds.has(k)), 'accusation.keys phải là các manh mối có thật');
+  for (const s of suspects.filter((x) => x !== acc.culprit)) {
+    const opts = acc.proofs?.[s];
+    need(Array.isArray(opts) && opts.length, `accusation.proofs.${s}: thiếu cách minh oan`);
+    for (const P of opts || []) for (const id of P) need(allClueIds.has(id), `accusation.proofs.${s}: manh mối "${id}" không tồn tại`);
+  }
+  const E = acc.endings || {};
+  for (const k of ['good', 'unproven', 'timeout']) need(E[k]?.title, `accusation.endings.${k} thiếu`);
+  for (const s of suspects.filter((x) => x !== acc.culprit)) need(E.wrong?.[s]?.title, `accusation.endings.wrong.${s} thiếu`);
+  for (const k of acc.keys || []) need(E.missing?.[k]?.title, `accusation.endings.missing.${k} thiếu`);
+  return problems;
+}
+
+/** Payload (chưa mã hóa) của một câu hỏi có kết quả: thay "@id" bằng manh mối đầy đủ. */
+export function askPayload(entry, secret) {
+  const locked = new Map((secret.lockedClues || []).map((c) => [c.id, c]));
+  return {
+    window: entry.window,
+    answer: entry.answer,
+    late: entry.late || null,
+    early: entry.early || null,
+    clue: entry.clue ? locked.get(String(entry.clue).replace(/^@/, '')) : null,
+  };
 }
 
 /** Payload (chưa mã hóa) của một mâu thuẫn: thay "@id" bằng manh mối đầy đủ. */
@@ -103,5 +177,7 @@ export function contradictionPayload(entry, secret) {
 
 /** Payload (chưa mã hóa) của lời giải: kèm đáp án và các manh mối bị khóa. */
 export function solutionPayload(secret) {
-  return { answers: secret.answers, ...secret.solution, lockedClues: secret.lockedClues || [] };
+  const out = { answers: secret.answers || {}, ...secret.solution, lockedClues: secret.lockedClues || [] };
+  if (secret.accusation) out.timed = secret.accusation; // chế độ có đồng hồ: dữ liệu chấm buộc tội + kết cục
+  return out;
 }

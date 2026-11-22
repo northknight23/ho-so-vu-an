@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" role="img" aria-label="Chân dung Tống Duy Khang">
+  <rect width="200" height="240" fill="#231f29"/>
+  <circle cx="100" cy="98" r="80" fill="#2d2834"/>
+  <!-- Vest đen, cà vạt bạc -->
+  <path d="M10 240 C14 182 54 162 100 162 C146 162 186 182 190 240Z" fill="#141419"/>
+  <path d="M78 164 L100 222 L122 164 C112 160 88 160 78 164Z" fill="#ecebe6"/>
+  <path d="M95 170 h10 l-2 8 l6 42 l-9 10 l-9 -10 l6 -42z" fill="#a9adb3"/>
+  <path d="M78 164 L94 208 L68 194 L64 170Z M122 164 L106 208 L132 194 L136 170Z" fill="#0b0b0f"/>
+  <!-- Cổ to -->
+  <path d="M80 134 h40 v30 c-12 8 -28 8 -40 0z" fill="#c08d68"/>
+  <!-- Mặt vuông -->
+  <ellipse cx="55" cy="104" rx="7" ry="12" fill="#c08d68"/>
+  <ellipse cx="145" cy="104" rx="7" ry="12" fill="#c08d68"/>
+  <path d="M57 92 C57 62 78 50 100 50 C122 50 143 62 143 92 L141 124 C137 148 118 154 100 154 C82 154 63 148 59 124Z" fill="#d29f78"/>
+  <path d="M61 122 C65 146 84 152 100 152 C116 152 135 146 139 122 C129 142 116 146 100 146 C84 146 71 142 61 122Z" fill="#000" opacity=".1"/>
+  <!-- Tóc vuốt ngược bóng -->
+  <path d="M56 98 C50 58 78 40 102 42 C128 42 152 58 144 98 C142 80 136 68 124 62 C108 56 92 56 76 62 C66 70 59 82 56 98Z" fill="#0f0e10"/>
+  <path d="M74 60 C90 50 114 50 130 60 M80 54 C96 46 110 46 124 54" stroke="#3a3840" stroke-width="2" fill="none"/>
+  <!-- Lông mày cau, mắt nhỏ -->
+  <path d="M70 96 l21 4 M130 96 l-21 4" stroke="#1d1a1c" stroke-width="4.6" stroke-linecap="round"/>
+  <ellipse cx="83" cy="107" rx="3" ry="2.6" fill="#1d1d1f"/>
+  <ellipse cx="117" cy="107" rx="3" ry="2.6" fill="#1d1d1f"/>
+  <!-- Mũi, miệng trễ -->
+  <path d="M100 108 q-7 14 -1 18 q6 2 9 -1" stroke="#a87554" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+  <path d="M86 138 q14 -5 28 0" stroke="#5e2f26" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+  <path d="M80 128 q-3 6 0 12 M120 128 q3 6 0 12" stroke="#a87554" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+</svg>

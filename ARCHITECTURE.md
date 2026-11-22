@@ -38,6 +38,8 @@ js/ui.js                   các màn chính + modal manh mối/nghi phạm (ch�
 js/interrogation.js        màn thẩm vấn, trình bằng chứng, computeUnlocks()
 js/board.js                bảng suy luận: kéo thả (Pointer Events), dây đỏ (SVG), zoom
 js/hints.js                modal gợi ý 3 cấp
+js/timed.js                chế độ có đồng hồ: tab Điều tra, đồng hồ lượt, computeTimed() (tính lại manh mối từ nhật ký hỏi)
+js/accuse.js               chế độ có đồng hồ: màn buộc tội kèm chứng minh, gradeAccusation(), màn kết cục
 js/modal.js                openModal / closeModal / confirmDialog
 js/selectors.js            allClues(), findClue(), clueNo()… — đọc dữ liệu từ `app`
 js/documents.js            render manh mối dạng "tài liệu" theo detail.type
@@ -53,6 +55,7 @@ authoring/<id>.secret.json đáp án, mâu thuẫn, manh mối bị khóa, gợi
 tools/case-secrets.mjs     validateSecret() + dựng payload, dùng chung cho 2 tool bên dưới
 tools/encode-case.mjs      file bí mật → hash/mã hóa vào cases/<id>.json
 tools/check-case.mjs       kiểm tra schema, file ảnh, và độ khớp với file bí mật
+tools/check-logic.mjs      kiểm chứng mô hình logic (mục "logic" của file bí mật): luật chỉ/bác, 15 tổ hợp, lịch thắng
 assets/svg/portraits/      chân dung 200×240 (nạn nhân + nghi phạm); vụ mới để trong thư mục con, vd portraits/case-02/
 assets/svg/icons/          icon manh mối 64×64 (nền tròn #26313f) + favicon
 assets/svg/scene/          sơ đồ hiện trường (viewBox 800×600)
@@ -124,6 +127,24 @@ docs/<id>-solution.md      giải thích chuỗi suy luận để kiểm tra log
 - `scoring` chia điểm cho từng phần. Gợi ý mở lần lượt theo cấp, mỗi cấp trừ `hintCosts[i]` (cộng dồn).
 - Điểm trừ **chỉ áp vào phần tương ứng** và không làm điểm phần đó xuống dưới 0. Phần trả lời sai thì bằng 0 sẵn rồi.
 - Trình sai bằng chứng khi thẩm vấn **không** bị trừ điểm. Nghi phạm chỉ đáp bằng câu trong `fallback`.
+
+## Chế độ có đồng hồ (`mode: "timed"`, vụ 03)
+
+- Thời gian: `clock.days × clock.slots.length` lượt. Lượt hiện tại = số câu hỏi đã hỏi + 1. Mỗi câu hỏi tốn đúng 1 lượt, kể cả hỏi sai.
+- Một câu hỏi = (người, nơi, chủ đề).
+  - Người chỉ có mặt ở nơi theo `schedule[người][lượt-1]`.
+  - Chủ đề chỉ hiện khi đã có đủ `leads[].requires.clues`.
+- `asks[] = { hash, payload }`:
+  - hash = sha256(salt:ask:người:nơi:chủ đề);
+  - payload mã hóa bằng chính bộ ba đó, chứa `window` (các lượt lấy được), `answer`, `late`/`early` và manh mối đầy đủ.
+  - Hỏi đúng bộ ba nhưng ngoài `window` thì nhận câu "đến muộn" / "đến sớm".
+- Tiến trình chỉ lưu `progress.timed.log = [{ t, p, l, q }]`. `computeTimed()` giải mã lại và gộp manh mối vào `app.unlocked.clues` (hàm `recompute()` trong main.js).
+- Buộc tội: `progress.submission = { h, proof: { [nghi phạm]: [id manh mối…] } }` hoặc `{ giveUp: true }`.
+  - Lời giải (giải mã sau khi buộc tội) có `timed = { culprit, keys, proofs, endings }`.
+  - `gradeAccusation()` chọn kết cục: `good`, `wrong:<id>`, `missing:<key>`, `unproven` hoặc `timeout`.
+- `partsOf()` trả về `[]` cho vụ timed: không có câu hỏi / điểm / gợi ý kiểu cũ.
+- File bí mật thêm `logic` (để `check-logic.mjs` kiểm chứng), `asks` và `accusation`.
+  - `case-secrets.mjs` đối chiếu: `asks[].window` phải bằng `logic.time.nodes[x].A`, `leads.requires` phải bằng `R(x)`, và người phải có mặt ở nơi đó trong mọi lượt của window.
 
 ## Schema `cases/<id>.json`
 
@@ -225,6 +246,7 @@ docs/<id>-solution.md      giải thích chuỗi suy luận để kiểm tra log
 - Mỗi phương án sai phải bị loại được bằng chứng cứ.
 - Có 3–4 manh mối gây nhiễu và 1 manh mối then chốt trông vô hại.
 - Câu hỏi thẩm vấn nào nhắc tới manh mối thì nên đặt `requires.clues`, để người chơi không bị lộ thông tin trước khi xem manh mối đó.
+- **Vụ rất khó (case-03)** dùng logic phi đơn điệu (luật chỉ khả bác + luật bác chặt). Hung thủ chỉ bị chỉ ra khi có đủ mọi manh mối then chốt, và mọi tổ hợp thiếu đều chỉ nhầm vào người vô tội. Ràng buộc kiểm bằng `tools/check-logic.mjs`; bảng tự kiểm từng tổ hợp ghi ở `docs/<id>-solution.md`.
 - **Vụ khó (case-02)** dùng "lưới bộ lọc": hung thủ phải thỏa N điều kiện bắt buộc, mỗi người vô tội vòng trong trượt đúng một điều kiện, nên bỏ qua bất kỳ điều kiện nào cũng còn lại đúng 2 người. Ghi bảng nghi phạm × điều kiện và phần kiểm chứng vào `docs/<id>-solution.md`.
 - Bối cảnh case-01 đặt ở năm 2024 để dùng được tên "Quận 7", "TP Thủ Đức" (các đơn vị này đã bị bỏ từ 7/2025).
 

@@ -150,7 +150,10 @@ export function renderInterrogation(app, sid, actions) {
       cls: 'talk--evidence',
       after: clue ? clueLink(app, clue.id, actions) : null,
     }));
-    if (!ev.ok) {
+    // Lượt trình đúng nhưng không giải mã được nữa (vụ án đã sửa sau khi người chơi trình)
+    // → hiển thị như một lượt trình sai, thay vì bỏ trống câu trả lời.
+    const data = ev.ok && !ev.dup ? decodePresent(app, sid, ev.t, ev.c) : null;
+    if (!ev.ok || (!ev.dup && !data)) {
       const lines = inter.fallback?.length ? inter.fallback : ['…'];
       transcript.append(bubble('them', lines[failCount++ % lines.length], { who: shortName, cls: 'talk--flat' }));
       continue;
@@ -159,8 +162,6 @@ export function renderInterrogation(app, sid, actions) {
       transcript.append(sysLine('Mâu thuẫn này đã được vạch ra trước đó.'));
       continue;
     }
-    const data = decodePresent(app, sid, ev.t, ev.c);
-    if (!data) continue;
     transcript.append(
       sysLine(el('strong', { text: '⚡ Mâu thuẫn!' })),
       bubble('them', data.response || [], { who: shortName, cls: 'talk--break' }));

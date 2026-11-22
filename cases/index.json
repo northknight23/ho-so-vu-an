@@ -10,5 +10,11 @@
     "caseNumber": "Hồ sơ 02",
     "title": "Két Sắt Không Bị Phá",
     "difficulty": "Khó"
+  },
+  {
+    "id": "case-03",
+    "caseNumber": "Hồ sơ 03",
+    "title": "72 Giờ",
+    "difficulty": "Rất khó"
   }
 ]

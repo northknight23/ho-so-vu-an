@@ -24,8 +24,9 @@ import path from 'node:path';
 import {
   partsOf, hashChoice, encodeSolution, decodeSolution,
   contradictionHash, encodeContradiction, decodeContradiction, encodeHint, decodeHint,
+  askHash, encodeAsk, decodeAsk,
 } from '../js/answer.js';
-import { validateSecret, contradictionPayload, solutionPayload } from './case-secrets.mjs';
+import { validateSecret, contradictionPayload, solutionPayload, askPayload } from './case-secrets.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const caseId = process.argv[2];
@@ -70,6 +71,16 @@ for (const x of secret.contradictions || []) {
 }
 for (const inter of Object.values(caseData.interrogations || {})) inter.contradictions.sort((a, b) => a.hash.localeCompare(b.hash));
 caseData.lockedClues = (secret.lockedClues || []).length;
+
+// 3b. Chế độ có đồng hồ: câu hỏi (người, nơi, chủ đề) — khóa giải mã chính là bộ ba đó
+if (caseData.mode === 'timed') {
+  caseData.asks = (secret.asks || []).map((a) => {
+    const obj = askPayload(a, secret);
+    const payload = encodeAsk(id, salt, a.person, a.place, a.lead, obj);
+    if (!same(decodeAsk(id, salt, a.person, a.place, a.lead, payload), obj)) fail(`câu hỏi ${a.person}@${a.place}/${a.lead}`);
+    return { hash: askHash(salt, a.person, a.place, a.lead), payload };
+  }).sort((x, y) => x.hash.localeCompare(y.hash));
+}
 
 // 4. Gợi ý
 if ((caseData.hintCosts || []).length) {

@@ -15,8 +15,10 @@ import { loadCase, loadLibrary } from './caseLoader.js';
 import { loadProgress, saveProgress, clearProgress, defaultProgress } from './storage.js';
 import { gradeSubmission, decodeSolution, rankFor, contradictionHash } from './answer.js';
 import { initModal, closeModal, confirmDialog } from './modal.js';
-import { numberBaseClues } from './selectors.js';
+import { numberBaseClues, allClues } from './selectors.js';
 import { computeUnlocks } from './interrogation.js';
+import { isTimed, computeTimed, currentTurn, totalTurns } from './timed.js';
+import { renderAccuse, renderEnding, gradeAccusation } from './accuse.js';
 import { suggestPosition } from './board.js';
 import * as ui from './ui.js';
 
@@ -50,6 +52,18 @@ function ensureGrid() {
 const persist = () => saveProgress(app.caseData.id, app.progress);
 const addUnique = (arr, id) => { if (!arr.includes(id)) arr.push(id); };
 const newId = (prefix) => `${prefix}${Date.now().toString(36)}${Math.random().toString(36).slice(2, 6)}`;
+
+/**
+ * Tính lại mọi thứ "đã mở khóa" từ nhật ký: mâu thuẫn khi thẩm vấn, và với vụ có đồng hồ,
+ * các manh mối lấy được khi hỏi đúng người – đúng nơi – đúng lúc.
+ */
+function recompute() {
+  computeUnlocks(app);
+  if (isTimed(app.caseData)) {
+    computeTimed(app);
+    app.unlocked.clues.push(...app.timed.clues);
+  }
+}
 
 /** Giải mã lời giải (sau khi đã nộp) để lấy đáp án + các manh mối bị khóa. */
 function loadSolution() {
@@ -121,8 +135,33 @@ const actions = {
       rec.log.push({ k: 'present', t: tid, c: cid, ok: true });
     }
     persist();
-    computeUnlocks(app);
+    recompute();
     actions.rerender();
+  },
+
+  // ----- Chế độ có đồng hồ -----
+  /** Hỏi người p tại nơi l về chủ đề q. Tốn đúng một lượt, kể cả khi hỏi sai. */
+  askAt(p, l, q) {
+    const c = app.caseData;
+    if (!isTimed(c) || app.progress.submission) return;
+    const t = currentTurn(app);
+    if (t > totalTurns(c)) return;
+    app.progress.timed.log.push({ t, p, l, q });
+    persist();
+    recompute();
+    actions.rerender();
+  },
+
+  /** Buộc tội (h, π) hoặc thả tất cả ({ giveUp: true }). Chỉ một lần. */
+  accuse(choice) {
+    if (app.progress.submission) return;
+    app.progress.submission = { ...choice, submittedAt: new Date().toISOString() };
+    delete app.progress.draft;
+    loadSolution();
+    const held = allClues(app).map((cl) => cl.id);
+    app.progress.result = { ending: gradeAccusation(app.solution, app.progress.submission, held) };
+    persist();
+    actions.go('#/result');
   },
 
   // ----- Lưới loại trừ (tab Sổ tay) -----
@@ -247,12 +286,11 @@ const actions = {
     app.solution = null;
     app.rank = null;
     app.revealedClues = [];
-    computeUnlocks(app);
+    recompute();
     actions.go('#/');
   },
 };
 
-const TAB_IDS = ui.TABS.map((t) => t.id);
 
 /** Đọc location.hash và vẽ màn tương ứng. */
 function route({ keepScroll = false } = {}) {
@@ -266,7 +304,8 @@ function route({ keepScroll = false } = {}) {
 
   switch (screen) {
     case 'case': {
-      const tab = TAB_IDS.includes(sub) ? sub : (p.lastTab || 'overview');
+      const tabIds = ui.tabsFor(app.caseData).map((t) => t.id);
+      const tab = tabIds.includes(sub) ? sub : (tabIds.includes(p.lastTab) ? p.lastTab : 'overview');
       if (!p.started || p.lastTab !== tab) {
         p.started = true;
         p.lastTab = tab;
@@ -283,7 +322,8 @@ function route({ keepScroll = false } = {}) {
     }
     case 'submit':
       if (p.submission) return actions.go('#/result');
-      ui.renderSubmit(app, actions);
+      if (isTimed(app.caseData)) renderAccuse(app, actions);
+      else ui.renderSubmit(app, actions);
       break;
     case 'result': {
       if (!p.submission || !p.result) return actions.go('#/submit');
@@ -293,6 +333,10 @@ function route({ keepScroll = false } = {}) {
       } catch (err) {
         ui.renderError(`Không giải mã được lời giải: ${err.message}`);
         return;
+      }
+      if (isTimed(app.caseData)) {
+        renderEnding(app, app.solution, actions);
+        break;
       }
       app.rank = rankFor(app.caseData.ranks, p.result.score, p.result.max);
       ui.renderResult(app, app.solution, actions);
@@ -322,7 +366,7 @@ async function init() {
     item.status = saved.result ? `Đã nộp · ${saved.result.score}/${saved.result.max}`
       : saved.started ? 'Đang điều tra' : 'Chưa mở';
   }
-  computeUnlocks(app);
+  recompute();
   if (app.progress.submission) {
     try { loadSolution(); } catch { /* lỗi sẽ hiện khi vào màn kết quả */ }
   }

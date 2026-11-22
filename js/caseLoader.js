@@ -105,6 +105,9 @@ export function validateCase(c) {
     }
   }
 
+  // Chế độ có đồng hồ: đồng hồ, địa điểm, người, lịch có mặt, chủ đề hỏi
+  if (c.mode === 'timed') errors.push(...validateTimed(c, suspectIds, need));
+
   // Câu hỏi & đáp án
   // Mỗi phần: hoặc chọn từ danh sách nghi phạm, hoặc có ít nhất 2 lựa chọn riêng
   const q = c.questions || {};
@@ -118,6 +121,48 @@ export function validateCase(c) {
   need(c.answer && c.answer.salt, 'Thiếu "answer" — hãy chạy: node tools/encode-case.mjs ' + (c.id || '<id>'));
   need(c.solution && c.solution.payload, 'Thiếu "solution" — hãy chạy tools/encode-case.mjs');
 
+  return errors;
+}
+
+/** Kiểm tra dữ liệu công khai của chế độ có đồng hồ (mode "timed"). */
+function validateTimed(c, suspectIds, need) {
+  const errors = [];
+  const req = (cond, msg) => { if (!cond) errors.push(msg); };
+  const clock = c.clock || {};
+  req(Number.isInteger(clock.days) && clock.days > 0, '"clock.days" phải là số nguyên dương');
+  req(Array.isArray(clock.slots) && clock.slots.length > 0, '"clock.slots" phải là mảng tên buổi');
+  const N = (clock.days || 0) * (clock.slots?.length || 0);
+
+  const locIds = new Set();
+  (c.locations || []).forEach((l, i) => {
+    req(l.id && !locIds.has(l.id), `locations[${i}]: id trống hoặc trùng`);
+    locIds.add(l.id);
+    req(l.name, `locations[${i}] (${l.id}): thiếu "name"`);
+  });
+  req(locIds.size > 0, 'Thiếu "locations"');
+
+  const personIds = new Set(suspectIds);
+  (c.people || []).forEach((p, i) => {
+    req(p.id && !personIds.has(p.id), `people[${i}]: id trống hoặc trùng với nghi phạm`);
+    personIds.add(p.id);
+    req(p.name, `people[${i}] (${p.id}): thiếu "name"`);
+  });
+
+  for (const [pid, plan] of Object.entries(c.schedule || {})) {
+    req(personIds.has(pid), `schedule.${pid}: không có người này`);
+    req(Array.isArray(plan) && plan.length === N, `schedule.${pid}: cần đúng ${N} ô (mỗi lượt một nơi hoặc null)`);
+    (plan || []).forEach((l, t) => req(l === null || locIds.has(l), `schedule.${pid}[${t}]: nơi "${l}" không tồn tại`));
+  }
+
+  const leadIds = new Set();
+  (c.leads || []).forEach((q, i) => {
+    req(q.id && !leadIds.has(q.id), `leads[${i}]: id trống hoặc trùng`);
+    leadIds.add(q.id);
+    req(q.label, `leads[${i}] (${q.id}): thiếu "label"`);
+  });
+  req(leadIds.size > 0, 'Thiếu "leads"');
+  req(Array.isArray(c.asks), 'Thiếu "asks" — hãy chạy tools/encode-case.mjs');
+  (c.expiries || []).forEach((x, i) => req(Number.isInteger(x.after) && x.text, `expiries[${i}]: cần "after" (lượt) và "text"`));
   return errors;
 }
 

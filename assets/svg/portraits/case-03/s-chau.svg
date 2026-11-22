@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" role="img" aria-label="Chân dung Lạc Minh Châu">
+  <rect width="200" height="240" fill="#36262f"/>
+  <circle cx="100" cy="98" r="80" fill="#45303b"/>
+  <!-- Tóc dài thẳng phía sau -->
+  <path d="M56 108 C50 62 76 44 100 44 C126 44 152 62 144 108 L148 200 C138 208 126 204 124 194 L122 128 L78 128 L76 194 C74 204 62 208 52 200Z" fill="#1a1412"/>
+  <!-- Váy hồng nhạt -->
+  <path d="M22 240 C26 192 62 172 100 172 C138 172 174 192 178 240Z" fill="#e7a9b8"/>
+  <path d="M74 176 C86 186 114 186 126 176" stroke="#d48da0" stroke-width="3" fill="none"/>
+  <!-- Cổ -->
+  <path d="M88 140 h24 v32 c-8 6 -16 6 -24 0z" fill="#e8bfa0"/>
+  <!-- Mặt trái xoan -->
+  <ellipse cx="100" cy="104" rx="33" ry="44" fill="#f2cdb0"/>
+  <path d="M70 120 C74 142 87 148 100 148 C113 148 126 142 130 120 C122 138 111 142 100 142 C89 142 78 138 70 120Z" fill="#000" opacity=".05"/>
+  <!-- Mái tóc rẽ giữa -->
+  <path d="M66 108 C64 72 82 54 100 54 C118 54 136 72 134 108 C128 84 116 66 100 64 C84 66 72 84 66 108Z" fill="#1a1412"/>
+  <!-- Lông mày nhíu lo âu, mắt to -->
+  <path d="M77 96 q8 -2 16 2 M107 98 q8 -4 16 -2" stroke="#1a1412" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+  <ellipse cx="86" cy="107" rx="3.6" ry="4" fill="#1d1d1f"/>
+  <ellipse cx="114" cy="107" rx="3.6" ry="4" fill="#1d1d1f"/>
+  <circle cx="87.2" cy="105.6" r="1" fill="#fff"/>
+  <circle cx="115.2" cy="105.6" r="1" fill="#fff"/>
+  <!-- Mũi, môi hơi hé -->
+  <path d="M100 112 q-3 9 0 11 q3 1 4 -1" stroke="#c99a7c" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M92 132 q8 -3 16 0 q-8 4 -16 0z" fill="#c45c74"/>
+</svg>

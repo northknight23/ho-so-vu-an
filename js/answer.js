@@ -25,6 +25,7 @@ export const PARTS = ['culprit', 'motive', 'method'];
  * mục tương ứng trong "questions" và "scoring".
  */
 export function partsOf(caseData) {
+  if (caseData?.mode === 'timed') return []; // chấm bằng buộc tội kèm chứng minh (js/accuse.js)
   return Array.isArray(caseData?.parts) && caseData.parts.length ? caseData.parts : PARTS;
 }
 
@@ -131,3 +132,12 @@ export const decodeContradiction = (caseId, salt, s, t, c, payload) => xorDecode
 const hSeed = (caseId, salt, part, level) => `${caseId}|${salt}|hint|${part}|${level}`;
 export const encodeHint = (caseId, salt, part, level, text) => xorEncode(hSeed(caseId, salt, part, level), text);
 export const decodeHint = (caseId, salt, part, level, payload) => xorDecode(hSeed(caseId, salt, part, level), payload);
+
+// ---------- Chế độ có đồng hồ (mode "timed"): hỏi đúng người, đúng nơi, đúng chủ đề ----------
+/** Mã nhận diện công khai của một câu hỏi có kết quả. Khóa giải mã chính là bộ ba (người, nơi, chủ đề). */
+export function askHash(salt, person, place, lead) {
+  return sha256Hex(`${salt}:ask:${person}:${place}:${lead}`);
+}
+const aSeed = (caseId, salt, p, l, q) => `${caseId}|${salt}|ask|${p}|${l}|${q}`;
+export const encodeAsk = (caseId, salt, p, l, q, obj) => xorEncode(aSeed(caseId, salt, p, l, q), obj);
+export const decodeAsk = (caseId, salt, p, l, q, payload) => xorDecode(aSeed(caseId, salt, p, l, q), payload);

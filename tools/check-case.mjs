@@ -13,7 +13,8 @@ import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import { validateCase } from '../js/caseLoader.js';
 import { partsOf, hashChoice, decodeSolution, contradictionHash, decodeContradiction, decodeHint } from '../js/answer.js';
-import { validateSecret, contradictionPayload, solutionPayload } from './case-secrets.mjs';
+import { validateSecret, contradictionPayload, solutionPayload, askPayload } from './case-secrets.mjs';
+import { askHash, decodeAsk } from '../js/answer.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const caseId = process.argv[2] || 'case-01';
@@ -54,6 +55,18 @@ if (secret && caseData.answer?.salt) {
     if (!same(decodeSolution(id, salt, caseData.solution.payload), solutionPayload(secret))) errors.push(`Lời giải đã mã hóa khác file bí mật${STALE}`);
   } catch { errors.push(`Không giải mã được lời giải${STALE}`); }
 
+  if (caseData.mode === 'timed') {
+    for (const a of secret.asks || []) {
+      const tag = `${a.person}@${a.place}/${a.lead}`;
+      const found = (caseData.asks || []).find((x) => x.hash === askHash(salt, a.person, a.place, a.lead));
+      if (!found) { errors.push(`Thiếu câu hỏi ${tag}${STALE}`); continue; }
+      try {
+        if (!same(decodeAsk(id, salt, a.person, a.place, a.lead, found.payload), askPayload(a, secret))) errors.push(`Câu hỏi ${tag} khác file bí mật${STALE}`);
+      } catch { errors.push(`Không giải mã được câu hỏi ${tag}${STALE}`); }
+    }
+    if ((caseData.asks || []).length !== (secret.asks || []).length) errors.push(`Số câu hỏi trong vụ án khác file bí mật${STALE}`);
+  }
+
   let total = 0;
   for (const x of secret.contradictions || []) {
     const hash = contradictionHash(salt, x.suspect, x.topic, x.clue);
@@ -83,5 +96,6 @@ if (errors.length) {
 }
 const topics = Object.values(caseData.interrogations || {}).reduce((s, x) => s + x.topics.length, 0);
 console.log(`✓ ${caseId} hợp lệ: ${caseData.suspects.length} nghi phạm, ${caseData.clues.length} manh mối `
-  + `(+${caseData.lockedClues || 0} bị khóa), ${caseData.scene.hotspots.length} điểm hiện trường, `
+  + `(+${caseData.lockedClues || 0} bị khóa), ${caseData.scene?.hotspots?.length || 0} điểm hiện trường, `
+  + (caseData.mode === 'timed' ? `${caseData.locations.length} địa điểm, ${(caseData.asks || []).length} câu hỏi có kết quả, ` : '')
   + `${topics} câu hỏi thẩm vấn, ${caseData.hints ? 'có' : 'không có'} gợi ý.`);

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" role="img" aria-label="Chân dung bác sĩ Kha Tuấn">
+  <rect width="200" height="240" fill="#22343c"/>
+  <circle cx="100" cy="98" r="80" fill="#2b424c"/>
+  <!-- Blouse trắng ngoài sơ mi xanh -->
+  <path d="M14 240 C18 186 56 166 100 166 C144 166 182 186 186 240Z" fill="#f1efe9"/>
+  <path d="M80 168 L100 206 L120 168 C112 164 88 164 80 168Z" fill="#7fa6c4"/>
+  <path d="M80 168 L94 240 M120 168 L106 240" stroke="#cfccc4" stroke-width="2.5"/>
+  <rect x="128" y="200" width="22" height="16" rx="2" fill="none" stroke="#cfccc4" stroke-width="2"/>
+  <path d="M134 200 v-8" stroke="#1d5f9a" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Cổ -->
+  <path d="M84 138 h32 v30 c-9 7 -23 7 -32 0z" fill="#cf9f7c"/>
+  <!-- Mặt -->
+  <ellipse cx="60" cy="106" rx="6.5" ry="11" fill="#cf9f7c"/>
+  <ellipse cx="140" cy="106" rx="6.5" ry="11" fill="#cf9f7c"/>
+  <ellipse cx="100" cy="104" rx="40" ry="47" fill="#dfb08c"/>
+  <path d="M64 120 C68 146 85 152 100 152 C115 152 132 146 136 120 C127 142 114 146 100 146 C86 146 73 142 64 120Z" fill="#000" opacity=".08"/>
+  <!-- Tóc muối tiêu -->
+  <path d="M59 100 C54 64 78 48 102 48 C128 48 148 64 141 100 C138 82 130 70 118 66 C104 62 92 62 80 66 C69 72 62 84 59 100Z" fill="#6b6762"/>
+  <path d="M72 70 C86 60 116 58 130 70" stroke="#a9a49c" stroke-width="2" fill="none" stroke-dasharray="4 3"/>
+  <!-- Kính cận gọng đen -->
+  <rect x="71" y="98" width="25" height="17" rx="4" fill="none" stroke="#1b1b1d" stroke-width="2.6"/>
+  <rect x="104" y="98" width="25" height="17" rx="4" fill="none" stroke="#1b1b1d" stroke-width="2.6"/>
+  <path d="M96 104 h8 M71 103 l-10 -2 M129 103 l10 -2" stroke="#1b1b1d" stroke-width="2.6"/>
+  <!-- Lông mày, mắt -->
+  <path d="M73 93 q10 -3 20 0 M107 93 q10 -3 20 0" stroke="#4a4642" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <ellipse cx="84" cy="107" rx="2.8" ry="3" fill="#1d1d1f"/>
+  <ellipse cx="116" cy="107" rx="2.8" ry="3" fill="#1d1d1f"/>
+  <!-- Mũi, miệng điềm tĩnh -->
+  <path d="M100 114 q-5 11 0 14 q4 1 6 -1" stroke="#b08262" stroke-width="2.3" fill="none" stroke-linecap="round"/>
+  <path d="M89 136 q11 3 22 0" stroke="#6e3a2e" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>

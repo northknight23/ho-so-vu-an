@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" role="img" aria-label="Chân dung Vương Gia Huy">
+  <rect width="200" height="240" fill="#28303a"/>
+  <circle cx="100" cy="98" r="80" fill="#323c48"/>
+  <!-- Vest xám nhạt, sơ mi trắng, không cà vạt -->
+  <path d="M14 240 C18 184 56 164 100 164 C144 164 182 184 186 240Z" fill="#8d96a0"/>
+  <path d="M78 166 L100 220 L122 166 C112 162 88 162 78 166Z" fill="#f6f4ee"/>
+  <path d="M86 166 L100 186 L114 166" fill="#e2b896"/>
+  <path d="M78 166 L94 206 L70 194 L66 172Z M122 166 L106 206 L130 194 L134 172Z" fill="#747d88"/>
+  <!-- Cổ -->
+  <path d="M86 138 h28 v28 c-8 7 -20 7 -28 0z" fill="#d9ab86"/>
+  <!-- Mặt thanh, trẻ -->
+  <ellipse cx="62" cy="106" rx="6.5" ry="11" fill="#d9ab86"/>
+  <ellipse cx="138" cy="106" rx="6.5" ry="11" fill="#d9ab86"/>
+  <ellipse cx="100" cy="103" rx="37" ry="47" fill="#ebbf9a"/>
+  <path d="M66 118 C70 144 86 150 100 150 C114 150 130 144 134 118 C126 140 114 144 100 144 C86 144 74 140 66 118Z" fill="#000" opacity=".06"/>
+  <!-- Tóc vuốt gọn -->
+  <path d="M61 102 C55 62 80 46 104 48 C128 48 148 64 139 102 C136 84 130 72 118 66 C102 62 86 64 76 70 C68 78 63 88 61 102Z" fill="#14110f"/>
+  <path d="M76 70 C92 58 116 58 132 72" stroke="#2b2522" stroke-width="2.4" fill="none"/>
+  <!-- Lông mày hiền, mắt buồn -->
+  <path d="M74 95 q9 -3 18 1 M108 96 q9 -4 18 -1" stroke="#14110f" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <ellipse cx="84" cy="106" rx="3.2" ry="3.4" fill="#1d1d1f"/>
+  <ellipse cx="116" cy="106" rx="3.2" ry="3.4" fill="#1d1d1f"/>
+  <path d="M78 112 q6 2 12 0 M110 112 q6 2 12 0" stroke="#bf9070" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+  <!-- Mũi, nụ cười hiền -->
+  <path d="M100 110 q-4 11 0 13 q4 1 5 -1" stroke="#bf9070" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  <path d="M88 132 q12 7 24 0" stroke="#7a3a33" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>

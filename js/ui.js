@@ -17,6 +17,7 @@ import { allClues, findClue, clueNo, lockedRemaining, hintsUsedTotal } from './s
 import { renderInterrogation, solvedCount } from './interrogation.js';
 import { renderBoard } from './board.js';
 import { openHints } from './hints.js';
+import { isTimed, renderInvestigate, clockSummary } from './timed.js';
 
 const root = () => document.getElementById('app');
 
@@ -31,6 +32,7 @@ const ICON_PATHS = {
   board: 'M3 4h18v14H3zM7 9l5 4 5-6M7 9h.01M12 13h.01M17 7h.01M8 21l1-3M16 21l-1-3',
   notes: 'M4 20h4L19.5 8.5l-4-4L4 16zM14 6l4 4',
   exit: 'M10 4H5v16h5M14 8l4 4-4 4M18 12H9',
+  investigate: 'M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10zM12 8.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5',
 };
 
 function icon(name) {
@@ -58,6 +60,12 @@ export const TABS = [
   { id: 'board', label: 'Bảng suy luận', short: 'Bảng' },
   { id: 'notes', label: 'Sổ tay' },
 ];
+
+/** Các tab theo chế độ chơi: vụ có đồng hồ thay tab Hiện trường bằng tab Điều tra. */
+export function tabsFor(c) {
+  if (!isTimed(c)) return TABS;
+  return TABS.map((t) => (t.id === 'scene' ? { id: 'investigate', label: 'Điều tra' } : t));
+}
 
 // ======================================================================
 // Màn lỗi
@@ -99,7 +107,7 @@ export function renderIntro(app, actions) {
       el('span', { class: 'shelf__no', text: item.caseNumber || item.id }),
       el('span', { class: 'shelf__title', text: item.title }),
       el('span', { class: 'shelf__meta' },
-        item.difficulty && el('span', { class: `shelf__diff shelf__diff--${item.difficulty === 'Khó' ? 'hard' : 'easy'}`, text: item.difficulty }),
+        item.difficulty && el('span', { class: `shelf__diff shelf__diff--${/khó/i.test(item.difficulty) ? 'hard' : 'easy'}`, text: item.difficulty }),
         item.status && el('span', { text: item.status })));
     }));
 
@@ -148,7 +156,9 @@ export function renderCase(app, tab, actions, opts = {}) {
       }, icon('exit'), el('span', { class: 'hide-sm', text: 'Thoát' })),
       el('button', { type: 'button', class: 'case-header__home', onClick: () => actions.go('#/'), 'aria-label': 'Về trang bìa hồ sơ' },
         el('span', { class: 'case-header__title', text: c.title }),
-        el('span', { class: 'case-header__progress', text: `Đã xem ${seen}/${clues.length} manh mối${locked ? ` · 🔒 ${locked} chưa mở` : ''}` })),
+        el('span', { class: 'case-header__progress', text: isTimed(c)
+          ? `${clockSummary(app)} · ${clues.length} manh mối`
+          : `Đã xem ${seen}/${clues.length} manh mối${locked ? ` · 🔒 ${locked} chưa mở` : ''}` })),
       c.hints && el('button', {
         type: 'button',
         class: 'btn btn--ghost btn--small hint-btn',
@@ -157,9 +167,9 @@ export function renderCase(app, tab, actions, opts = {}) {
       }, '💡', el('span', { class: 'hide-sm', text: 'Gợi ý' }), usedHints ? el('span', { class: 'hint-btn__count', text: String(usedHints) }) : null),
       p.submission
         ? el('button', { type: 'button', class: 'btn btn--ghost btn--small', onClick: () => actions.go('#/result') }, 'Kết quả')
-        : el('button', { type: 'button', class: 'btn btn--primary btn--small', onClick: () => actions.go('#/submit') }, 'Nộp kết luận')),
+        : el('button', { type: 'button', class: 'btn btn--primary btn--small', onClick: () => actions.go('#/submit') }, isTimed(c) ? 'Buộc tội' : 'Nộp kết luận')),
     el('nav', { class: 'tabs', role: 'tablist', 'aria-label': 'Các phần của hồ sơ' },
-      TABS.map((t) => el('button', {
+      tabsFor(c).map((t) => el('button', {
         type: 'button',
         class: 'tab',
         role: 'tab',
@@ -174,6 +184,7 @@ export function renderCase(app, tab, actions, opts = {}) {
     suspects: renderSuspects,
     clues: renderClues,
     scene: renderScene,
+    investigate: renderInvestigate,
     board: renderBoard,
     notes: renderNotes,
   };
@@ -199,7 +210,7 @@ function renderOverview(app) {
         el('ul', { class: 'fact-list' }, (c.victim.facts || []).map((f) => el('li', {}, rich(f)))))),
     el('div', { class: 'howto' },
       el('h3', { text: 'Cách chơi' }),
-      el('ol', {},
+      c.howto ? el('ol', {}, c.howto.map((t) => el('li', {}, rich(t)))) : el('ol', {},
         el('li', { text: 'Đọc lời khai, mở từng manh mối và xem sơ đồ hiện trường.' }),
         el('li', { text: 'Thẩm vấn nghi phạm. Thấy câu trả lời nào mâu thuẫn với chứng cứ, bấm “⚡ Phản bác” và trình đúng manh mối để mở khóa lời khai hoặc manh mối mới.' }),
         el('li', { text: 'Ghim thẻ lên Bảng suy luận và căng dây đỏ nối các chi tiết liên quan; ghi chú trong Sổ tay.' }),
@@ -650,7 +661,17 @@ export function renderResult(app, solution, actions) {
 
     el('div', { class: 'part-list' }, partsOf(c).map(partRow)),
 
-    el('article', { class: 'paper-card solution' },
+    renderSolutionArticle(app, solution, actions),
+
+    el('div', { class: 'result-actions' },
+      el('button', { type: 'button', class: 'btn btn--ghost', onClick: () => actions.go(`#/case/${p.lastTab || 'overview'}`) }, 'Xem lại hồ sơ'),
+      el('button', { type: 'button', class: 'btn btn--ghost', onClick: () => actions.go('#/') }, 'Về trang bìa'),
+      el('button', { type: 'button', class: 'btn btn--primary', onClick: () => actions.reset() }, 'Chơi lại từ đầu'))));
+}
+
+/** Bài lời giải (chuyện gì đã xảy ra, chuỗi suy luận, mồi nhử, kết) — dùng chung cho mọi chế độ. */
+export function renderSolutionArticle(app, solution, actions) {
+  return el('article', { class: 'paper-card solution' },
       el('h3', { text: 'Chuyện gì đã xảy ra' }),
       (solution.overview || []).map((t) => para(t)),
       el('h3', { text: 'Chuỗi suy luận' }),
@@ -664,10 +685,5 @@ export function renderResult(app, solution, actions) {
           el('strong', { text: `${r.title}: ` }), rich(r.text), ' ',
           (r.clueIds || []).map((id) => clueLink(app, id, actions))))),
       ] : null,
-      solution.closing && [el('h3', { text: 'Kết' }), para(solution.closing)]),
-
-    el('div', { class: 'result-actions' },
-      el('button', { type: 'button', class: 'btn btn--ghost', onClick: () => actions.go(`#/case/${p.lastTab || 'overview'}`) }, 'Xem lại hồ sơ'),
-      el('button', { type: 'button', class: 'btn btn--ghost', onClick: () => actions.go('#/') }, 'Về trang bìa'),
-      el('button', { type: 'button', class: 'btn btn--primary', onClick: () => actions.reset() }, 'Chơi lại từ đầu'))));
+      solution.closing && [el('h3', { text: 'Kết' }), para(solution.closing)]);
 }

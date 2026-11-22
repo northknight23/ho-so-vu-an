@@ -24,8 +24,10 @@ export function defaultProgress() {
     board: { cards: [], links: [], zoom: null }, // bảng suy luận (zoom null = tự chọn theo màn hình)
     grid: null,          // lưới loại trừ { columns: [{id,label}], cells: { "nghiPhạm|cột": "yes"|"no"|"maybe" } }; null = chưa dùng
     hintsUsed: { culprit: 0, motive: 0, method: 0 },
+    timed: { log: [] },  // chế độ có đồng hồ: [{ t, p, l, q }] — mọi thứ khác tính lại từ nhật ký
     submission: null,    // { <phần>: lựa chọn, ..., submittedAt } — các phần theo partsOf(caseData)
-    result: null,        // { score, max, parts }
+                         // chế độ có đồng hồ: { h, proof: { [suspectId]: [clueId…] }, giveUp?, submittedAt }
+    result: null,        // { score, max, parts }; chế độ có đồng hồ: { ending }
     updatedAt: null,
   };
 }
@@ -86,6 +88,7 @@ export function loadProgress(caseId) {
         ...saved,
         board: { ...base.board, ...saved.board },
         hintsUsed: { ...base.hintsUsed, ...saved.hintsUsed },
+        timed: { ...base.timed, ...saved.timed },
       };
     } catch {
       return base;
